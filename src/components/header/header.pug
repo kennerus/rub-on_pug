@@ -1,0 +1,11 @@
+extends  ../container/container
+
+mixin header()
+  +b('header').header
+    +container('container _flex')
+      +b('a')(href="/").logo
+        +e('img')(src="/assets/images/logo.png", width="175", height="47", alt="RUBON").img
+      +b.header__search
+        +b('form').global-search
+          +e('input')(id='global-search', type="search")
+          +e('input')(id='global-search_submit')

@@ -1,0 +1,37 @@
+.container
+  box-sizing: border-box
+  margin-right: auto
+  margin-left: auto
+  position: relative
+
+  &_flex
+    display: flex
+    align-items: center
+
+
+@media (max-width: 768px)
+  .container
+    width: 100%
+    padding: 0 10px
+
+
+
+@media (min-width: 768px)
+  .container
+    width: 750px
+    padding: 0 10px
+
+
+@media (min-width: 992px)
+  .container
+    width: 960px
+    padding: 0 15px
+
+
+
+@media (min-width: 1200px)
+  .container
+    width: 1170px
+    padding: 0
+
+
