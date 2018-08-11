@@ -66,7 +66,7 @@ gulp.task('images', function () {
 
 gulp.task('svg-grayscale', function () {
 
-  return gulp.src('./src/sprite/*.svg')
+  return gulp.src('./src/images/svg/*.svg')
     .pipe(cheerio({
       run: function ($) {
         let fill = $('[fill]:not(.fill)');
@@ -179,5 +179,5 @@ gulp.task('fonts-build', function () {
 });
 
 // Commands
-gulp.task('build', ['pug-build', 'css-build', 'js-build', 'libs-build', 'images-build', 'fonts-build', 'svg-sprite']);
+gulp.task('build', ['pug-build', 'css-build', 'js-build', 'libs-build', 'images-build', 'fonts-build']);
 gulp.task('default', ['watch', 'libs', 'images', 'fonts', 'svg-sprite', 'browser-sync']);

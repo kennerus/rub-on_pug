@@ -6,14 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Index Page</title>
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/fonts/fonts.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <div class="container container_flex"><a class="logo" href="/"><img class="logo__img" src="/assets/images/logo.png" width="175" height="47" alt="RUBON" title=""/></a>
-        <div class="header__search">
-          <form class="global-search"><input id="global-search" type="search"/><input id="global-search_submit" type="text"/>
-          </form>
+        <form class="global-search"><input class="global-search__input" id="global-search" type="search" placeholder="Поиск..."/><input class="global-search__submit" id="global-search_submit" type="submit"/>
+          <label class="global-search__label" for="global-search_submit">
+            <svg class="ico ico_gray ico_small">
+              <use xlink:href="assets/images/svg.svg#search">
+              </use>
+            </svg>
+          </label>
+        </form>
+        <button class="choose-region" type="button">
+          <svg class="choose-region__icon ico ico_gray">
+            <use xlink:href="assets/images/svg.svg#nav">
+            </use>
+          </svg><span class="gray-text">Регион</span>
+        </button><a class="button button_red mr10">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
+        <div class="header__profile"><a class="header__registration" href="#">
+          <svg class="ico ico_gray mr10">
+            <use xlink:href="assets/images/svg.svg#reg">
+            </use>
+          </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text" href="#">Войти</a>
         </div>
       </div>
     </header>

@@ -4,8 +4,9 @@ body
   padding: 0
   border: 0
   font-family: 'AvenirNextCyr', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-weight: 500
+  font-size: 13px
   color: #262626
-
 
 a
   text-decoration: none
@@ -19,11 +20,119 @@ input
   &:hover, &:focus, &:active
     outline: none
 
-
-
 textarea
   outline: none
   &:hover, &:focus, &:active
     outline: none
 
+.mr10
+  margin-right: 10px
 
+.mr20
+  margin-right: 20px
+
+.gray-text
+  color: #a8a8a8
+
+.red-text
+  color: #ff564e
+
+.ico
+  width: 17px
+  height: 17px
+
+  &_gray
+    fill: #a8a8a8
+
+  &_small
+    width: 10px
+    height: 10px
+
+.logo
+  margin-right: 20px
+
+.global-search
+  position: relative
+  margin-right: 15px
+
+  &__input
+    width: 320px
+    padding: 8px 20px
+    border: 1px solid #e5e5e5
+    border-radius: 4px
+
+  &__submit
+    position: absolute
+    left: -99999px
+    z-index: -999
+
+  &__label
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+
+.choose-region
+  display: flex
+  align-items: center
+  margin-right: 20px
+  padding: 0
+  background-color: white
+  border: none
+  cursor: pointer
+
+  &__icon
+    margin-right: 10px
+
+.button
+  padding: 10px 24px
+  font-weight: 500
+  color: white
+  background-color: transparent
+  border: none
+  border-radius: 4px
+  cursor: pointer
+
+  &_red
+    background-color: #ff564e
+
+    &:hover
+      color: white
+      background-color: #ff3838
+      box-shadow: none
+
+    &:active, &:focus
+      color: white
+      background-color: #cc2d2d
+      box-shadow: none
+
+  &_blue
+    background-color: #4d8eff
+
+    &:hover
+      color: white
+      background-color: #1b6efe
+      box-shadow: none
+
+    &:active, &:focus
+      color: white
+      background-color: #185fd9
+      box-shadow: none
+
+.header
+  padding: 20px 0
+
+  &__profile
+    display: flex
+    align-items: center
+
+  &__registration
+    display: flex
+    align-items: center
+    padding: 10px 0
+    padding-right: 15px
+    border-right: 1px solid #f0f0f0
+
+  &__enter
+    padding: 10px 0
+    padding-left: 15px

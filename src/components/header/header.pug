@@ -1,11 +1,31 @@
-extends  ../container/container
+extends ../container/container
+include ../button/button
 
 mixin header()
   +b('header').header
-    +container('container _flex')
+    +container('_flex')
       +b('a')(href="/").logo
         +e('img')(src="/assets/images/logo.png", width="175", height="47", alt="RUBON").img
-      +b.header__search
-        +b('form').global-search
-          +e('input')(id='global-search', type="search")
-          +e('input')(id='global-search_submit')
+
+      +b('form').global-search
+        +e('input')#global-search.input(type="search", placeholder="Поиск...")
+        +e('input')#global-search_submit.submit(type="submit")
+
+        +e('label').label(for="global-search_submit")
+          +b('svg').ico._gray._small
+            +e('use')(xlink:href="assets/images/svg.svg#search")
+
+      +b('button')(type="button").choose-region
+        +b('svg').__icon.ico._gray
+          +e('use')(xlink:href="assets/images/svg.svg#nav")
+        +b('span').gray-text Регион
+
+      +button('_red mr10') Дать объявление
+      +button('_blue mr20') Создать организацию
+
+      +b.header__profile
+        +e('a')(href="#").registration
+          +b('svg').ico._gray.mr10
+            +e('use')(xlink:href="assets/images/svg.svg#reg")
+          +b('span').gray-text Регистрация
+        +e('a')(href="#").enter.red-text Войти
