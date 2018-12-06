@@ -1,0 +1,58 @@
+@import "imports"
+
+.bg-img
+  +fit-cover
+
+.overlay
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.5)
+
+.modal
+  display: none
+
+.btn-close
+  $size: 20px
+  $p: 0
+  +btn
+  +flex-center
+  position: absolute
+  top: 10px
+  right: 10px
+  width: $size
+  height: $size
+  padding: $p
+  cursor: pointer
+  span
+    position: absolute
+    display: inline-block
+    width: $size - $p * 2
+    height: 1px
+    background-color: $main
+    &:first-of-type
+      transform: rotate(45deg)
+    &:last-of-type
+      transform: rotate(-45deg)
+
+.tab-item
+  height: 0
+  opacity: 0
+  overflow: hidden
+  transition: opacity 0.5s ease, height 0s ease 1s
+  &-active
+    height: unset
+    opacity: 1
+    transition: opacity 0.5s ease
+
+.avatar
+  +f-size(70px)
+  position: relative
+  border-radius: 50%
+  overflow: hidden
+  img
+    +fit-cover
+

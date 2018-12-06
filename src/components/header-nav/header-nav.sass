@@ -1,0 +1,73 @@
+@import "../../shared/sass/imports"
+
+.header-nav
+  &__overflow
+    display: flex
+    align-items: center
+    overflow: hidden
+  &__wrap
+    display: flex
+    align-items: center
+    overflow: hidden
+    transition: $transition
+    &_move
+      margin-left: calc(-100% + 30px)
+  &__link
+    &-category
+      position: relative
+      display: flex
+      align-items: center
+      height: 100%
+      padding: 25px 17px
+      white-space: nowrap
+      font-weight: 500
+      letter-spacing: .4px
+      color: #a8a8a8
+    &-hover
+      background-color: #f1efef
+  &__next
+    +btn
+    position: absolute
+    z-index: 1
+    right: 0
+    display: flex
+    padding: 25px 10px
+    height: 100%
+    background-color: #fff
+    svg
+      height: 20px
+    &:hover
+      svg
+        fill: darken($gray, 15)
+    svg
+      fill: $gray
+      width: 9px
+      transition: $transition
+  &__svg
+    width: 25px
+    margin-right: 10px
+    fill: $gray
+  &__dropdown
+    position: absolute
+    top: 100%
+    z-index: 5
+    display: none
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 275px
+    margin: 0
+    padding: 30px
+    list-style: none
+    background-color: #fff
+    &-li
+      width: 150px
+      padding: 7px 15px
+    &-link
+      padding: 7px 0
+      color: $main
+      background-color: #fff
+      &:hover
+        color: $gray
+
+.rotateCategoryBtn
+  transform: rotate(180deg)

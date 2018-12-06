@@ -1,5 +1,6 @@
 include ../../../node_modules/bemto.pug/bemto
 include ../header/header
+include ../header-nav/header-nav
 
 doctype html
 html(lang='ru')
@@ -15,5 +16,7 @@ html(lang='ru')
     link(href='assets/fonts/fonts.css' rel='stylesheet')
   body
     +header
+    +header-nav
     block content
+    script(src='assets/libs/jquery-3.3.1.js')
     script(src='assets/js/script.js')
