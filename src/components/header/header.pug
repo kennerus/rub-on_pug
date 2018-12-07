@@ -20,7 +20,7 @@ mixin header()
           +e('use')(xlink:href="assets/images/svg.svg#nav")
         +b('span').gray-text Регион
 
-      +button('_red mr10') Дать объявление
+      +button('_red mr10 header__btn--first') Дать объявление
       +button('_blue mr20') Создать организацию
 
       +b.header__profile
@@ -82,4 +82,6 @@ mixin header()
               +e('li').li
                 a.header-nav__link.header-nav__dropdown-link(href='#')= item
       +e('footer').footer
+        button.button.button_white.modal__btn Отмена
+        button.button.button_red.modal__btn Выбрать
       +e('button').close.js-modalClose ×

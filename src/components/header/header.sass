@@ -1,2 +1,31 @@
-.header
-	display: block
+@import "../../shared/sass/imports"
+
+.city-choise
+  @media (max-width: $lg)
+    overflow: scroll
+    height: 120px
+  &__list
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: 330px
+    margin: 0
+    padding: 30px
+    padding-bottom: 0
+    list-style: none
+    overflow: hidden
+    @media (max-width: $md)
+      height: 400px
+    @media (max-width: 650px)
+      height: 650px
+    @media (max-width: 480px)
+      height: unset
+  &__li
+    width: 25%
+    margin-bottom: 10px
+    @media (max-width: $md)
+      width: calc(100% / 3)
+    @media (max-width: 650px)
+      width: 50%
+    @media (max-width: 480px)
+      width: 100%

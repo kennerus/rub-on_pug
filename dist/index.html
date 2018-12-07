@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Index Page</title>
+    <link href="assets/libs/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/libs/slick/slick.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
   </head>
@@ -24,7 +26,7 @@
             <use xlink:href="assets/images/svg.svg#nav">
             </use>
           </svg><span class="gray-text">Регион</span>
-        </button><a class="button button_red mr10">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
+        </button><a class="button button_red mr10 header__btn--first">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
         <div class="header__profile"><a class="header__registration" href="#">
           <svg class="ico ico_gray mr10">
             <use xlink:href="assets/images/svg.svg#reg">
@@ -122,6 +124,8 @@
           </div>
         </div>
         <footer class="modal__footer">
+          <button class="button button_white modal__btn">Отмена</button>
+          <button class="button button_red modal__btn">Выбрать</button>
         </footer>
         <button class="modal__close js-modalClose">×
         </button>
@@ -129,179 +133,194 @@
     </div>
     <nav class="header-nav">
       <div class="container">
-        <div class="header-nav__overflow">
-          <div class="header-nav__wrap">
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
+        <div class="header-nav__wrap">
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span></a>
             </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/chair.svg" alt="" width="25" height="25" role="presentation"/><span>Дом и сад</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/key.svg" alt="" width="25" height="25" role="presentation"/><span>Недвижимость</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/necktie.svg" alt="" width="25" height="25" role="presentation"/><span>Мода и стиль</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/devices.svg" alt="" width="25" height="25" role="presentation"/><span>Электроника</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/ball.svg" alt="" width="25" height="25" role="presentation"/><span>Хобби, отдых и спорт</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/business.svg" alt="" width="25" height="25" role="presentation"/><span>Бизнес и услуги</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/paw.svg" alt="" width="25" height="25" role="presentation"/><span>Животные</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/job.svg" alt="" width="25" height="25" role="presentation"/><span>Работа</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header-nav__item-wrap js-showCategoryList">
-              <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/bear.svg" alt="" width="25" height="25" role="presentation"/><span>Детский мир</span></a>
-              </div>
-              <ul class="header-nav__dropdown">
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
-                </li>
-                <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
           </div>
-          <button class="header-nav__next js-nextCategories">
-            <svg>
-              <use xlink:href="assets/images/svg.svg#arrow">
-              </use>
-            </svg>
-          </button>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/chair.svg" alt="" width="25" height="25" role="presentation"/><span>Дом и сад</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/key.svg" alt="" width="25" height="25" role="presentation"/><span>Недвижимость</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/necktie.svg" alt="" width="25" height="25" role="presentation"/><span>Мода и стиль</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/devices.svg" alt="" width="25" height="25" role="presentation"/><span>Электроника</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/ball.svg" alt="" width="25" height="25" role="presentation"/><span>Хобби, отдых и спорт</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/business.svg" alt="" width="25" height="25" role="presentation"/><span>Бизнес и услуги</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/paw.svg" alt="" width="25" height="25" role="presentation"/><span>Животные</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/job.svg" alt="" width="25" height="25" role="presentation"/><span>Работа</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-nav__item-wrap js-showCategoryList">
+            <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/bear.svg" alt="" width="25" height="25" role="presentation"/><span>Детский мир</span></a>
+            </div>
+            <ul class="header-nav__dropdown">
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мотоциклы</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мопеды</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Машины</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Телефоны</a>
+              </li>
+              <li class="header-nav__dropdown-li"><a class="header-nav__link header-nav__dropdown-link" href="#">Всякое другое</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__head">
+          <h2 class="footer__title"><strong>Rubon</strong> — сайт объявлений и организаций ДНР, ЛНР - здесь вы найдете то, что искали!
+          </h2>
+        </div>
+        <div class="footer__body">
+          <nav class="footer__list"><a class="footer__link" href="#">Транспорт</a><a class="footer__link" href="#">Дом и сад</a><a class="footer__link" href="#">Недвижимость</a><a class="footer__link" href="#">Мода и стиль</a><a class="footer__link" href="#">Электроника</a><a class="footer__link" href="#">Бизнес и услуги</a><a class="footer__link" href="#">Работа</a><a class="footer__link" href="#">Животные</a><a class="footer__link" href="#">Хобби, отдых и спорт</a><a class="footer__link" href="#">Детский мир</a><span class="footer__link"></span><a class="footer__link" href="#">Организации</a>
+          </nav>
+          <nav class="footer__list"><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Реклама на сайте</a><a class="footer__link" href="#">Карта сайта</a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">©2018 Rubon
+          </p>
+          <nav class="footer__faq"><a class="footer__faq-link" href="#">Как продавать и покупать?</a><a class="footer__faq-link" href="#">Правила безопастности</a><a class="footer__faq-link" href="#">Обратная связь</a><a class="footer__faq-link" href="#">Помощь</a>
+          </nav>
+          <div class="footer__social"><span class="mr10">Мы в соцсетях</span><a class="footer__social-link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="footer__social-link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="footer__social-link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="footer__social-link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="assets/libs/jquery-3.3.1.js"></script>
+    <script src="assets/libs/slick/slick.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -1,2 +1,78 @@
+@import "../../shared/sass/imports"
+
 .footer
-	display: block
+  color: $gray
+  &__head
+    padding: 20px 0
+  &__title
+    margin: 0
+    font-weight: 500
+    font-size: 16px
+    text-align: center
+    letter-spacing: .4px
+    color: $main
+  &__body
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 30px 0
+    border-top: 1px solid #f0f0f0
+    @media (max-width: 650px)
+      flex-direction: column
+  &__list
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: 150px
+    @media (max-width: 650px)
+      height: unset
+      max-height: 220px
+    @media (max-width: 380px)
+      max-height: unset
+    &:last-child
+      .footer__link
+        width: unset
+  &__link
+    width: 250px
+    min-height: 20px
+    padding-right: 25px
+    margin-bottom: 15px
+    color: inherit
+    @media (max-width: $lg)
+      width: unset
+    &:hover
+      color: $main
+  &__bottom
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 20px 0 30px
+    font-size: 14px
+    border-top: 1px solid #f0f0f0
+  &__copyright
+    margin: 0
+    margin-right: 60px
+    @media (max-width: $xl)
+      width: 100%
+  &__faq
+    display: flex
+    flex-wrap: wrap
+    &-link
+      margin-right: 30px
+      color: inherit
+      &:hover
+        color: $main
+  &__social
+    display: flex
+    align-items: center
+    margin-left: auto
+    &-link
+      +f-size(26px)
+      +flex-center
+      margin: 3px
+      color: $white
+      border-radius: 50%
+      &:hover
+        color: $white
+        .fa
+          opacity: 0.5

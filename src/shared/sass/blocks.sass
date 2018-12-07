@@ -1,5 +1,11 @@
+@import "imports"
+
 .pos-relative
   position: relative
 
 .width100
   width: 100%
+
+@each $name, $color in $bg
+  .bg-#{$name}
+    background-color: #{$color}

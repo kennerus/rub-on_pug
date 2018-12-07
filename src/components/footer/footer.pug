@@ -1,3 +1,60 @@
 mixin footer()
-	+b.footer
-		block
+  +b('footer').footer
+    .container
+      +e.head
+        +e('h2').title <strong>Rubon</strong> — сайт объявлений и организаций ДНР, ЛНР - здесь вы найдете то, что искали!
+      +e.body
+        +e('nav').list
+          -
+            var items = [
+              'Транспорт',
+              'Дом и сад',
+              'Недвижимость',
+              'Мода и стиль',
+              'Электроника',
+              'Бизнес и услуги',
+              'Работа',
+              'Животные',
+              'Хобби, отдых и спорт',
+              'Детский мир',
+              '',
+              'Организации'
+            ]
+          each item in items
+            if item === ''
+              +e('span').link
+            else
+              +e('a').link(href='#')= item
+        +e('nav').list
+          -
+            var items = [
+              'Новости',
+              'Реклама на сайте',
+              'Карта сайта'
+            ]
+          each item in items
+            +e('a').link(href='#')= item
+      +e.bottom
+        +e('p').copyright ©2018 Rubon
+        +e('nav').faq
+          -
+            var items = [
+              'Как продавать и покупать?' ,
+              'Правила безопастности',
+              'Обратная связь',
+              'Помощь'
+            ]
+          each item in items
+            +e('a').faq-link(href='#')= item
+        +e.social
+          span.mr10 Мы в соцсетях
+          -
+            var items = [
+              'vk',
+              'facebook',
+              'twitter',
+              'youtube'
+            ]
+          each item in items
+            +e('a').social-link(class=`bg-${item}` href='https://vk.com/rub_on')
+              i.fa(class=`fa-${item}`)

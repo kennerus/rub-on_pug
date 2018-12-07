@@ -1,17 +1,14 @@
 @import "../../shared/sass/imports"
 
 .header-nav
-  &__overflow
-    display: flex
-    align-items: center
-    overflow: hidden
+  font-size: 13px
   &__wrap
     display: flex
     align-items: center
-    overflow: hidden
     transition: $transition
-    &_move
-      margin-left: calc(-100% + 30px)
+    .slick-list
+      padding-bottom: 500px
+      margin-bottom: -500px
   &__link
     &-category
       position: relative

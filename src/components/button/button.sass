@@ -1,7 +1,49 @@
+@import "../../shared/sass/imports"
+
+button
+  font: inherit
+
 .button
-  padding: 10px 24px
+  $py: 10px
+  $px: 24px
+  padding: $py $px
   font-weight: 500
+  color: white
   background-color: transparent
   border: none
   border-radius: 4px
   cursor: pointer
+  transition: $transition
+  &_red
+    background-color: #ff564e
+    &:hover
+      color: white
+      background-color: #ff3838
+      box-shadow: none
+    &:active, &:focus
+      color: white
+      background-color: #cc2d2d
+      box-shadow: none
+  &_blue
+    background-color: #4d8eff
+    &:hover
+      color: white
+      background-color: #1b6efe
+      box-shadow: none
+    &:active, &:focus
+      color: white
+      background-color: #185fd9
+      box-shadow: none
+  &_white
+    padding: $py - 1px $px - 1px
+    color: $main
+    border: 1px solid $gray
+    background-color: #fff
+    &:hover
+      color: $white
+      background-color: $redHover
+      border-color: $redHover
+    &:active, &:focus
+      color: $white
+      background-color: $redActive
+      border-color: $redActive
