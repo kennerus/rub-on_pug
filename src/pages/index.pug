@@ -1,6 +1,8 @@
 extends ../components/layout-default/layout-default
+include ../components/index-main/index-main
 
 block head
     - var pageTitle = 'Index Page';
 
 block content
+  +index-main()

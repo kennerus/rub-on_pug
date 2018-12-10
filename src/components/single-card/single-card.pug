@@ -1,3 +1,37 @@
-mixin single-card()
-	+b.single-card
-		block
+mixin single-card(data)
+  if data.big
+    - var big = 'single-card__big'
+  +b.single-card(class= big || '')
+    +e.main
+      +e.top
+        +e.overlay
+          a(href='#')
+          if !data.top
+            +e('span').view.__city
+              i.fa.fa-camera
+              span 5
+        +e.top-content
+          if data.top
+            +e('span').top-label Top
+          +e('a').city(href='#') Москва
+          +e('span').like
+            if data.like
+              i.fa.fa-heart
+            else
+              i.fa.fa-heart-o
+        if data.gif
+          +e.gif-content
+            +e('span').gif-label Gif
+          img.bg-img.gif(data-gifffer='assets/images/cards/dinamic.gif' alt='')
+        else
+          if data.big
+            img.bg-img(src='assets/images/cards/company.jpg' alt='')
+          else
+            img.bg-img(src='assets/images/cards/bag.jpg' alt='')
+      +e.bottom
+        if data.big
+          +e('a').title(href='#') Игровая компания UBISOFT (является одним из крупнейших игровых издателей в Европе и США)
+        else
+          +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
+          +e('span').price 1800₽
+    +e.detail
