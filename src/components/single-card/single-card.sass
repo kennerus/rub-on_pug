@@ -11,7 +11,34 @@
   margin: 19px 12px
   &__big
     width: calc(50% - 24px)
+    .single-card__bottom
+      color: #ffffff
+      background-color: $red
+      a
+        &:hover
+          color: inherit
+          text-decoration: underline
+    &-bottom
+      +flex-wrap-center-v
+  &__company
+    &-link
+      margin-right: 10px
+      color: inherit
+      letter-spacing: 0.37px
+      font-size: 11px
+  &__products
+    &-number
+      margin-left: auto
+      padding: 5px 15px
+      color: $main
+      font-size: 13px
+      letter-spacing: 0.43px
+      font-weight: 500
+      background-color: $body
+      border-radius: 4px
   &__main
+    border-radius: 4px 4px 0 0
+    overflow: hidden
     background-color: #fff
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
     &:hover

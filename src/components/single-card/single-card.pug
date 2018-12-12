@@ -31,6 +31,9 @@ mixin single-card(data)
       +e.bottom
         if data.big
           +e('a').title(href='#') Игровая компания UBISOFT (является одним из крупнейших игровых издателей в Европе и США)
+          +e.big-bottom
+            +e('a').company-link(href='#') Перейти на страницу компании
+            +e('span').products-number 250 товаров
         else
           +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
           +e('span').price 1800₽
