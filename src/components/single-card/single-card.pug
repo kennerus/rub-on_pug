@@ -1,18 +1,19 @@
 mixin single-card(data)
   if data.big
     - var big = 'single-card__big'
-  +b.single-card(class= big || '')
+  +b.single-card.js-detail-wrap(class= big || '')
     +e.main
       +e.top
         +e.overlay
-          a(href='#')
+          a(href='#').js-btn-detail
           if !data.top
             +e('span').view.__city
               i.fa.fa-camera
               span 5
         +e.top-content
           if data.top
-            +e('span').top-label Top
+            .width100
+              +e('span').top-label Top
           +e('a').city(href='#') Москва
           +e('span').like
             if data.like
@@ -37,4 +38,5 @@ mixin single-card(data)
         else
           +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
           +e('span').price 1800₽
-    +e.detail
+    +e.detail.js-detail
+      button.js-detail-close

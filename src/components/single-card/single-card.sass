@@ -7,8 +7,9 @@
 .single-card
   $px: 20px
   $py: 20px
+  $my: 20px
   width: calc(25% - 24px)
-  margin: 19px 12px
+  margin: $my 12px
   &__big
     width: calc(50% - 24px)
     .single-card__bottom
@@ -148,6 +149,11 @@
       letter-spacing: 0.42px
       border-radius: 50%
       background-color: $main
+  &__detail
+    display: none
+    height: 40px
+    margin: $my * 2 0 0
+    background-color: #000
 
 .gif
   .gifffer-play-button
