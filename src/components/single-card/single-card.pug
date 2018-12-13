@@ -34,9 +34,49 @@ mixin single-card(data)
           +e('a').title(href='#') Игровая компания UBISOFT (является одним из крупнейших игровых издателей в Европе и США)
           +e.big-bottom
             +e('a').company-link(href='#') Перейти на страницу компании
-            +e('span').products-number 250 товаров
+            +e('a').button.button_white-on-pink.button_small.ml-auto(href='#') 250 товаров
         else
           +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
           +e('span').price 1800₽
     +e.detail.js-detail
-      button.js-detail-close
+      button.button_close.js-detail-close ×
+      +e.detail-tr
+      +e.detail-content
+        +e.detail-img
+          img.bg-img(src='assets/images/cards/bag.jpg' alt='')
+          +e.detail-img-content
+            span.single-card__view.single-card__city
+              i.fa.fa-camera
+              span 5
+        +e.detail-main
+          a.button.button_small.button_gray Мода и стиль
+          +e('h3').detail-title.mb15.mt20 Рюкзак из натуральной крокодильей кожи, размеры 30х35 см
+          +e.info-second
+            span.mr15.mt5.mb5 Добавлено: 19 марта 2018, 17:15
+            .d-flex.align-items-center.mt5.mb5
+              img.mr5(src='assets/images/icon-eye.png' alt='')
+              span 255
+            a.d-flex.align-items-center.ml-auto.mt5.mb5(href='#')
+              +b('svg').__icon.ico._gray
+                +e('use')(xlink:href="assets/images/svg.svg#nav")
+              span.ml5 Санкт - Петербург
+          +e.info
+            p Размер: 30/35см
+            p Материал: натуральная кожа супер качество!
+            p Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!
+            p Цвет: чёрная
+          .d-flex.flex-wrap.align-items-center.justify-content-end.mt15
+            +e('a').detail-like.mt5.mb5(href='#')
+              i.fa.fa-heart-o
+              span В избранное
+            a.button.button_red.mt5.mb5.ml15 Посмотреть полностью
+          .mt15.fw-semi-bold.fz18.mb15
+            span Похожие объявления:
+          +e.slider
+            - for (var i = 0; i < 8; i++)
+              if i < 4
+                - var num = i + 1
+              else
+                - var num = i - 3
+              +e('a').slider-item(href='#')
+                img.bg-img(src=`assets/images/cards/bag-0${num}.jpg` alt='')

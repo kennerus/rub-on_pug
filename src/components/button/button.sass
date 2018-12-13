@@ -6,9 +6,12 @@ button
 .button
   $py: 10px
   $px: 24px
+  display: inline-block
   padding: $py $px
   font-weight: 500
+  font-size: 13px
   color: white
+  letter-spacing: 0.43px
   background-color: transparent
   border: none
   border-radius: 4px
@@ -47,9 +50,28 @@ button
       color: $white
       background-color: $redActive
       border-color: $redActive
+    &-on-pink
+      color: $main
+      background-color: $body
+      &:hover
+        color: $main !important
+        text-decoration: none !important
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
   &_gray
+    color: #ffffff
     background-color: $gray
     &:hover
+      color: #ffffff
       background-color: darken($gray, 20)
   &_big
     padding: $py 45px
+  &_close
+    +btn
+    position: absolute
+    top: 15px
+    right: 20px
+    color: $gray
+    font-size: 30px
+  &_small
+    padding: 5px 15px
+    font-size: 13px

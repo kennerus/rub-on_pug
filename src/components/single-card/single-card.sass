@@ -10,11 +10,22 @@
   $my: 20px
   width: calc(25% - 24px)
   margin: $my 12px
+  @media (max-width: $xl)
+    width: calc((100% / 3) - 24px)
+  @media (max-width: $lg)
+    width: calc(50% - 24px)
+  @media (max-width: $sm)
+    width: 100%
   &__big
     width: calc(50% - 24px)
+    @media (max-width: $xl)
+      width: calc((100% / 3) * 2 - 24px)
+    @media (max-width: $lg)
+      width: 100%
     .single-card__bottom
       color: #ffffff
       background-color: $red
+      max-height: 140px
       a
         &:hover
           color: inherit
@@ -23,20 +34,11 @@
       +flex-wrap-center-v
   &__company
     &-link
+      margin: 5px 0
       margin-right: 10px
       color: inherit
       letter-spacing: 0.37px
       font-size: 11px
-  &__products
-    &-number
-      margin-left: auto
-      padding: 5px 15px
-      color: $main
-      font-size: 13px
-      letter-spacing: 0.43px
-      font-weight: 500
-      background-color: $body
-      border-radius: 4px
   &__main
     border-radius: 4px 4px 0 0
     overflow: hidden
@@ -78,14 +80,16 @@
   &__bottom
     display: flex
     flex-direction: column
-    height: 114px
+    max-height: 114px
     padding: 15px $px 20px
   &__title
+    height: 40px
     margin-bottom: 10px
     font-weight: 600
     letter-spacing: 0.16px
     font-size: 16px
     color: inherit
+    overflow: hidden
     &:hover
       color: $gray
   &__price
@@ -150,10 +154,128 @@
       border-radius: 50%
       background-color: $main
   &__detail
+    $shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+    $firstWidth: 35%
+    $secondWidth: 100% - $firstWidth
+    $widthXl: 5%
+    position: relative
     display: none
-    height: 40px
     margin: $my * 2 0 0
-    background-color: #000
+    box-shadow: $shadow
+    background-color: #fff
+    &-tr
+      position: absolute
+      bottom: 100%
+      width: 40px
+      height: 40px
+      overflow: hidden
+      &:after
+        position: absolute
+        bottom: -10px
+        left: 10px
+        content: ""
+        width: 20px
+        height: 20px
+        background-color: #fff
+        transform: rotate(45deg)
+        box-shadow: $shadow
+    &-content
+      +flex-wrap
+      align-items: stretch
+    &-img
+      position: relative
+      width: $firstWidth
+      @media (max-width: $xl)
+        width: $firstWidth + $widthXl
+      @media (max-width: $lg)
+        width: 100%
+        height: 400px
+      &-content
+        padding: 25px 30px
+    &-main
+      width: $secondWidth
+      padding: 30px 90px 25px 50px
+      @media (max-width: $xl)
+        width: $secondWidth - $widthXl
+        padding: 30px 40px 25px 30px
+      @media (max-width: $lg)
+        width: 100%
+      @media (max-width: $sm)
+        padding: 30px 15px
+    &-title
+      max-width: 555px
+      font-size: 24px
+      font-weight: 700
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+      @media (max-width: $sm)
+        font-size: 20px
+    &-like
+      display: flex
+      align-items: center
+      margin-left: auto
+      color: $gray
+      font-size: 13px
+      letter-spacing: 0.43px
+      font-weight: 500
+      &:hover
+        color: $red
+      .fa
+        margin-right: 5px
+        font-size: 18px
+  &__info
+    margin-top: 15px
+    font-size: 15px
+    p
+      margin: 0
+      line-height: 1.8
+    &-second
+      +flex-wrap-center-v
+      color: $gray
+      letter-spacing: 0.33px
+      font-size: 13px
+      font-weight: 500
+      a
+        color: inherit
+  &__slider
+    margin: 0 25px
+    &-item
+      position: relative
+      height: 117px
+      padding: 5px
+      transition: $transition
+      &:after
+        position: absolute
+        top: 5px
+        left: 5px
+        right: 5px
+        bottom: 5px
+        content: ''
+        background-color: rgba(38, 38, 38, 0.5)
+      &:hover
+        transform: scale(1.1)
+        &:after
+          display: none
+      .bg-img
+        position: unset !important
+  &__next,
+  &__prev
+    +btn
+    position: absolute
+    z-index: 1
+    top: 50%
+    height: 17px
+    transform: translateY(-50%)
+    svg
+      width: 9px
+      height: 16px
+      fill: $gray
+  &__next
+    right: -27px
+  &__prev
+    left: -25px
+    transform: translateY(-50%) rotate(180deg)
 
 .gif
   .gifffer-play-button
