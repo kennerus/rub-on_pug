@@ -2,6 +2,10 @@ extends ../container/container
 
 mixin header-nav()
   +b('nav').header-nav
+    +e('button').btn.js-btn-menu
+      span
+      span
+      span
     .container
       +e.wrap
         -
@@ -49,19 +53,37 @@ mixin header-nav()
           ]
         -
           var dropdown = [
-            'Мотоциклы',
-            'Мопеды',
-            'Машины',
-            'Телефоны',
-            'Всякое другое'
+          'Мотоциклы',
+          'Мопеды',
+          'Машины',
+          'Телефоны',
+          'Всякое другое'
           ]
-        each item in items
+        each item, index in items
           +e.item-wrap.js-showCategoryList
             +e.item
               +e('a').link.__link-category(href='#')
                 +e('img').svg(src=`assets/images/svg/${item.img}.svg` alt='' width="25" height="25")
                 span= item.title
-            +e('ul').dropdown
-              each dropItem in dropdown
-                +e('li').dropdown-li
-                  +e('a').link.__dropdown-link(href='#')= dropItem
+            +e.dropdown
+              if index === 3
+                -
+                  dropdown = [
+                    'Мотоциклы',
+                    'Мопеды',
+                    'Машины',
+                    'Телефоны',
+                    'Всякое другое',
+                    'Мотоциклы',
+                    'Мопеды',
+                    'Машины',
+                    'Телефоны'
+                  ]
+              - var count = 5
+              - var listsCount = Math.ceil(dropdown.length / count)
+              - for (var i = 1; i <= listsCount; i++)
+                +e('ul').dropdown-list
+                  each dropItem, indexDrop in dropdown
+                    if indexDrop + 1 <= i * count && indexDrop + 1 > i * count - count
+                      +e('li').dropdown-li
+                        +e('a').link.__dropdown-link(href='#')= dropItem
