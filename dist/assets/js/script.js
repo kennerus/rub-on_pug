@@ -129,21 +129,26 @@ $(function () {
       $(this).parents('.js-detail').slideUp();
     });
   }
-});
+  $(document).on('click', '.gifer-play-button', function () {
+    $('.gifffer-play-button').trigger('click');
+  });
 
-if ($('.gif').length > 0) {
-  Gifffer();
-}
+  if ($('.gif').length > 0) {
+    Gifffer();
+  }
 
-$(document).on('click', '.gifffer-play-button', function (e) {
-  $('.gif').each(function (index, value) {
-    if ($(value).children(this)) {
-      $(value).parents('.single-card__top').find('.single-card__overlay').addClass('event-none');
+  $(document).on('click', '.gifffer-play-button', function (e) {
+    $('.gif').each(function (index, value) {
+      if ($(value).children(this)) {
+        $(value).parents('.single-card__top').find('.single-card__overlay').addClass('event-none');
+      }
+    });
+  });
+
+  $(document).on('click', function (e) {
+    if (!e.target.classList.contains('gifffer-play-button') && e.target.closest('.gifffer-play-button') === null) {
+      $('.gif canvas').parents('.single-card__top').find('.single-card__overlay').removeClass('event-none');
     }
   });
-});
-
-$(document).on('click', '.gif img', function (e) {
-  $(this).parents('.single-card__top').find('.single-card__overlay').removeClass('event-none');
 });
 //# sourceMappingURL=script.js.map

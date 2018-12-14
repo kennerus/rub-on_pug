@@ -5,6 +5,8 @@ mixin single-card(data)
     +e.main
       +e.top
         +e.overlay
+          if data.gif
+            button.gifer-play-button
           a(href='#').js-btn-detail
           if !data.top
             +e('span').view.__city
