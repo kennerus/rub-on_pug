@@ -8,6 +8,17 @@ mixin header-nav()
       span
       span
     .container
+      +e.mobile
+
+        +button('_red mr10 mt10 mb10') Дать объявление
+        +button('_blue mr20') Создать организацию
+
+        +b.header__profile
+          +e('a')(href="#").registration
+            +b('svg').ico._gray.mr10
+              +e('use')(xlink:href="assets/images/svg.svg#reg")
+            +b('span').gray-text Регистрация
+          +e('a')(href="#").enter.red-text Войти
       +e.wrap
         -
           var items = [

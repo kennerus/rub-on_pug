@@ -14,16 +14,20 @@ mixin header()
         +e('label').label(for="global-search_submit")
           +b('svg').ico._gray._small
             +e('use')(xlink:href="assets/images/svg.svg#search")
+        +e('button').close.js-search-close Закрыть
+
+      svg.ico_gray.search-mobile.js-search-open
+        +e('use')(xlink:href="assets/images/svg.svg#search")
 
       +b('button')(type="button").choose-region.js-openLocationModal
         +b('svg').__icon.ico._gray
           +e('use')(xlink:href="assets/images/svg.svg#nav")
         +b('span').gray-text Регион
 
-      +button('_red mr10 header__btn--first') Дать объявление
-      +button('_blue mr20') Создать организацию
+      +button('_red mr10 header__btn--first xl-none') Дать объявление
+      +button('_blue mr20 xl-none') Создать организацию
 
-      +b.header__profile
+      +b.header__profile.xl-none
         +e('a')(href="#").registration
           +b('svg').ico._gray.mr10
             +e('use')(xlink:href="assets/images/svg.svg#reg")

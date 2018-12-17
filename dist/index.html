@@ -20,14 +20,20 @@
               </use>
             </svg>
           </label>
+          <button class="global-search__close js-search-close">Закрыть
+          </button>
         </form>
+        <svg class="ico_gray search-mobile js-search-open">
+          <use xlink:href="assets/images/svg.svg#search">
+          </use>
+        </svg>
         <button class="choose-region js-openLocationModal" type="button">
           <svg class="choose-region__icon ico ico_gray">
             <use xlink:href="assets/images/svg.svg#nav">
             </use>
           </svg><span class="gray-text">Регион</span>
-        </button><a class="button button_red mr10 header__btn--first">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
-        <div class="header__profile"><a class="header__registration" href="#">
+        </button><a class="button button_red mr10 header__btn--first xl-none">Дать объявление</a><a class="button button_blue mr20 xl-none">Создать организацию</a>
+        <div class="header__profile xl-none"><a class="header__registration" href="#">
           <svg class="ico ico_gray mr10">
             <use xlink:href="assets/images/svg.svg#reg">
             </use>
@@ -136,6 +142,14 @@
       <button class="header-nav__btn js-btn-menu"><span></span><span></span><span></span>
       </button>
       <div class="container">
+        <div class="header-nav__mobile"><a class="button button_red mr10 mt10 mb10">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
+          <div class="header__profile"><a class="header__registration" href="#">
+            <svg class="ico ico_gray mr10">
+              <use xlink:href="assets/images/svg.svg#reg">
+              </use>
+            </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text" href="#">Войти</a>
+          </div>
+        </div>
         <div class="header-nav__wrap">
           <div class="header-nav__item-wrap js-showCategoryList">
             <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span></a>

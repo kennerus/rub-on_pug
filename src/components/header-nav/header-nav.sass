@@ -1,22 +1,36 @@
 @import "../../shared/sass/imports"
 
 .header-nav
+  position: sticky
+  z-index: 100
+  top: 0
   font-size: 13px
   background-color: #fff
-  @media (max-width: $md)
+  @media (max-width: $xl)
     position: fixed
     z-index: 1001
     top: 0
     left: -100%
     height: 100vh
+    width: 50%
     overflow: scroll
     transition: $transition
+    .container
+      width: unset
     &--active
       left: 0
+  @media (max-width: $md)
+    width: 100%
+  &__mobile
+    display: none
+    @media (max-width: $xl)
+      padding-top: 20px
+      display: block
   &__btn
     $size: 25px
     +btn
     position: fixed
+    z-index: 1
     top: 20px
     right: 20px
     display: none
@@ -25,7 +39,19 @@
     width: $size
     height: $size
     padding: 0
-    @media (max-width: $md)
+    span
+      transition: $transition
+    &-close
+      span
+        position: absolute
+        top: 50%
+        &:nth-child(1)
+          transform: rotate(135deg)
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          transform: rotate(-135deg)
+    @media (max-width: $xl)
       display: flex
     span
       width: $size
@@ -35,12 +61,15 @@
     display: flex
     align-items: center
     transition: $transition
-    @media (max-width: $md)
+    @media (max-width: $xl)
       flex-direction: column
       align-items: flex-start
     .slick-list
       padding-bottom: 500px
       margin-bottom: -500px
+      pointer-events: none
+    .slick-track
+      pointer-events: all
   &__link
     &-category
       position: relative
@@ -84,7 +113,7 @@
     padding: 0 15px
     flex-wrap: wrap
     background-color: #fff
-    @media (max-width: $md)
+    @media (max-width: $xl)
       position: static
       display: flex
       flex-direction: column
@@ -94,7 +123,7 @@
       list-style: none
       margin: 0
       padding: 30px 15px
-      @media (max-width: $md)
+      @media (max-width: $xl)
         padding: 0
     &-li
       padding: 7px 15px

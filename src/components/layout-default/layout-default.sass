@@ -53,27 +53,6 @@ textarea
 .logo
   margin-right: 20px
 
-.global-search
-  position: relative
-  margin-right: 15px
-
-  &__input
-    width: 300px
-    padding: 8px 20px
-    border: 1px solid #e5e5e5
-    border-radius: 4px
-
-  &__submit
-    position: absolute
-    left: -99999px
-    z-index: -999
-
-  &__label
-    position: absolute
-    top: 10px
-    right: 10px
-    cursor: pointer
-
 .choose-region
   display: flex
   align-items: center
@@ -87,52 +66,3 @@ textarea
 
   &__icon
     margin-right: 10px
-
-.header
-  font-size: 13px
-  padding: 20px 0
-  background-color: #fff
-  &__btn
-    &--first
-      @media (max-width: $xl)
-        margin-left: auto
-      @media (max-width: 400px)
-        margin-left: 0
-        margin-right: 40px !important
-        margin-bottom: 10px
-  .global-search
-    @media (max-width: $xl)
-      flex-grow: 1
-    @media (max-width: 650px)
-      flex-grow: unset
-      width: calc(100% - 90px)
-      margin-top: 10px
-      margin-bottom: 10px
-  .choose-region
-    @media (max-width: 650px)
-      margin-left: auto
-  &__profile
-    display: flex
-    align-items: center
-  .global-search__input
-    @media (max-width: $xl)
-      width: 100%
-      min-width: 500px
-    @media (max-width: $lg)
-      min-width: 400px
-    @media (max-width: $md)
-      min-width: 300px
-    @media (max-width: 650px)
-      min-width: unset
-  &__registration
-    display: flex
-    align-items: center
-    padding: 10px 0
-    padding-right: 15px
-    border-right: 1px solid #f0f0f0
-
-  &__enter
-    padding: 10px 0
-    padding-left: 15px
-  .container_flex
-    flex-wrap: wrap

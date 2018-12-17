@@ -48,30 +48,21 @@ $(function () {
       infinite: false,
       slidesToScroll: 7,
       nextArrow: '<button class="header-nav__next">\n' + '            <svg>\n' + '              <use xlink:href="assets/images/svg.svg#arrow">\n' + '              </use>\n' + '            </svg>\n' + '          </button>',
-      prevArrow: '<button class="header-nav__next rotateCategoryBtn">\n' + '            <svg>\n' + '              <use xlink:href="assets/images/svg.svg#arrow">\n' + '              </use>\n' + '            </svg>\n' + '          </button>',
-      responsive: [{
-        breakpoint: 1200,
-        settings: {
-          slidesToScroll: 6
-        }
-      }, {
-        breakpoint: 992,
-        settings: {
-          slidesToScroll: 1
-        }
-      }]
+      prevArrow: '<button class="header-nav__next rotateCategoryBtn">\n' + '            <svg>\n' + '              <use xlink:href="assets/images/svg.svg#arrow">\n' + '              </use>\n' + '            </svg>\n' + '          </button>'
     });
-    if (document.documentElement.clientWidth < 768) {
+    if (document.documentElement.clientWidth < 1200) {
       $('.header-nav__wrap').slick('unslick');
     }
   }
   $(document).on('click', '.js-btn-menu', function () {
     $('.header-nav').toggleClass('header-nav--active');
-    $('.js-menu-close').addClass('menu__overlay--active');
+    $('.js-menu-close').toggleClass('menu__overlay--active');
+    $(this).toggleClass('header-nav__btn-close');
   });
   $(document).on('click', '.js-menu-close', function () {
     $(this).removeClass('menu__overlay--active');
-    $('.header-nav').removeClass('header-nav--active');
+    $('.header-nav').toggleClass('header-nav--active');
+    $('.js-btn-menu').toggleClass('header-nav__btn-close');
   });
   if ($('.js-detail').length > 0) {
     $('.js-detail').css('width', containerWidth + 'px');
@@ -154,6 +145,14 @@ $(function () {
     if (!e.target.classList.contains('gifffer-play-button') && e.target.closest('.gifffer-play-button') === null) {
       $('.gif canvas').parents('.single-card__top').find('.single-card__overlay').removeClass('event-none');
     }
+  });
+
+  $(document).on('click', '.js-search-open', function () {
+    $('.global-search').addClass('global-search--active');
+  });
+
+  $(document).on('click', '.js-search-close', function () {
+    $('.global-search').removeClass('global-search--active');
   });
 });
 //# sourceMappingURL=script.js.map
