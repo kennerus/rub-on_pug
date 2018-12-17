@@ -67,6 +67,11 @@ $(function () {
   }
   $(document).on('click', '.js-btn-menu', function () {
     $('.header-nav').toggleClass('header-nav--active');
+    $('.js-menu-close').addClass('menu__overlay--active');
+  });
+  $(document).on('click', '.js-menu-close', function () {
+    $(this).removeClass('menu__overlay--active');
+    $('.header-nav').removeClass('header-nav--active');
   });
   if ($('.js-detail').length > 0) {
     $('.js-detail').css('width', containerWidth + 'px');
