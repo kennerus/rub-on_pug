@@ -14,7 +14,7 @@ mixin header()
         +e('label').label(for="global-search_submit")
           +b('svg').ico._gray._small
             +e('use')(xlink:href="assets/images/svg.svg#search")
-        +e('button').close.js-search-close Закрыть
+        +e('button').close.js-search-close(type='button') Закрыть
 
       svg.ico_gray.search-mobile.js-search-open
         +e('use')(xlink:href="assets/images/svg.svg#search")
