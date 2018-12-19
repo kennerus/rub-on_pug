@@ -1,8 +1,16 @@
 mixin header-mobile()
   +b('header').header-mobile
-    .container
-      button.mobile-btn-menu
-        - for (var i = 0; i < 9; i++)
-          span
-      +b('a')(href="/").logo
-        +e('img')(src="assets/images/logo.png", width="175", height="47", alt="RUBON").img
+    .mobile-btn-menu.js-btn-menu
+      - for (var i = 0; i < 9; i++)
+        span
+    +b('a')(href="/").logo
+      +e('img')(src="assets/images/logo.png", width="175", height="47", alt="RUBON").img
+    svg.ico_gray.mobile-search-open.js-search-open
+      use(xlink:href='assets/images/svg.svg#search')
+    +b.mobile-search.js-mobile-search
+      +e('form').main
+        +e('input').input(type="search", placeholder="Поиск")
+        +e('label').label(for="global-search_submit")
+          +b('svg').ico._gray
+            +e('use')(xlink:href="assets/images/svg.svg#search")
+      +e('button').close.js-search-close ×

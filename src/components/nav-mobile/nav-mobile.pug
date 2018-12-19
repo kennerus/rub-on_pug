@@ -1,2 +1,74 @@
 mixin nav-mobile()
   +b('nav').nav-mobile
+    +e('ul').list.js-nav-mobile(id='main-menu')
+      +e('li').li
+        +b('button')(type="button").choose-region.js-openLocationModal
+          +b('svg').ico.ico._gray.mr20
+            +e('use')(xlink:href="assets/images/svg.svg#nav")
+          +b('span').gray-text Санкт-Петербург
+      +e('li').li
+        a(href="#")
+          +b('svg').ico._gray.mr20
+            +e('use')(xlink:href="assets/images/svg.svg#reg")
+          +b('span').gray-text Войти в личный кабинет
+      +e('li').li.bg-red.js-menu-link(data-menulink='#categoriesOne')
+        .category-icon.ico.mr20
+          - for (var i = 0; i < 4; i++)
+            span
+        span.c-white Категории
+      +e('li').li
+        a(href='#')
+          +e.plus.ico.bg-red.mr20 +
+          span.c-red Дать объявление
+      +e('li').li
+        a(href='#')
+          +e.plus.ico.bg-blue.mr20 +
+          span.c-blue Создать организацию
+    +e('ul').list.js-nav-mobile(id='categoriesOne')
+      -
+        var items = [
+        {
+        title: 'Транспорт',
+        img: 'car'
+        },
+        {
+        title: 'Дом и сад',
+        img: 'chair'
+        },
+        {
+        title: 'Недвижимость',
+        img: 'key'
+        },
+        {
+        title: 'Мода и стиль',
+        img: 'necktie'
+        },
+        {
+        title: 'Электроника',
+        img: 'devices'
+        },
+        {
+        title: 'Хобби, отдых и спорт',
+        img: 'ball'
+        },
+        {
+        title: 'Бизнес и услуги',
+        img: 'business'
+        },
+        {
+        title: 'Животные',
+        img: 'paw'
+        },
+        {
+        title: 'Работа',
+        img: 'job'
+        },
+        {
+        title: 'Детский мир',
+        img: 'bear'
+        }
+        ]
+      each item, index in items
+        +e('li').li
+          +e('img').svg.mr20(src=`assets/images/svg/${item.img}.svg` alt='' width="25" height="25")
+          span= item.title

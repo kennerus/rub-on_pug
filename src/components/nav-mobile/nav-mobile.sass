@@ -1,6 +1,50 @@
 @import "../../shared/sass/imports"
 
 .nav-mobile
-  display: none
   @media (max-width: $xl)
-    display: block
+    position: fixed
+    z-index: 1000
+    top: 60px
+    width: 100%
+    background-color: #fff
+    &__list
+      position: fixed
+      left: -100%
+      top: 60px
+      width: 100%
+      max-height: calc(100vh - 60px)
+      margin: 0
+      padding: 0
+      list-style: none
+      background-color: #fff
+      transition: $transition
+      overflow: scroll
+      &--active
+        left: 0
+    &__li
+      display: flex
+      align-items: center
+      padding: 20px
+      color: $gray
+      border-bottom: 1px solid #e8e8e8
+      a
+        display: flex
+        align-items: center
+        width: 100%
+        color: inherit
+  .category-icon
+    +flex-wrap
+    justify-content: space-between
+    span
+      +f-size(7px)
+      margin-bottom: 3px
+      background-color: #fff
+      &:nth-child(3, 4)
+        margin-bottom: 0
+  &__plus
+    +flex-center
+    padding-bottom: 2px
+    color: #fff
+    font-size: 12px
+    font-weight: 700
+    border-radius: 50%
