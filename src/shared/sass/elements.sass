@@ -15,42 +15,44 @@
 .modal
   display: none
   position: fixed
+  top: 50%
+  left: 50%
   z-index: 1002
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
+  transform: translate(-50%,-50%)
+  flex-direction: column
+  justify-content: space-between
+  width: 610px
+  max-width: calc(100% - 30px)
+  background-color: #fff
+  border-radius: 4px
+  &-big
+    width: 800px
+  @media (max-width: $lg)
+    top: 20px
+    bottom: 20px
+    max-height: calc(100vh - 40px)
+    transform: translateX(-50%)
   &__overlay
-    position: absolute
-    z-index: 3
+    position: fixed
+    z-index: 1001
     top: 0
     left: 0
     width: 100%
     height: 100%
     background-color: rgba(0,0,0,.5)
-  &__content
-    position: absolute
-    top: 50%
-    left: 50%
-    z-index: 3
-    transform: translate(-50%,-50%)
-    flex-direction: column
-    justify-content: space-between
-    width: 800px
-    max-width: calc(100% - 30px)
-    height: 580px
-    background-color: #fff
-    border-radius: 4px
-    @media (max-width: $lg)
-      top: 20px
-      bottom: 20px
-      max-height: calc(100vh - 40px)
-      transform: translateX(-50%)
+    opacity: 0
+    pointer-events: none
+    transition: $transition
+    &-active
+      opacity: 1
+      pointer-events: all
   &__header
     padding: 30px
   &__title
     margin: 0
     font-weight: 600
+    text-align: center
+    font-size: 30px
   &__form
     &-location
       width: 100%
@@ -62,6 +64,8 @@
     border: none
     border-top: 1px solid #f0f0f0
     border-bottom: 1px solid #f0f0f0
+  &__content
+    padding: 55px
   &__close
     position: absolute
     top: -15px
@@ -73,14 +77,47 @@
     border-radius: 50%
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.1)
     cursor: pointer
+  &__text
+    text-align: center
+    font-size: 16px
+    letter-spacing: 0.8px
   &__footer
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     padding: 30px
+    @media (max-width: $lg)
+      justify-content: space-evenly
+    @media (max-width: $md)
+      flex-direction: column
+      align-items: center
+      .button
+        &:first-child
+          margin-bottom: 10px
   &__btn
-    width: 49%
-
+    width: 350px
+    max-width: 100%
+    padding: 17px 23px !important
+    font-size: 20px !important
+    @media (max-width: $lg)
+      width: 300px
+      font-size: 16px !important
+  &__input
+    margin-bottom: 10px
+    padding: 19px
+    width: 100%
+    font-size: 16px
+    letter-spacing: 0.36px
+    color: $main
+    border: 1px solid #e8e8e8
+    &::placeholder
+      color: $main
+  &__form
+    width: 350px
+    margin: 30px auto 40px
+  &__link
+    font-weight: 700
+    cursor: pointer
 .btn-close
   $size: 20px
   $p: 0

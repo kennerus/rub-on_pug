@@ -1,13 +1,24 @@
 $(function() {
-  let container = $('.container');
+  let container = 0;
+  $('.container').each(function(index, value) {
+    if ($(value).css('height') !== '0px') {
+      container = $(value);
+      return false;
+    }
+  });
   let containerWidth = parseInt(container.css('width')) - parseInt(container.css('paddingLeft')) - parseInt(container.css('paddingRight'));
   let offsetNormal = container.offset().left + parseInt(container.css('paddingLeft'));
-  $(document).on('click', '.js-openLocationModal', function() {
-    $('.js-locationModal').fadeIn(400).css('display', 'flex');
+  $(document).on('click', '.js-openModal', function() {
+    let href = $(this).data('modal');
+    let modal = $(href);
+    $('.modal-js').not(modal).fadeOut(300);
+    $(modal).fadeIn(400);
+    $('.modal__overlay').addClass('modal__overlay-active');
   });
 
   $(document).on('click', '.js-modalClose', function() {
-    $('.modal').fadeOut(400);
+    $('.modal').fadeOut(300);
+    $('.modal__overlay').removeClass('modal__overlay-active');
   });
   $(document).on('mouseenter', '.js-showCategoryList', function() {
     let drop = $(this).find('.header-nav__dropdown');
@@ -83,7 +94,7 @@ $(function() {
   $(document).on('click', '.js-menu-link', function() {
     let list = $(this).data("menulink");
     $(list).addClass('nav-mobile__list--active');
-    $(this).parents('.nav-mobile__list').removeClass('nav-mobile__list--active');
+    $(this).closest('.nav-mobile__list').removeClass('nav-mobile__list--active');
   });
 
   if ($('.js-detail').length > 0) {
@@ -150,11 +161,22 @@ $(function() {
                 ]
               });
             }
+          },
+          done: function() {
+            let top = item.offset().top - 100;
+            $("HTML, BODY").animate({ scrollTop: top }, 1000);
           }
         });
       }
       else {
-        item.slideToggle();
+        item.slideToggle({
+          done: function() {
+            if (item.is(':visible')) {
+              let top = item.offset().top - 100;
+              $("HTML, BODY").animate({ scrollTop: top }, 1000);
+            }
+          }
+        });
       }
     });
   }

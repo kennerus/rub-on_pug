@@ -68,7 +68,26 @@ mixin nav-mobile()
         img: 'bear'
         }
         ]
+      +e('li').li.js-menu-link(data-menulink='#main-menu')
+        i.fa.fa-angle-left.mr20
+        span Назад
       each item, index in items
-        +e('li').li
+        +e('li').li.js-menu-link(data-menulink=`#category${index}`)
           +e('img').svg.mr20(src=`assets/images/svg/${item.img}.svg` alt='' width="25" height="25")
           span= item.title
+          i.fa.fa-angle-right
+        li
+          +e('ul').list.js-nav-mobile(id=`category${index}`)
+            +e('li').li.js-menu-link(data-menulink='#categoriesOne')
+              i.fa.fa-angle-left.mr20
+              span Назад
+              span.ml-auto.c-main Мода и стиль
+            - for (var i = 1; i < 17; i++)
+              +e('li').li
+                a(href='#')
+                  +e.img
+                    img(src=`assets/images/nav/nav${i}.png` alt='')
+                  span
+                    span Аксессуары
+                    span.c-red  (1150)
+                  i.fa.fa-angle-right

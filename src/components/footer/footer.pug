@@ -46,7 +46,7 @@ mixin footer()
             ]
           each item in items
             +e('a').faq-link(href='#')= item
-        +e.social
+        +b.social
           span.mr10 Мы в соцсетях
           -
             var items = [
@@ -56,5 +56,5 @@ mixin footer()
               'youtube'
             ]
           each item in items
-            +e('a').social-link(class=`bg-${item}` href='https://vk.com/rub_on')
+            +e('a').link(class=`bg-${item}` href='https://vk.com/rub_on')
               i.fa(class=`fa-${item}`)

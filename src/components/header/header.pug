@@ -15,7 +15,7 @@ mixin header()
           +b('svg').ico._gray._small
             +e('use')(xlink:href="assets/images/svg.svg#search")
 
-      +b('button')(type="button").choose-region.js-openLocationModal
+      +b('button')(type="button" data-modal='#modalLocation').choose-region.js-openModal
         +b('svg').__icon.ico._gray
           +e('use')(xlink:href="assets/images/svg.svg#nav")
         +b('span').gray-text Регион
@@ -28,60 +28,84 @@ mixin header()
           +b('svg').ico._gray.mr10
             +e('use')(xlink:href="assets/images/svg.svg#reg")
           +b('span').gray-text Регистрация
-        +e('a')(href="#").enter.red-text Войти
-  +b.modal.js-locationModal
-    +e.overlay.js-modalClose
+        +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти
+  .modal__overlay.js-modalClose
+  +b.modal.modal-big.modal-js(id='modalLocation')
+    +e('header').header
+      +e('h2').title Выберите город
+    +e.body
+      +e('form').form-location(id="location")
+        +e('input').city-search(type="search" name="city-search" placeholder="Введите город")
+      +b.city-choise
+        +e('ul').list
+          -
+            var items = [
+              'Донецк',
+              'Москва',
+              'Магадан',
+              'Курск',
+              'Воронеж',
+              'Волгоград',
+              'Санкт-Петербург',
+              'Пекин',
+              'Чайнатаун',
+              'Белгород',
+              'Ростов-на-Дону',
+              'Ставпрополь',
+              'Сибирь',
+              'Кострома',
+              'Большая Лаповка',
+              'Провинция Шаньдун',
+              'Сеул',
+              'Токио',
+              'Мурманск',
+              'Луганск',
+              'Снежное',
+              'Сибирь',
+              'Кострома',
+              'Большая Лаповка',
+              'Провинция Шаньдун',
+              'Сеул',
+              'Токио',
+              'Мурманск',
+              'Луганск',
+              'Снежное',
+              'Провинция Шаньдун',
+              'Сеул',
+              'Токио',
+              'Мурманск',
+              'Луганск',
+              'Снежное'
+            ]
+          each item in items
+            +e('li').li
+              a.header-nav__link.header-nav__dropdown-link(href='#')= item
+    +e('footer').footer
+      button.button.button_white.modal__btn Отмена
+      button.button.button_red.modal__btn Выбрать
+    button.button_close.js-modalClose ×
+  +b.modal.modal-js(id='modalEnter')
     +e.content
-      +e('header').header
-        +e('h2').title Выберите город
-      +e.body
-        +e('form').form-location(id="location")
-          +e('input').city-search(type="search" name="city-search" placeholder="Введите город")
-        +b.city-choise
-          +e('ul').list
+      +e('h2').title Войти в личный кабинет
+      +e('p').text Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
+      +e('form').form
+        +e('input').input(placeholder='E-mail' type='email')
+        +e('input').input(placeholder='Пароль' type='password')
+        button.button.button_red.modal__btn Войти
+        .d-flex.align-items-center.flex-wrap
+          p.mr10.fw-light или через соц.сети
+          +b.social.ml-auto
             -
               var items = [
-                'Донецк',
-                'Москва',
-                'Магадан',
-                'Курск',
-                'Воронеж',
-                'Волгоград',
-                'Санкт-Петербург',
-                'Пекин',
-                'Чайнатаун',
-                'Белгород',
-                'Ростов-на-Дону',
-                'Ставпрополь',
-                'Сибирь',
-                'Кострома',
-                'Большая Лаповка',
-                'Провинция Шаньдун',
-                'Сеул',
-                'Токио',
-                'Мурманск',
-                'Луганск',
-                'Снежное',
-                'Сибирь',
-                'Кострома',
-                'Большая Лаповка',
-                'Провинция Шаньдун',
-                'Сеул',
-                'Токио',
-                'Мурманск',
-                'Луганск',
-                'Снежное',
-                'Провинция Шаньдун',
-                'Сеул',
-                'Токио',
-                'Мурманск',
-                'Луганск',
-                'Снежное'
+              'vk',
+              'facebook',
+              'twitter',
+              'youtube'
               ]
             each item in items
-              +e('li').li
-                a.header-nav__link.header-nav__dropdown-link(href='#')= item
-      +e('footer').footer
-        button.button.button_white.modal__btn Отмена
-        button.button.button_red.modal__btn Выбрать
-      +e('button').close.js-modalClose ×
+              +e('a').link(class=`bg-${item}` href='https://vk.com/rub_on')
+                i.fa(class=`fa-${item}`)
+      .text-center
+        span.fw-light Нет аккаунта?
+        +e('span').link  Зарегистрируйтесь!
+    button.button_close.js-modalClose ×

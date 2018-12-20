@@ -21,7 +21,7 @@
             </svg>
           </label>
         </form>
-        <button class="choose-region js-openLocationModal" type="button">
+        <button class="choose-region js-openModal" type="button" data-modal="#modalLocation">
           <svg class="choose-region__icon ico ico_gray">
             <use xlink:href="assets/images/svg.svg#nav">
             </use>
@@ -31,105 +31,120 @@
           <svg class="ico ico_gray mr10">
             <use xlink:href="assets/images/svg.svg#reg">
             </use>
-          </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text" href="#">Войти</a>
+          </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text js-openModal" href="#" data-modal="#modalEnter">Войти</a>
         </div>
       </div>
     </header>
-    <div class="modal js-locationModal">
-      <div class="modal__overlay js-modalClose">
-      </div>
-      <div class="modal__content">
-        <header class="modal__header">
-          <h2 class="modal__title">Выберите город
-          </h2>
-        </header>
-        <div class="modal__body">
-          <form class="modal__form-location" id="location"><input class="modal__city-search" type="search" name="city-search" placeholder="Введите город"/>
-          </form>
-          <div class="city-choise">
-            <ul class="city-choise__list">
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Донецк</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Москва</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Магадан</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Курск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Воронеж</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Волгоград</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Санкт-Петербург</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Пекин</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Чайнатаун</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Белгород</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ростов-на-Дону</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ставпрополь</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
-              </li>
-              <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
-              </li>
-            </ul>
-          </div>
+    <div class="modal__overlay js-modalClose"></div>
+    <div class="modal modal-big modal-js" id="modalLocation">
+      <header class="modal__header">
+        <h2 class="modal__title">Выберите город
+        </h2>
+      </header>
+      <div class="modal__body">
+        <form class="modal__form-location" id="location"><input class="modal__city-search" type="search" name="city-search" placeholder="Введите город"/>
+        </form>
+        <div class="city-choise">
+          <ul class="city-choise__list">
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Донецк</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Москва</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Магадан</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Курск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Воронеж</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Волгоград</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Санкт-Петербург</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Пекин</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Чайнатаун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Белгород</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ростов-на-Дону</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ставпрополь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+          </ul>
         </div>
-        <footer class="modal__footer">
-          <button class="button button_white modal__btn">Отмена</button>
-          <button class="button button_red modal__btn">Выбрать</button>
-        </footer>
-        <button class="modal__close js-modalClose">×
-        </button>
       </div>
+      <footer class="modal__footer">
+        <button class="button button_white modal__btn">Отмена</button>
+        <button class="button button_red modal__btn">Выбрать</button>
+      </footer>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalEnter">
+      <div class="modal__content">
+        <h2 class="modal__title">Войти в личный кабинет
+        </h2>
+        <p class="modal__text">Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
+        </p>
+        <form class="modal__form"><input class="modal__input" placeholder="E-mail" type="email"/><input class="modal__input" placeholder="Пароль" type="password"/>
+          <button class="button button_red modal__btn">Войти</button>
+          <div class="d-flex align-items-center flex-wrap">
+            <p class="mr10 fw-light">или через соц.сети</p>
+            <div class="social ml-auto"><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </form>
+        <div class="text-center"><span class="fw-light">Нет аккаунта?</span><span class="modal__link"> Зарегистрируйтесь!</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
     </div>
     <div class="menu__overlay js-menu-close"></div>
     <nav class="header-nav">
@@ -447,25 +462,727 @@
         </li>
       </ul>
       <ul class="nav-mobile__list js-nav-mobile" id="categoriesOne">
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#main-menu"><i class="fa fa-angle-left mr20"></i><span>Назад</span>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/chair.svg" alt="" width="25" height="25" role="presentation"/><span>Дом и сад</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category0"><img class="nav-mobile__svg mr20" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span><i class="fa fa-angle-right"></i>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/key.svg" alt="" width="25" height="25" role="presentation"/><span>Недвижимость</span>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category0">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/necktie.svg" alt="" width="25" height="25" role="presentation"/><span>Мода и стиль</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category1"><img class="nav-mobile__svg mr20" src="assets/images/svg/chair.svg" alt="" width="25" height="25" role="presentation"/><span>Дом и сад</span><i class="fa fa-angle-right"></i>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/devices.svg" alt="" width="25" height="25" role="presentation"/><span>Электроника</span>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category1">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/ball.svg" alt="" width="25" height="25" role="presentation"/><span>Хобби, отдых и спорт</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category2"><img class="nav-mobile__svg mr20" src="assets/images/svg/key.svg" alt="" width="25" height="25" role="presentation"/><span>Недвижимость</span><i class="fa fa-angle-right"></i>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/business.svg" alt="" width="25" height="25" role="presentation"/><span>Бизнес и услуги</span>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category2">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/paw.svg" alt="" width="25" height="25" role="presentation"/><span>Животные</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category3"><img class="nav-mobile__svg mr20" src="assets/images/svg/necktie.svg" alt="" width="25" height="25" role="presentation"/><span>Мода и стиль</span><i class="fa fa-angle-right"></i>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/job.svg" alt="" width="25" height="25" role="presentation"/><span>Работа</span>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category3">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
         </li>
-        <li class="nav-mobile__li"><img class="nav-mobile__svg mr20" src="assets/images/svg/bear.svg" alt="" width="25" height="25" role="presentation"/><span>Детский мир</span>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category4"><img class="nav-mobile__svg mr20" src="assets/images/svg/devices.svg" alt="" width="25" height="25" role="presentation"/><span>Электроника</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category4">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category5"><img class="nav-mobile__svg mr20" src="assets/images/svg/ball.svg" alt="" width="25" height="25" role="presentation"/><span>Хобби, отдых и спорт</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category5">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category6"><img class="nav-mobile__svg mr20" src="assets/images/svg/business.svg" alt="" width="25" height="25" role="presentation"/><span>Бизнес и услуги</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category6">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category7"><img class="nav-mobile__svg mr20" src="assets/images/svg/paw.svg" alt="" width="25" height="25" role="presentation"/><span>Животные</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category7">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category8"><img class="nav-mobile__svg mr20" src="assets/images/svg/job.svg" alt="" width="25" height="25" role="presentation"/><span>Работа</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category8">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category9"><img class="nav-mobile__svg mr20" src="assets/images/svg/bear.svg" alt="" width="25" height="25" role="presentation"/><span>Детский мир</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category9">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
         </li>
       </ul>
     </nav>
@@ -1136,7 +1853,7 @@
           </p>
           <nav class="footer__faq"><a class="footer__faq-link" href="#">Как продавать и покупать?</a><a class="footer__faq-link" href="#">Правила безопастности</a><a class="footer__faq-link" href="#">Обратная связь</a><a class="footer__faq-link" href="#">Помощь</a>
           </nav>
-          <div class="footer__social"><span class="mr10">Мы в соцсетях</span><a class="footer__social-link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="footer__social-link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="footer__social-link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="footer__social-link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+          <div class="social"><span class="mr10">Мы в соцсетях</span><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
           </div>
         </div>
       </div>
