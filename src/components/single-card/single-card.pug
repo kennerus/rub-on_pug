@@ -72,9 +72,9 @@ mixin single-card(data)
               i.fa.fa-heart-o
               span В избранное
             a.button.button_red.mt5.mb5.ml15 Посмотреть полностью
-          .mt15.fw-semi-bold.fz18.mb15
+          .mt15.fw-semi-bold.fz18.mb15.lg-none
             span Похожие объявления:
-          +e.slider
+          +e.slider.lg-none
             - for (var i = 0; i < 8; i++)
               if i < 4
                 - var num = i + 1

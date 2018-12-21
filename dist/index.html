@@ -31,7 +31,7 @@
           <svg class="ico ico_gray mr10">
             <use xlink:href="assets/images/svg.svg#reg">
             </use>
-          </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text js-openModal" href="#" data-modal="#modalEnter">Войти</a>
+          </svg><span class="gray-text js-openModal" data-modal="#modalReg">Регистрация</span></a><a class="header__enter red-text js-openModal" href="#" data-modal="#modalEnter">Войти</a>
         </div>
       </div>
     </header>
@@ -134,6 +134,11 @@
         <p class="modal__text">Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
         </p>
         <form class="modal__form"><input class="modal__input" placeholder="E-mail" type="email"/><input class="modal__input" placeholder="Пароль" type="password"/>
+          <div class="d-flex align-items-center flex-wrap mb10">
+            <label class="checkbox mt5 mb5">
+              <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Запомнить меня</span>
+            </label><span class="ml-auto mt5 mb5 c-gray fz12 js-openModal" data-modal="#modalPassword">Не можете войти?</span>
+          </div>
           <button class="button button_red modal__btn">Войти</button>
           <div class="d-flex align-items-center flex-wrap">
             <p class="mr10 fw-light">или через соц.сети</p>
@@ -141,7 +146,55 @@
             </div>
           </div>
         </form>
-        <div class="text-center"><span class="fw-light">Нет аккаунта?</span><span class="modal__link"> Зарегистрируйтесь!</span>
+        <div class="text-center"><span class="fw-light">Нет аккаунта?</span><span class="modal__link js-openModal" data-modal="#modalReg"> Зарегистрируйтесь!</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalPassword">
+      <div class="modal__content">
+        <h2 class="modal__title">Восстановление доступа
+        </h2>
+        <form class="modal__form"><input class="modal__input" placeholder="E-mail" type="email"/>
+          <button class="button button_red modal__btn js-openModal" data-modal="#modalPasswordSuccess">Отправить доступы на почту</button>
+        </form>
+        <div class="text-center"><span class="fw-light">или</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Войти в личный кабинет</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalReg">
+      <div class="modal__content">
+        <h2 class="modal__title">Войти в личный кабинет
+        </h2>
+        <p class="modal__text">Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
+        </p>
+        <form class="modal__form"><input class="modal__input" placeholder="Введите e-mail" type="email"/><input class="modal__input" placeholder="Введите логин" type="text"/><input class="modal__input" placeholder="Введите пароль" type="password"/>
+          <div class="d-flex align-items-center flex-wrap mb10">
+            <label class="checkbox mt5 mb5">
+              <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>* Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления</span>
+            </label>
+          </div>
+          <button class="button button_red modal__btn">Зарегистрироваться</button>
+          <div class="d-flex align-items-center flex-wrap">
+            <p class="mr10 fw-light">или через соц.сети</p>
+            <div class="social ml-auto"><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </form>
+        <div class="text-center"><span class="fw-light">Уже зарегистрированы?</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Авторизуйтесь!</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalPasswordSuccess">
+      <div class="modal__content">
+        <h2 class="modal__title">Благодарим
+        </h2>
+        <div class="check-pulse"><i class="fa fa-check"></i></div>
+        <p class="modal__text">Ваша заявка на восстановление доступа <br>к личному кабинету успешно отправлена.
+        </p>
+        <div class="text-center mt30"><span class="modal__link js-openModal" data-modal="#modalEnter"> Войти в личный кабинет</span>
         </div>
       </div>
       <button class="button_close js-modalClose">×</button>
@@ -151,14 +204,6 @@
       <button class="header-nav__btn js-btn-menu"><span></span><span></span><span></span>
       </button>
       <div class="container">
-        <div class="header-nav__mobile"><a class="button button_red mr10 mt10 mb10">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
-          <div class="header__profile"><a class="header__registration" href="#">
-            <svg class="ico ico_gray mr10">
-              <use xlink:href="assets/images/svg.svg#reg">
-              </use>
-            </svg><span class="gray-text">Регистрация</span></a><a class="header__enter red-text" href="#">Войти</a>
-          </div>
-        </div>
         <div class="header-nav__wrap">
           <div class="header-nav__item-wrap js-showCategoryList">
             <div class="header-nav__item"><a class="header-nav__link header-nav__link-category" href="#"><img class="header-nav__svg" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span></a>
@@ -434,19 +479,19 @@
     </header>
     <nav class="nav-mobile">
       <ul class="nav-mobile__list js-nav-mobile" id="main-menu">
-        <li class="nav-mobile__li">
-          <button class="choose-region js-openLocationModal" type="button">
+        <li class="nav-mobile__li js-openModal" data-modal="#modalLocation">
+          <div class="choose-region">
             <svg class="ico ico ico_gray mr20">
               <use xlink:href="assets/images/svg.svg#nav">
               </use>
             </svg><span class="gray-text">Санкт-Петербург</span>
-          </button>
+          </div>
         </li>
-        <li class="nav-mobile__li"><a href="#">
+        <li class="nav-mobile__li js-openModal" data-modal="#modalEnter">
           <svg class="ico ico_gray mr20">
             <use xlink:href="assets/images/svg.svg#reg">
             </use>
-          </svg><span class="gray-text">Войти в личный кабинет</span></a>
+          </svg><span class="gray-text">Войти в личный кабинет</span>
         </li>
         <li class="nav-mobile__li bg-red js-menu-link" data-menulink="#categoriesOne">
           <div class="category-icon ico mr20"><span></span><span></span><span></span><span></span>
@@ -1231,8 +1276,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1276,8 +1321,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1321,8 +1366,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1368,8 +1413,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1413,8 +1458,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1458,8 +1503,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1505,8 +1550,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1550,8 +1595,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1595,8 +1640,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1640,8 +1685,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1685,8 +1730,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1730,8 +1775,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1777,8 +1822,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>
@@ -1822,8 +1867,8 @@
                     </div>
                     <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                     </div>
-                    <div class="mt15 fw-semi-bold fz18 mb15"><span>Похожие объявления:</span></div>
-                    <div class="single-card__slider"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
+                    <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                    <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                     </div>
                   </div>
                 </div>

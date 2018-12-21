@@ -66,6 +66,13 @@
     border-bottom: 1px solid #f0f0f0
   &__content
     padding: 55px
+    @media (max-width: $lg)
+      max-height: 100%
+      overflow: scroll
+    @media (max-width: $md)
+      padding: 50px 40px
+    @media (max-width: $sm)
+      padding: 50px 15px
   &__close
     position: absolute
     top: -15px
@@ -87,8 +94,6 @@
     flex-wrap: wrap
     padding: 30px
     @media (max-width: $lg)
-      justify-content: space-evenly
-    @media (max-width: $md)
       flex-direction: column
       align-items: center
       .button
@@ -99,9 +104,8 @@
     max-width: 100%
     padding: 17px 23px !important
     font-size: 20px !important
-    @media (max-width: $lg)
-      width: 300px
-      font-size: 16px !important
+    @media (max-width: $md)
+      width: 100%
   &__input
     margin-bottom: 10px
     padding: 19px
@@ -114,6 +118,7 @@
       color: $main
   &__form
     width: 350px
+    max-width: 100%
     margin: 30px auto 40px
   &__link
     font-weight: 700
@@ -183,3 +188,26 @@
 .xl-none
   @media (max-width: $xl)
     display: none !important
+
+.js-openModal
+  cursor: pointer
+
+.check-pulse
+  +size(82px)
+  +flex-center
+  margin: 50px auto
+  color: #ffffff
+  font-size: 40px
+  background-color: $red
+  border-radius: 50%
+  animation: pulseShadow 2s ease infinite
+
+@keyframes pulseShadow
+  0%
+    box-shadow: 0 0 0 0 transparentize($red, 0)
+  33%
+    box-shadow: 0 0 0 7px transparentize($red, 0.6), 0 0 0 0 transparentize($red, 0.3)
+  66%
+    box-shadow: 0 0 0 14px transparentize($red, 0.6), 0 0 0 7px transparentize($red, 0.3)
+  100%
+    box-shadow: 0 0 0 0 transparentize($red, 0)

@@ -27,7 +27,7 @@ mixin header()
         +e('a')(href="#").registration
           +b('svg').ico._gray.mr10
             +e('use')(xlink:href="assets/images/svg.svg#reg")
-          +b('span').gray-text Регистрация
+          +b('span').gray-text.js-openModal(data-modal='#modalReg') Регистрация
         +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти
   .modal__overlay.js-modalClose
   +b.modal.modal-big.modal-js(id='modalLocation')
@@ -91,6 +91,13 @@ mixin header()
       +e('form').form
         +e('input').input(placeholder='E-mail' type='email')
         +e('input').input(placeholder='Пароль' type='password')
+        .d-flex.align-items-center.flex-wrap.mb10
+          +b('label').checkbox.mt5.mb5
+            input(type='checkbox')
+            +e.main
+              i.fa.fa-check
+            span Запомнить меня
+          span.ml-auto.mt5.mb5.c-gray.fz12.js-openModal(data-modal='#modalPassword') Не можете войти?
         button.button.button_red.modal__btn Войти
         .d-flex.align-items-center.flex-wrap
           p.mr10.fw-light или через соц.сети
@@ -107,5 +114,56 @@ mixin header()
                 i.fa(class=`fa-${item}`)
       .text-center
         span.fw-light Нет аккаунта?
-        +e('span').link  Зарегистрируйтесь!
+        +e('span').link.js-openModal(data-modal='#modalReg')  Зарегистрируйтесь!
+    button.button_close.js-modalClose ×
+  +b.modal.modal-js(id='modalPassword')
+    +e.content
+      +e('h2').title Восстановление доступа
+      +e('form').form
+        +e('input').input(placeholder='E-mail' type='email')
+        button.button.button_red.modal__btn.js-openModal(data-modal='#modalPasswordSuccess') Отправить доступы на почту
+      .text-center
+        span.fw-light или
+        +e('span').link.js-openModal(data-modal='#modalEnter')  Войти в личный кабинет
+    button.button_close.js-modalClose ×
+  +b.modal.modal-js(id='modalReg')
+    +e.content
+      +e('h2').title Войти в личный кабинет
+      +e('p').text Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
+      +e('form').form
+        +e('input').input(placeholder='Введите e-mail' type='email')
+        +e('input').input(placeholder='Введите логин' type='text')
+        +e('input').input(placeholder='Введите пароль' type='password')
+        .d-flex.align-items-center.flex-wrap.mb10
+          +b('label').checkbox.mt5.mb5
+            input(type='checkbox')
+            +e.main
+              i.fa.fa-check
+            span * Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления
+        button.button.button_red.modal__btn Зарегистрироваться
+        .d-flex.align-items-center.flex-wrap
+          p.mr10.fw-light или через соц.сети
+          +b.social.ml-auto
+            -
+              var items = [
+              'vk',
+              'facebook',
+              'twitter',
+              'youtube'
+              ]
+            each item in items
+              +e('a').link(class=`bg-${item}` href='https://vk.com/rub_on')
+                i.fa(class=`fa-${item}`)
+      .text-center
+        span.fw-light Уже зарегистрированы?
+        +e('span').link.js-openModal(data-modal='#modalEnter')  Авторизуйтесь!
+    button.button_close.js-modalClose ×
+  +b.modal.modal-js(id='modalPasswordSuccess')
+    +e.content
+      +e('h2').title Благодарим
+      .check-pulse
+        i.fa.fa-check
+      +e('p').text Ваша заявка на восстановление доступа <br>к личному кабинету успешно отправлена.
+      .text-center.mt30
+        +e('span').link.js-openModal(data-modal='#modalEnter')  Войти в личный кабинет
     button.button_close.js-modalClose ×

@@ -1,16 +1,15 @@
 mixin nav-mobile()
   +b('nav').nav-mobile
     +e('ul').list.js-nav-mobile(id='main-menu')
-      +e('li').li
-        +b('button')(type="button").choose-region.js-openLocationModal
+      +e('li').li.js-openModal(data-modal='#modalLocation')
+        .choose-region
           +b('svg').ico.ico._gray.mr20
             +e('use')(xlink:href="assets/images/svg.svg#nav")
           +b('span').gray-text Санкт-Петербург
-      +e('li').li
-        a(href="#")
-          +b('svg').ico._gray.mr20
-            +e('use')(xlink:href="assets/images/svg.svg#reg")
-          +b('span').gray-text Войти в личный кабинет
+      +e('li').li.js-openModal(data-modal='#modalEnter')
+        +b('svg').ico._gray.mr20
+          +e('use')(xlink:href="assets/images/svg.svg#reg")
+        +b('span').gray-text Войти в личный кабинет
       +e('li').li.bg-red.js-menu-link(data-menulink='#categoriesOne')
         .category-icon.ico.mr20
           - for (var i = 0; i < 4; i++)

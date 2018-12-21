@@ -12,8 +12,6 @@
   margin: $my 12px
   @media (max-width: $xl)
     width: calc((100% / 3) - 24px)
-  @media (max-width: $lg)
-    width: calc(50% - 24px)
   @media (max-width: $md)
     margin: $my 10px
   &__big
@@ -21,6 +19,9 @@
     @media (max-width: $xl)
       width: calc((100% / 3) * 2 - 24px)
     @media (max-width: $lg)
+      .single-card__bottom
+        height: 85px
+    @media (max-width: $md)
       width: 100%
     .single-card__bottom
       color: #ffffff
@@ -51,6 +52,8 @@
   &__top
     position: relative
     height: 320px
+    @media (max-width: $lg)
+      height: 280px
     @media (max-width: $sm)
       height: 260px
     &-content
@@ -58,6 +61,8 @@
       position: relative
       height: 100%
       padding: $py $px
+      @media (max-width: $lg)
+        padding: $py - 10px $px - 10px
     &-label
       +size(38px)
       +flex-center
@@ -77,6 +82,8 @@
     display: none
     padding: $py $px
     background-color: rgba(96,96,96,.5)
+    @media (max-width: $lg)
+      padding: $py - 10px $px - 10px
     a
       +absolute
   &__bottom
@@ -84,6 +91,8 @@
     flex-direction: column
     max-height: 114px
     padding: 15px $px 20px
+    @media (max-width: $lg)
+      padding: $py - 10px $px - 10px
   &__title
     height: 40px
     margin-bottom: 10px
@@ -92,6 +101,9 @@
     font-size: 16px
     color: inherit
     overflow: hidden
+    @media (max-width: $lg)
+      margin-bottom: 5px
+      font-size: 14px
     &:hover
       color: $gray
   &__price
@@ -100,6 +112,8 @@
     font-weight: 700
     font-size: 24px
     letter-spacing: 0.6px
+    @media (max-width: $lg)
+      font-size: 16px
   &__city
     position: relative
     z-index: 2
@@ -114,6 +128,9 @@
     line-height: 1
     background-color: transparentize($main, 0.4)
     border-radius: 2px
+    @media (max-width: $lg)
+      padding: 5px 10px
+      font-size: 10px
     &:hover
       color: $red
   &__like
@@ -125,6 +142,8 @@
     font-size: 22px
     color: #ffffff
     cursor: pointer
+    @media (max-width: $lg)
+      font-size: 18px
     &:hover
       color: $red
     .fa-heart
@@ -143,6 +162,8 @@
     &-content
       +absolute
       padding: $py $px
+      @media (max-width: $lg)
+        padding: $py - 10px $px - 10px
     &-label
       +size(27px)
       +flex-center
@@ -189,9 +210,9 @@
       width: $firstWidth
       @media (max-width: $xl)
         width: $firstWidth + $widthXl
-      @media (max-width: $lg)
-        width: 100%
-        height: 400px
+      //@media (max-width: $lg)
+      //  width: 100%
+      //  height: 400px
       &-content
         padding: 25px 30px
     &-main
@@ -200,8 +221,8 @@
       @media (max-width: $xl)
         width: $secondWidth - $widthXl
         padding: 30px 40px 25px 30px
-      @media (max-width: $lg)
-        width: 100%
+      //@media (max-width: $lg)
+      //  width: 100%
       @media (max-width: $sm)
         padding: 30px 15px
     &-title
@@ -211,6 +232,8 @@
       white-space: nowrap
       text-overflow: ellipsis
       overflow: hidden
+      @media (max-width: $lg)
+        font-size: 16px
       @media (max-width: $sm)
         font-size: 20px
     &-like
@@ -229,6 +252,8 @@
   &__info
     margin-top: 15px
     font-size: 15px
+    @media (max-width: $lg)
+      font-size: 14px
     p
       margin: 0
       line-height: 1.8
@@ -302,3 +327,7 @@
 
 .gifer-play-button
   opacity: 0
+
+.lg-none
+  @media (max-width: $lg)
+    display: none
