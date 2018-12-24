@@ -17,6 +17,10 @@ button
   border-radius: 4px
   cursor: pointer
   transition: $transition
+  @media (max-width: $md)
+    padding: $py
+  @media (max-width: $sm)
+    font-size: 12px
   &_red
     background-color: #ff564e
     &:hover
@@ -58,7 +62,7 @@ button
         text-decoration: none !important
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3)
   &_gray
-    color: #ffffff
+    color: #ffffff !important
     background-color: $gray
     &:hover
       color: #ffffff
@@ -75,3 +79,8 @@ button
   &_small
     padding: 5px 15px
     font-size: 13px
+    @media (max-width: $lg)
+      padding: 5px 10px
+      font-size: 11px
+    @media (max-width: $sm)
+      font-size: 10px

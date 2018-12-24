@@ -189,4 +189,14 @@ $(function () {
     $('.js-mobile-search').removeClass('mobile-search-active');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  $cg('.masonry').masonry({
+    cols: 3,
+    template: TEMPLATE_FIXED_SIZE,
+    height: 'auto',
+    columnGapBottom: 8,
+    columnGapRight: 8
+  });
+});
 //# sourceMappingURL=script.js.map

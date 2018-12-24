@@ -3,6 +3,8 @@
 .cards
   +flex-wrap
   margin: 0 -12px
+  @media (max-width: $lg)
+    margin: 0 -10px
 
 .single-card
   $px: 20px
@@ -12,8 +14,10 @@
   margin: $my 12px
   @media (max-width: $xl)
     width: calc((100% / 3) - 24px)
+  @media (max-width: $lg)
+    margin: 10px
   @media (max-width: $md)
-    margin: $my 10px
+    width: calc((100% / 2) - 20px)
   &__big
     width: calc(50% - 24px)
     @media (max-width: $xl)
@@ -22,7 +26,7 @@
       .single-card__bottom
         height: 85px
     @media (max-width: $md)
-      width: 100%
+      width: calc(100% - 20px)
     .single-card__bottom
       color: #ffffff
       background-color: $red
@@ -54,8 +58,10 @@
     height: 320px
     @media (max-width: $lg)
       height: 280px
-    @media (max-width: $sm)
-      height: 260px
+    @media (max-width: 500px)
+      height: 230px
+    @media (max-width: 400px)
+      height: 170px
     &-content
       +flex-wrap
       position: relative
@@ -186,22 +192,38 @@
     margin: $my * 2 0 0
     box-shadow: $shadow
     background-color: #fff
+    @media (max-width: $lg)
+      margin-top: 20px
+    &-date
+      margin-bottom: 5px
+      margin-top: 5px
+      margin-right: 15px
+      @media (max-width: $sm)
+        margin-right: 0
+        font-size: 10px
+    &-view
+      display: flex
+      align-items: center
+      margin: 5px 0
+      color: $gray
+      font-size: 13px
     &-tr
       position: absolute
       bottom: 100%
-      width: 40px
-      height: 40px
+      +size(40px)
       overflow: hidden
       &:after
         position: absolute
         bottom: -10px
         left: 10px
         content: ""
-        width: 20px
-        height: 20px
+        +size(20px)
         background-color: #fff
         transform: rotate(45deg)
         box-shadow: $shadow
+        @media (max-width: $lg)
+          +size(15px)
+          bottom: -8px
     &-content
       +flex-wrap
       align-items: stretch
@@ -210,21 +232,25 @@
       width: $firstWidth
       @media (max-width: $xl)
         width: $firstWidth + $widthXl
-      //@media (max-width: $lg)
-      //  width: 100%
-      //  height: 400px
+      @media (max-width: $sm)
+        width: 100%
+        height: 300px
       &-content
         padding: 25px 30px
+        @media (max-width: $lg)
+          padding: 20px
     &-main
       width: $secondWidth
       padding: 30px 90px 25px 50px
       @media (max-width: $xl)
         width: $secondWidth - $widthXl
         padding: 30px 40px 25px 30px
-      //@media (max-width: $lg)
-      //  width: 100%
+      @media (max-width: $lg)
+        padding: 20px
       @media (max-width: $sm)
-        padding: 30px 15px
+        width: 100%
+        padding: 15px
+        padding-top: 0
     &-title
       max-width: 555px
       font-size: 24px
@@ -234,8 +260,9 @@
       overflow: hidden
       @media (max-width: $lg)
         font-size: 16px
+        white-space: unset
       @media (max-width: $sm)
-        font-size: 20px
+        font-size: 14px
     &-like
       display: flex
       align-items: center
@@ -244,6 +271,11 @@
       font-size: 13px
       letter-spacing: 0.43px
       font-weight: 500
+      @media (max-width: $lg)
+        margin-right: auto
+        margin-left: 0
+      @media (max-width: $md)
+        display: none
       &:hover
         color: $red
       .fa

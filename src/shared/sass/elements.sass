@@ -176,6 +176,9 @@
 .justify-content-end
   justify-content: flex-end
 
+.justify-content-between
+  justify-content: space-between
+
 .flex-wrap
   flex-wrap: wrap
 
@@ -188,6 +191,20 @@
 .xl-none
   @media (max-width: $xl)
     display: none !important
+
+.lg-block
+  display: none !important
+  @media (max-width: $lg)
+    display: block !important
+
+.sm-none
+  @media (max-width: $sm)
+    display: none !important
+
+.sm-block
+  display: none !important
+  @media (max-width: $sm)
+    display: block !important
 
 .js-openModal
   cursor: pointer

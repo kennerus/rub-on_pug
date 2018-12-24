@@ -1,7 +1,8 @@
 mixin single-card(data)
   if data.big
     - var big = 'single-card__big'
-  +b.single-card.js-detail-wrap(class= big || '')
+    - var bigAttr = '2'
+  +b.single-card.js-detail-wrap.masonry(class= big || '', data-horizontal=bigAttr || '1', data-vertical="1")
     +e.main
       +e.top
         +e.overlay
@@ -34,9 +35,13 @@ mixin single-card(data)
       +e.bottom
         if data.big
           +e('a').title(href='#') Игровая компания UBISOFT (является одним из крупнейших игровых издателей в Европе и США)
-          +e.big-bottom
-            +e('a').company-link(href='#') Перейти на страницу компании
-            +e('a').button.button_white-on-pink.button_small.ml-auto(href='#') 250 товаров
+          .sm-none
+            +e.big-bottom
+              +e('a').company-link(href='#') Перейти на страницу компании
+              +e('a').button.button_white-on-pink.button_small.ml-auto(href='#') 250 товаров
+          .sm-block
+            +e('a').company-link(href='#') Страница компании
+              img.ml5(src='assets/images/arrow-sm.png' alt='')
         else
           +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
           +e('span').price 1800₽
@@ -51,14 +56,16 @@ mixin single-card(data)
               i.fa.fa-camera
               span 5
         +e.detail-main
-          a.button.button_small.button_gray Мода и стиль
+          a.button.button_small.button_gray.sm-none Мода и стиль
           +e('h3').detail-title.mb15.mt20 Рюкзак из натуральной крокодильей кожи, размеры 30х35 см
           +e.info-second
-            span.mr15.mt5.mb5 Добавлено: 19 марта 2018, 17:15
-            .d-flex.align-items-center.mt5.mb5
+            .sm-block.mr-auto
+              a.button.button_small.button_gray Мода и стиль
+            +e('span').detail-date Добавлено: 19 марта 2018, 17:15
+            +e.detail-view.sm-none
               img.mr5(src='assets/images/icon-eye.png' alt='')
               span 255
-            a.d-flex.align-items-center.ml-auto.mt5.mb5(href='#')
+            a.d-flex.align-items-center.ml-auto.mt5.mb5.lg-none(href='#')
               +b('svg').__icon.ico._gray
                 +e('use')(xlink:href="assets/images/svg.svg#nav")
               span.ml5 Санкт - Петербург
@@ -71,6 +78,10 @@ mixin single-card(data)
             +e('a').detail-like.mt5.mb5(href='#')
               i.fa.fa-heart-o
               span В избранное
+            .sm-block.mr-auto
+              +e.detail-view
+                img.mr5(src='assets/images/icon-eye.png' alt='')
+                span 255
             a.button.button_red.mt5.mb5.ml15 Посмотреть полностью
           .mt15.fw-semi-bold.fz18.mb15.lg-none
             span Похожие объявления:
