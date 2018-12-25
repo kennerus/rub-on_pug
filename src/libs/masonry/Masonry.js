@@ -31,7 +31,6 @@ function Masonry() {
             height: 300,
             columnGapBottom: 0,
             columnGapRight: 0,
-            containerHeight: 300
         };
 
         this.event = new MasonryEvents(options.events);

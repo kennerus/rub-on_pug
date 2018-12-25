@@ -14,7 +14,7 @@
 
 .modal
   display: none
-  position: fixed
+  position: fixed !important
   top: 50%
   left: 50%
   z-index: 1002
@@ -25,13 +25,18 @@
   max-width: calc(100% - 30px)
   background-color: #fff
   border-radius: 4px
-  &-big
-    width: 800px
   @media (max-width: $lg)
     top: 20px
     bottom: 20px
     max-height: calc(100vh - 40px)
     transform: translateX(-50%)
+  &-big
+    width: 800px
+  &__detail
+    padding: 0 !important
+    @media (max-width: $lg) 
+      bottom: unset
+      overflow: scroll
   &__overlay
     position: fixed
     z-index: 1001

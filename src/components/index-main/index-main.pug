@@ -5,7 +5,10 @@ mixin index-main()
     .container
       .cards
         - for (var i = 0; i < 14; i++)
-          - var data = {}
+          -
+            var data = {
+              index: i
+            }
           if i === 0
             - data.gif = true
           if i === 6 || i === 12

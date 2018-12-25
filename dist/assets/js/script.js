@@ -14,7 +14,46 @@ $(function () {
     var href = $(this).data('modal');
     var modal = $(href);
     $('.modal-js').not(modal).fadeOut(300);
-    $(modal).fadeIn(400);
+    $(modal).fadeIn({
+      start: function start() {
+        if (!$(this).hasClass('done')) {
+          if ($('.single-card__slider', this).length > 0) {
+            $('.single-card__slider', this).slick({
+              slidesToShow: 5,
+              nextArrow: '<button class="single-card__next">\n' + '            <svg>\n' + '              <use xlink:href="assets/images/svg.svg#arrow">\n' + '              </use>\n' + '            </svg>\n' + '          </button>',
+              prevArrow: '<button class="single-card__prev">\n' + '            <svg>\n' + '              <use xlink:href="assets/images/svg.svg#arrow">\n' + '              </use>\n' + '            </svg>\n' + '          </button>',
+              responsive: [{
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 4
+                }
+              }, {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 5
+                }
+              }, {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 4
+                }
+              }, {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 3
+                }
+              }, {
+                breakpoint: 420,
+                settings: {
+                  slidesToShow: 2
+                }
+              }]
+            });
+            $(this).addClass('done');
+          }
+        }
+      }
+    });
     $('.modal__overlay').addClass('modal__overlay-active');
   });
 
@@ -191,12 +230,27 @@ $(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+  var cols = 4;
+  var gapRight = 24;
+  var gapBottom = 40;
+  if (width < 1200) {
+    cols = 3;
+  }
+  if (width < 992) {
+    gapRight = 20;
+    gapBottom = 20;
+  }
+  if (width < 768) {
+    cols = 2;
+  }
   $cg('.masonry').masonry({
-    cols: 3,
+    cols: cols,
     template: TEMPLATE_FIXED_SIZE,
+    width: 'auto',
     height: 'auto',
-    columnGapBottom: 8,
-    columnGapRight: 8
+    columnGapBottom: gapBottom,
+    columnGapRight: gapRight
   });
 });
 //# sourceMappingURL=script.js.map

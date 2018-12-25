@@ -2,6 +2,7 @@
 
 .cards
   +flex-wrap
+  position: relative
   margin: 0 -12px
   @media (max-width: $lg)
     margin: 0 -10px
@@ -30,7 +31,9 @@
     .single-card__bottom
       color: #ffffff
       background-color: $red
-      max-height: 140px
+      height: 114px
+      @media (max-width: $lg)
+        height: 85px
       a
         &:hover
           color: inherit
@@ -188,12 +191,11 @@
     $secondWidth: 100% - $firstWidth
     $widthXl: 5%
     position: relative
-    display: none
-    margin: $my * 2 0 0
     box-shadow: $shadow
     background-color: #fff
     @media (max-width: $lg)
-      margin-top: 20px
+      max-height: 100%
+      overflow: scroll
     &-date
       margin-bottom: 5px
       margin-top: 5px
