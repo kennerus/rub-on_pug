@@ -44,7 +44,7 @@ mixin single-card(data)
               img.ml5(src='assets/images/arrow-sm.png' alt='')
         else
           +e('a').title(href='#') Рюкзак из натуральной кожи, размеры 30х35 см
-          span.price.price-adaptive 1800₽
+          span.price.price-adaptive.price-small 1800₽
     .modal.modal__detail.container.modal-js(id=`card-detail${data.index}`)
       +e.detail
         button.button_close.js-modalClose ×
