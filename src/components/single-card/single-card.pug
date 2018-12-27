@@ -18,7 +18,7 @@ mixin single-card(data)
             .width100
               +e('span').top-label Top
           +e('a').city(href='#') Москва
-          +e('span').like
+          +e('a').like(href='#')
             if data.like
               i.fa.fa-heart
             else

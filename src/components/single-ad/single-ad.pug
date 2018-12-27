@@ -28,12 +28,12 @@ mixin single-ad()
           .d-flex.align-items-center
             span.price 2500 ₽
             .md-block.ml-auto
-              +e.like
+              +e('a').like(href='#')
                 i.fa.fa-heart-o
           span.date.mt15 Добавлено: 19 марта 2018, 17:15
           .md-block
             +e('h2').title Рюкзак из натуральной крокодильей кожи
-          +e.like.md-none
+          +e('a').like.md-none(href='#')
             i.fa.fa-heart-o
             span Добавить в избранное
           +e.btns
@@ -44,7 +44,7 @@ mixin single-ad()
           +b.offer-user.mt30.mb30.md-none
             +e.avatar
               span ВК
-            +e.info
+            +e('a').info(href='#')
               +e('span').name Виктория Кромарова
               +e('span').count (15 объявлений)
           .d-flex.align-items-center
@@ -75,7 +75,7 @@ mixin single-ad()
             +b.offer-user
               +e.avatar
                 span ВК
-              +e.info
+              +e('a').info(href='#')
                 +e('span').name Виктория Кромарова
                 +e('span').count (15 объявлений)
           +e.bottom-item
