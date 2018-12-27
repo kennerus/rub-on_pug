@@ -23,17 +23,11 @@
     width: calc(50% - 24px)
     @media (max-width: $xl)
       width: calc((100% / 3) * 2 - 24px)
-    @media (max-width: $lg)
-      .single-card__bottom
-        height: 85px
     @media (max-width: $md)
       width: calc(100% - 20px)
     .single-card__bottom
       color: #ffffff
       background-color: $red
-      height: 114px
-      @media (max-width: $lg)
-        height: 85px
       a
         &:hover
           color: inherit
@@ -100,7 +94,9 @@
     flex-direction: column
     max-height: 114px
     padding: 15px $px 20px
+    height: 114px
     @media (max-width: $lg)
+      height: 85px
       padding: $py - 10px $px - 10px
   &__title
     height: 40px
