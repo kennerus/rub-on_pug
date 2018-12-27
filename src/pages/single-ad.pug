@@ -1,0 +1,13 @@
+extends ../components/layout-default/layout-default
+include ../components/nav-ad/nav-ad
+include ../components/single-ad/single-ad
+include ../components/similar/similar
+
+
+block head
+  - var pageTitle = 'Single Ad';
+
+block content
+  +nav-ad()
+  +single-ad()
+  +similar()

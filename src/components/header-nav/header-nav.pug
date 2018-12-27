@@ -1,8 +1,10 @@
 extends ../container/container
 
-mixin header-nav()
+mixin header-nav(index)
+  if index
+    - var menu = 'header-nav-open'
   .menu__overlay.js-menu-close
-  +b('nav').header-nav
+  +b('nav').header-nav(class= menu || '')
     +e('button').btn.js-btn-menu
       span
       span

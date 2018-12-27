@@ -1,0 +1,94 @@
+mixin single-ad()
+  +b('section').single-adv
+    .container
+      +e('h2').title.md-none Рюкзак из натуральной крокодильей кожи
+      +e.wrap
+        +e.left
+          -
+            var img = [
+              'assets/images/cards/detail-img1.jpg',
+              'assets/images/cards/detail-img2.jpg',
+              'assets/images/cards/detail-img3.jpg',
+              'assets/images/cards/detail-img1.jpg',
+              'assets/images/cards/detail-img2.jpg',
+              'assets/images/cards/detail-img3.jpg'
+            ]
+          +e.sliders
+            +e.slider-main
+              each item in img
+                +e.slider-main-item
+                  +e('a').slider-main-increase.fancybox(href= item)
+                    img(src='assets/images/ico-increase.png' alt='')
+                  img(src= item)
+            +e.slider-second
+              each item in img
+                +e.slider-second-item
+                  img(src= item)
+        +e.right
+          .d-flex.align-items-center
+            span.price 2500 ₽
+            .md-block.ml-auto
+              +e.like
+                i.fa.fa-heart-o
+          span.date.mt15 Добавлено: 19 марта 2018, 17:15
+          .md-block
+            +e('h2').title Рюкзак из натуральной крокодильей кожи
+          +e.like.md-none
+            i.fa.fa-heart-o
+            span Добавить в избранное
+          +e.btns
+            button.button.button_big-v.button_red-border.mb10.md-none Написать продавцу
+            .md-block
+              button.button.button_big-v.button_red-border Написать
+            button.button.button_big-v.button_red Показать номер
+          +b.offer-user.mt30.mb30.md-none
+            +e.avatar
+              span ВК
+            +e.info
+              +e('span').name Виктория Кромарова
+              +e('span').count (15 объявлений)
+          .d-flex.align-items-center
+            a.d-flex.align-items-center(href='#')
+              +b('svg').__icon.ico._gray
+                +e('use')(xlink:href="assets/images/svg.svg#nav")
+              span.ml5.c-gray.fz13 Санкт - Петербург
+            .ml-auto
+              .single-card__detail-view
+                img.mr5(src='assets/images/icon-eye.png' alt='')
+                span 255
+        +e.left
+          +e.bottom-item
+            +e.bottom-title.md-none
+              span Описание
+            +e.bottom-content.__desc
+              p Стильный, вместительный женский рюкзак из качественного кожзама.
+              p Легко вмещает в себя формат А4. Имеет 2-а больших отделения и 2-а маленьких кармашка впереди.
+              p Цена смешная 600р., т.к. лежит без надобности.
+              p Есть небольшой дефект, отходит ручка по шву, легко исправляется.
+          +e.bottom-item.md-none
+            +e.bottom-title.d-flex.align-items-center
+              span Узнайте больше
+            +e.bottom-content
+              button.button.button_red-border.mr10 Показать номер
+              button.button.button_red Написать продавцу
+          +e.bottom-item.md-flex
+            +b.offer-user
+              +e.avatar
+                span ВК
+              +e.info
+                +e('span').name Виктория Кромарова
+                +e('span').count (15 объявлений)
+          +e.bottom-item
+            +e.bottom-title.d-flex.align-items-center
+              span Поделиться
+            +e.bottom-content.d-flex
+              +b.social
+                -
+                  var items = [
+                  'vk',
+                  'facebook',
+                  'odnoklassniki'
+                  ]
+                each item in items
+                  +e('a').link(class=`bg-${item}` href='https://vk.com/rub_on')
+                    i.fa(class=`fa-${item}`)

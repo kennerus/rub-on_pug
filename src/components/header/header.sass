@@ -32,12 +32,13 @@
 
 .global-search
   position: relative
+  flex-grow: 1
   margin-right: 15px
   transition: $transition
   &--active
     top: 0
   &__input
-    width: 300px
+    width: 100%
     padding: 8px 20px
     border: 1px solid #e5e5e5
     border-radius: 4px
@@ -52,11 +53,27 @@
     cursor: pointer
 
 .header
-  font-size: 13px
+  position: sticky
+  z-index: 101
+  top: 0
   padding: 20px 0
+  font-size: 13px
   background-color: #fff
   @media (max-width: $xl)
     display: none
+  &__category
+    +btn
+    display: flex
+    align-items: center
+    width: 96px
+    padding: 0
+    margin-right: 20px
+    color: $red
+    font-size: 13px
+    overflow: hidden
+    transition: $transition
+    &-none
+      width: 0
   &__profile
     display: flex
     align-items: center

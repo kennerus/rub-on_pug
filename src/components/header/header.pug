@@ -1,11 +1,16 @@
 extends ../container/container
 include ../button/button
 
-mixin header()
+mixin header(index)
   +b('header').header
-    +container('_flex')
+    .container.container_flex
       +b('a')(href="/").logo
         +e('img')(src="assets/images/logo.png", width="175", height="47", alt="RUBON").img
+      if index
+        - var category = 'header__category-none'
+      +e('button').category.js-btn-category(class= category || '')
+        img.mr10(src='assets/images/ico-caregory.png' alt='')
+        span Категории
 
       +b('form').global-search
         +e('input')#global-search.input(type="search", placeholder="Поиск...")

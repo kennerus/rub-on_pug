@@ -31,6 +31,12 @@ button
       color: white
       background-color: #cc2d2d
       box-shadow: none
+    &-border
+      border: 1px solid $red
+      color: $red
+      &:hover
+        color: $white
+        background-color: $red
   &_blue
     background-color: #4d8eff
     &:hover
@@ -69,6 +75,16 @@ button
       background-color: darken($gray, 20)
   &_big
     padding: $py 45px
+    font-size: 14px
+    @media (max-width: $md)
+      padding: $py 13px
+      font-size: 12px
+    &-v
+      padding: 14px $px
+      font-size: 16px
+      @media (max-width: $md)
+        padding: $py $px
+        font-size: 14px
   &_close
     +btn
     position: absolute

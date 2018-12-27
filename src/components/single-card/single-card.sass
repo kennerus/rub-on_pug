@@ -115,14 +115,8 @@
       font-size: 14px
     &:hover
       color: $gray
-  &__price
+  .price
     margin-top: auto
-    color: $red
-    font-weight: 700
-    font-size: 24px
-    letter-spacing: 0.6px
-    @media (max-width: $lg)
-      font-size: 16px
   &__city
     position: relative
     z-index: 2
@@ -365,3 +359,12 @@
 .lg-none
   @media (max-width: $lg)
     display: none
+
+.price
+  color: $red
+  font-weight: 700
+  font-size: 24px
+  letter-spacing: 0.6px
+  &-adaptive
+    @media (max-width: $lg)
+      font-size: 16px

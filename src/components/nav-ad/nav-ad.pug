@@ -1,0 +1,17 @@
+mixin nav-ad()
+  +b('section').nav-adv
+    .container
+      -
+        var items = [
+          'Главная',
+          'Женский гардероб',
+          'Платья и юбки',
+          'Платье бордовое в пол вечернее'
+        ]
+      +e('nav').wrap
+        each item, index in items
+          if index === items.length - 1
+            +e('a').item(href='#')= item
+          else
+            +e('a').item(href='#')= item
+            +e('span').slash /

@@ -1,0 +1,194 @@
+@import "../../shared/sass/imports"
+
+.single-adv
+  $leftWidth: 75%
+  $rightWidth: 100% - $leftWidth
+  background-color: $white
+  &__wrap
+    +flex-wrap
+  &__title
+    font-size: 24px
+    font-weight: 700
+    @media (max-width: $md)
+      font-size: 18px
+  &__left
+    width: $leftWidth
+    padding-right: 70px
+    @media (max-width: $xl)
+      padding-right: 20px
+    @media (max-width: $lg)
+      width: 100%
+      padding-right: 0
+  &__right
+    display: flex
+    flex-direction: column
+    width: $rightWidth
+    @media (max-width: $lg)
+      width: 100%
+      padding-top: 30px
+  &__btns
+    display: flex
+    flex-direction: column
+    @media (max-width: $md)
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 20px
+  &__like
+    display: flex
+    align-items: center
+    margin: 30px 0
+    color: $gray
+    font-size: 16px
+    @media (max-width: $md)
+      margin: 0
+    .fa-heart-o
+      font-size: 19px
+      margin-right: 15px
+  &__bottom
+    $title: 220px
+    &-item
+      display: flex
+      padding: 40px 0
+      border-bottom: 1px solid #e2e2e2
+      @media (max-width: $md)
+        padding: 20px 0
+      &:last-of-type
+        border-bottom: none
+    &-title
+      min-width: $title
+      max-width: $title
+      letter-spacing: 0.9px
+      font-size: 18px
+      color: $gray
+      @media (max-width: $md)
+        font-size: 14px
+        min-width: unset
+        max-width: unset
+    &-content
+      flex-grow: 1
+      .social
+        margin-left: 0
+        @media (max-width: $md)
+          margin-left: auto
+  &__desc
+    p
+      margin: 25px 0
+      @media (max-width: $md)
+        margin: 0
+      &:first-of-type
+        margin-top: 0
+      &:last-of-type
+        margin-bottom: 0
+  &__sliders
+    +flex-wrap
+    img
+      max-height: 100%
+      max-width: 100%
+      height: auto
+      width: auto
+  &__slider
+    &-main
+      width: 80%
+      height: 479px
+      border: 1px solid #e8e8e8
+      @media (max-width: $md)
+        width: calc(100% + 20px)
+        height: 350px
+        margin: 0 -10px
+        border: 0
+      @media (max-width: $sm)
+        height: 275px
+      .slick-list,
+      .slick-track
+        height: 100%
+      .slick-dots
+        position: absolute
+        left: 50%
+        bottom: 30px
+        display: flex
+        margin: 0
+        padding: 0
+        transform: translateX(-50%)
+        list-style: none
+        .slick-active
+          background-color: $red
+          border-color: $red
+        li
+          +f-size(6px)
+          margin: 2px
+          background-color: #fff
+          border-radius: 50%
+          border: 1px solid #e2e2e2
+        button
+          display: none
+      &-increase
+        +btn
+        position: absolute
+        z-index: 1
+        top: 13px
+        right: 13px
+        padding: 7px
+        transition: $transition
+        background-color: #fff
+        &:hover
+          transform: scale(1.2)
+      &-item
+        position: relative
+        display: flex !important
+        align-items: center
+        justify-content: center
+    &-second
+      width: calc(20% - 7px)
+      margin-left: 7px
+      margin-bottom: -7px
+      @media (max-width: $md)
+        width: 100%
+        margin-left: 0
+        margin-top: 7px
+      &-item
+        position: relative
+        height: 155px !important
+        margin-bottom: 7px
+        border: 1px solid #e8e8e8 !important
+        @media (max-width: $md)
+          width: 155px
+          margin-bottom: 0
+          margin-right: 7px
+        @media (max-width: $sm)
+          width: 75px
+          height: 55px !important
+        img
+          +fit-cover
+.date
+  letter-spacing: 0.33px
+  font-size: 13px
+  font-weight: 500
+
+.offer-user
+  display: flex
+  align-items: center
+  &__avatar
+    +f-size(50px)
+    +flex-center
+    position: relative
+    margin-right: 10px
+    color: $white
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 0.5px
+    border-radius: 50%
+    background-color: #dddddd
+  &__info
+    display: flex
+    flex-direction: column
+  &__name
+    font-size: 18px
+    font-weight: 500
+    letter-spacing: 0.45px
+    @media (max-width: $md)
+      font-size: 16px
+  &__count
+    font-weight: 500
+    font-size: 14px
+    letter-spacing: 0.35px
+    color: $red
