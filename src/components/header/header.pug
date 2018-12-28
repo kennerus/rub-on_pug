@@ -191,3 +191,12 @@ mixin header(index)
           span.fw-light Уже зарегистрированы?
           +e('span').link.js-openModal(data-modal='#modalEnter')  Авторизуйтесь!
     button.button_close.js-modalClose ×
+  +b.modal.modal-js(id='modalPasswordSuccess')
+    +e.content
+      +e('h2').title Благодарим
+      .check-pulse
+        i.fa.fa-check
+      +e('p').text Ваша заявка на восстановление доступа <br>к личному кабинету успешно отправлена.
+      .text-center.mt30
+        +e('span').link.js-openModal(data-modal='#modalEnter')  Войти в личный кабинет
+    button.button_close.js-modalClose ×

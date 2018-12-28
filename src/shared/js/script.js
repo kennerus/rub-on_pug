@@ -13,6 +13,7 @@ $(function() {
     e.preventDefault();
     let href = $(this).data('modal');
     let modal = $(href);
+    console.log(modal)
     $('.modal-js').not(modal).fadeOut(300);
     $(modal).fadeIn({
       start: function() {
