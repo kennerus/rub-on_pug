@@ -46,7 +46,11 @@
     font-size: 16px
     &:hover
       color: $red
-    @media (max-width: $md)
+    @media (max-width: $lg)
+      margin-top: 15px
+      margin-bottom: 0
+      margin-left: auto
+    @media (max-width: $sm)
       margin: 0
     .fa-heart-o
       font-size: 19px
@@ -166,6 +170,12 @@
           height: 55px !important
         img
           +fit-cover
+  &__like-and-date
+    display: flex
+    flex-direction: column
+    @media (max-width: $lg)
+      flex-direction: row
+      align-items: center
 .date
   letter-spacing: 0.33px
   font-size: 13px

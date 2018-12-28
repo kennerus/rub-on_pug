@@ -27,15 +27,16 @@ mixin single-ad()
         +e.right
           .d-flex.align-items-center
             span.price 2500 ₽
-            .md-block.ml-auto
+            .sm-block.ml-auto
               +e('a').like(href='#')
                 i.fa.fa-heart-o
-          span.date.mt15 Добавлено: 19 марта 2018, 17:15
+          +e.like-and-date
+            span.date.mt15 Добавлено: 19 марта 2018, 17:15
+            +e('a').like.sm-none(href='#')
+              i.fa.fa-heart-o
+              span Добавить в избранное
           .lg-block
             +e('h2').title Рюкзак из натуральной крокодильей кожи
-          +e('a').like.md-none(href='#')
-            i.fa.fa-heart-o
-            span Добавить в избранное
           +e.btns
             button.button.button_big-v.button_red-border.mb10.md-none Написать продавцу
             .md-block
