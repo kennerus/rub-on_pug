@@ -2,8 +2,14 @@
 
 input
   font: inherit
-  &::placeholder
+  &::placeholder,
+  &::-webkit-input-placeholder
     font: inherit
+    transition: $transition
+  &:focus
+    &::placeholder,
+    &::-webkit-input-placeholder
+      color: transparent
 
 .checkbox
   position: relative

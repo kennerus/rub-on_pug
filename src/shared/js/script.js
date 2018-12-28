@@ -346,10 +346,11 @@ document.addEventListener("DOMContentLoaded", function () {
     cols = 3;
   }
   if (width < 992) {
+    let cols = 3;
     gapRight = 20;
     gapBottom = 20;
   }
-  if (width < 768) {
+  if (width < 740) {
     cols = 2;
   }
   $cg('.masonry').masonry({
