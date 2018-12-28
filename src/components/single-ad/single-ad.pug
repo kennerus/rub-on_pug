@@ -38,11 +38,11 @@ mixin single-ad()
           .lg-block
             +e('h2').title Рюкзак из натуральной крокодильей кожи
           +e.btns
-            button.button.button_big-v.button_red-border.mb10.md-none Написать продавцу
-            .md-block
+            button.button.button_big-v.button_red-border.mb10.sm-none Написать продавцу
+            .sm-block
               button.button.button_big-v.button_red-border Написать
             button.button.button_big-v.button_red Показать номер
-          +b.offer-user.mt30.mb30.md-none
+          +b.offer-user.mt30.mb30.lg-none
             +e.avatar
               span ВК
             +e('a').info(href='#')
@@ -59,20 +59,20 @@ mixin single-ad()
                 span 255
         +e.left
           +e.bottom-item
-            +e.bottom-title.md-none
+            +e.bottom-title.sm-none
               span Описание
             +e.bottom-content.__desc
               p Стильный, вместительный женский рюкзак из качественного кожзама.
               p Легко вмещает в себя формат А4. Имеет 2-а больших отделения и 2-а маленьких кармашка впереди.
               p Цена смешная 600р., т.к. лежит без надобности.
               p Есть небольшой дефект, отходит ручка по шву, легко исправляется.
-          +e.bottom-item.md-none
+          +e.bottom-item.lg-none
             +e.bottom-title.d-flex.align-items-center
               span Узнайте больше
             +e.bottom-content
               button.button.button_red-border.mr10 Показать номер
               button.button.button_red Написать продавцу
-          +e.bottom-item.md-flex
+          +e.bottom-item.lg-flex
             +b.offer-user
               +e.avatar
                 span ВК
