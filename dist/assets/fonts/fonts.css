@@ -80,7 +80,7 @@
 
 @font-face {
 	font-family: "AvenirNextCyr";
-	src: url("AvenirNextCyrMedium.ttf");
+	src: url("AvenirNextCyrMedium.eot");
 	src: url("AvenirNextCyrMedium.eot?#iefix") format("embedded-opentype"),
 	url("AvenirNextCyrMedium.woff2") format("woff2"),
 	url("AvenirNextCyrMedium.woff") format("woff");

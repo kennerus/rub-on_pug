@@ -281,7 +281,7 @@ $(function() {
       fade: true,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 576,
           settings: {
             dots: true
           }
@@ -299,7 +299,7 @@ $(function() {
       verticalSwiping: true,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 576,
           settings: {
             variableWidth: true,
             vertical: false,
@@ -310,7 +310,9 @@ $(function() {
     });
   }
 
-  $(".fancybox").fancybox();
+  $(".fancybox").fancybox({
+    thumbs: false
+  });
 
   if($('.js-btn-category.header__category-none').length > 0) {
     $(document).scroll(function() {

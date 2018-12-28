@@ -74,7 +74,7 @@ mixin single-card(data)
               p Материал: натуральная кожа супер качество!
               p Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!
               p Цвет: чёрная
-            .d-flex.flex-wrap.align-items-center.justify-content-end.mt15
+            .d-flex.flex-wrap.align-items-center.justify-content-end.mt10
               +e('a').detail-like.mt5.mb5(href='#')
                 i.fa.fa-heart-o
                 span В избранное
@@ -83,7 +83,7 @@ mixin single-card(data)
                   img.mr5(src='assets/images/icon-eye.png' alt='')
                   span 255
               a.button.button_red.mt5.mb5.ml15 Посмотреть полностью
-            .mt15.fw-semi-bold.fz18.mb15.lg-none
+            .mt10.fw-semi-bold.fz18.mb10.lg-none
               span Похожие объявления:
             +e.slider.lg-none
               - for (var i = 0; i < 8; i++)

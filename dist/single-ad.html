@@ -130,26 +130,27 @@
       </footer>
       <button class="button_close js-modalClose">×</button>
     </div>
-    <div class="modal modal-js" id="modalEnter">
-      <div class="modal__content">
-        <h2 class="modal__title">Войти в личный кабинет
-        </h2>
-        <p class="modal__text">Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
-        </p>
-        <form class="modal__form"><input class="modal__input" placeholder="E-mail" type="email"/><input class="modal__input" placeholder="Пароль" type="password"/>
-          <div class="d-flex align-items-center flex-wrap mb10">
-            <label class="checkbox mt5 mb5">
-              <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Запомнить меня</span>
-            </label><span class="ml-auto mt5 mb5 c-gray fz12 js-openModal" data-modal="#modalPassword">Не можете войти?</span>
-          </div>
-          <button class="button button_red modal__btn">Войти</button>
-          <div class="d-flex align-items-center flex-wrap">
-            <p class="mr10 fw-light">или через соц.сети</p>
-            <div class="social ml-auto"><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+    <div class="modal modal-big modal-js" id="modalEnter">
+      <div class="modal__content modal__content-two d-flex flex-wrap">
+        <div class="modal__left">
+          <h2 class="modal__title modal__title-small">Войти в кабинет
+          </h2>
+          <form class="modal__form mb0"><input class="modal__input modal__input-small" placeholder="Введите e-mail" type="email"/><input class="modal__input modal__input-small" placeholder="Введите пароль" type="password"/>
+            <div class="d-flex align-items-center flex-wrap mb15 mt5">
+              <label class="checkbox mt5 mb5">
+                <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Запомнить меня</span>
+              </label><span class="ml-auto mt5 mb5 c-gray fz12 js-openModal" data-modal="#modalPassword">Не можете войти?</span>
             </div>
+            <button class="button button_red modal__btn modal__btn-small">Войти</button>
+          </form>
+        </div>
+        <div class="modal__center"><span>или</span>
+        </div>
+        <div class="modal__right">
+          <div class="pb20"><a class="modal__social button btn-vk" href="#"><span>Войдите через VK</span><i class="fa fa-vk"></i></a><a class="modal__social button btn-facebook" href="#"><span>Войдите через Facebook</span><i class="fa fa-facebook"></i></a><a class="modal__social button btn-twitter" href="#"><span>Войдите через Twitter</span><i class="fa fa-twitter"></i></a><a class="modal__social button btn-google-plus" href="#"><span>Войдите через Google</span><i class="fa fa-google-plus"></i></a>
           </div>
-        </form>
-        <div class="text-center"><span class="fw-light">Нет аккаунта?</span><span class="modal__link js-openModal" data-modal="#modalReg"> Зарегистрируйтесь!</span>
+          <div class="text-center pt20 fz15"><span class="fw-light">Нет аккаунта?</span><span class="modal__link js-openModal" data-modal="#modalReg"> Зарегистрируйтесь!</span>
+          </div>
         </div>
       </div>
       <button class="button_close js-modalClose">×</button>
@@ -166,38 +167,27 @@
       </div>
       <button class="button_close js-modalClose">×</button>
     </div>
-    <div class="modal modal-js" id="modalReg">
-      <div class="modal__content">
-        <h2 class="modal__title">Войти в личный кабинет
-        </h2>
-        <p class="modal__text">Rubon — это сервис бесплатных объявлений, где обычные люди продают, находят и покупают вещи друг у друга.
-        </p>
-        <form class="modal__form"><input class="modal__input" placeholder="Введите e-mail" type="email"/><input class="modal__input" placeholder="Введите логин" type="text"/><input class="modal__input" placeholder="Введите пароль" type="password"/>
-          <div class="d-flex align-items-center flex-wrap mb10">
-            <label class="checkbox mt5 mb5">
-              <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>* Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления</span>
-            </label>
-          </div>
-          <button class="button button_red modal__btn">Зарегистрироваться</button>
-          <div class="d-flex align-items-center flex-wrap">
-            <p class="mr10 fw-light">или через соц.сети</p>
-            <div class="social ml-auto"><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+    <div class="modal modal-big modal-js" id="modalReg">
+      <div class="modal__content modal__content-two d-flex flex-wrap">
+        <div class="modal__left">
+          <h2 class="modal__title modal__title-small">Войти в кабинет
+          </h2>
+          <form class="modal__form mb0"><input class="modal__input modal__input-small" placeholder="Введите e-mail" type="email"/><input class="modal__input modal__input-small" placeholder="Введите логин" type="text"/><input class="modal__input modal__input-small" placeholder="Введите пароль" type="password"/>
+            <div class="d-flex align-items-center flex-wrap mb15 mt5">
+              <label class="checkbox mt5 mb5">
+                <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>* Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления</span>
+              </label>
             </div>
-          </div>
-        </form>
-        <div class="text-center"><span class="fw-light">Уже зарегистрированы?</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Авторизуйтесь!</span>
+            <button class="button button_red modal__btn modal__btn-small">Зарегистрироваться</button>
+          </form>
         </div>
-      </div>
-      <button class="button_close js-modalClose">×</button>
-    </div>
-    <div class="modal modal-js" id="modalPasswordSuccess">
-      <div class="modal__content">
-        <h2 class="modal__title">Благодарим
-        </h2>
-        <div class="check-pulse"><i class="fa fa-check"></i></div>
-        <p class="modal__text">Ваша заявка на восстановление доступа <br>к личному кабинету успешно отправлена.
-        </p>
-        <div class="text-center mt30"><span class="modal__link js-openModal" data-modal="#modalEnter"> Войти в личный кабинет</span>
+        <div class="modal__center"><span>или</span>
+        </div>
+        <div class="modal__right">
+          <div class="pb20"><a class="modal__social button btn-vk" href="#"><span>Регистрация через VK</span><i class="fa fa-vk"></i></a><a class="modal__social button btn-facebook" href="#"><span>Регистрация через Facebook</span><i class="fa fa-facebook"></i></a><a class="modal__social button btn-twitter" href="#"><span>Регистрация через Twitter</span><i class="fa fa-twitter"></i></a><a class="modal__social button btn-google-plus" href="#"><span>Регистрация через Google</span><i class="fa fa-google-plus"></i></a>
+          </div>
+          <div class="text-center pt20 fz15"><span class="fw-light">Уже зарегистрированы?</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Авторизуйтесь!</span>
+          </div>
         </div>
       </div>
       <button class="button_close js-modalClose">×</button>
@@ -1243,23 +1233,23 @@
       </section>
       <section class="single-adv">
         <div class="container">
-          <h2 class="single-adv__title md-none">Рюкзак из натуральной крокодильей кожи
+          <h2 class="single-adv__title lg-none">Рюкзак из натуральной крокодильей кожи
           </h2>
           <div class="single-adv__wrap">
             <div class="single-adv__left">
               <div class="single-adv__sliders">
                 <div class="single-adv__slider-main">
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img1.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img1.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img1.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img1.jpg"/>
                   </div>
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img2.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img2.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img2.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img2.jpg"/>
                   </div>
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img3.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img3.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img3.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img3.jpg"/>
                   </div>
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img1.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img1.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img1.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img1.jpg"/>
                   </div>
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img2.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img2.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img2.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img2.jpg"/>
                   </div>
-                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" href="assets/images/cards/detail-img3.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img3.jpg"/>
+                  <div class="single-adv__slider-main-item"><a class="single-adv__slider-main-increase fancybox" data-fancybox="gallery1" href="assets/images/cards/detail-img3.jpg"><img src="assets/images/ico-increase.png" alt=""/></a><img src="assets/images/cards/detail-img3.jpg"/>
                   </div>
                 </div>
                 <div class="single-adv__slider-second">
@@ -1283,7 +1273,7 @@
                 <div class="md-block ml-auto"><a class="single-adv__like" href="#"><i class="fa fa-heart-o"></i></a>
                 </div>
               </div><span class="date mt15">Добавлено: 19 марта 2018, 17:15</span>
-              <div class="md-block">
+              <div class="lg-block">
                 <h2 class="single-adv__title">Рюкзак из натуральной крокодильей кожи
                 </h2>
               </div><a class="single-adv__like md-none" href="#"><i class="fa fa-heart-o"></i><span>Добавить в избранное</span></a>
@@ -1387,13 +1377,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1438,13 +1428,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1489,13 +1479,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1540,13 +1530,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1591,13 +1581,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1642,13 +1632,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1693,13 +1683,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>
@@ -1744,13 +1734,13 @@
                         <p>Форму держит, на змейке внутри, носиться как сумкой так и рюкзаком!</p>
                         <p>Цвет: чёрная</p>
                       </div>
-                      <div class="d-flex flex-wrap align-items-center justify-content-end mt15"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
+                      <div class="d-flex flex-wrap align-items-center justify-content-end mt10"><a class="single-card__detail-like mt5 mb5" href="#"><i class="fa fa-heart-o"></i><span>В избранное</span></a>
                         <div class="sm-block mr-auto">
                           <div class="single-card__detail-view"><img class="mr5" src="assets/images/icon-eye.png" alt=""/><span>255</span>
                           </div>
                         </div><a class="button button_red mt5 mb5 ml15">Посмотреть полностью</a>
                       </div>
-                      <div class="mt15 fw-semi-bold fz18 mb15 lg-none"><span>Похожие объявления:</span></div>
+                      <div class="mt10 fw-semi-bold fz18 mb10 lg-none"><span>Похожие объявления:</span></div>
                       <div class="single-card__slider lg-none"><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-01.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-02.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-03.jpg" alt=""/></a><a class="single-card__slider-item" href="#"><img class="bg-img" src="assets/images/cards/bag-04.jpg" alt=""/></a>
                       </div>
                     </div>

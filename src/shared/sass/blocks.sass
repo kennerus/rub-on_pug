@@ -12,3 +12,10 @@
 
 .d-none
   display: none !important
+
+@each $name, $color in $bg
+  .btn-#{$name}
+    background-color: #{$color} !important
+    &:hover
+      color: #ffffff
+      background-color: darken($color, 5) !important

@@ -1,7 +1,7 @@
 mixin single-ad()
   +b('section').single-adv
     .container
-      +e('h2').title.md-none Рюкзак из натуральной крокодильей кожи
+      +e('h2').title.lg-none Рюкзак из натуральной крокодильей кожи
       +e.wrap
         +e.left
           -
@@ -17,7 +17,7 @@ mixin single-ad()
             +e.slider-main
               each item in img
                 +e.slider-main-item
-                  +e('a').slider-main-increase.fancybox(href= item)
+                  +e('a').slider-main-increase.fancybox(data-fancybox="gallery1" href= item)
                     img(src='assets/images/ico-increase.png' alt='')
                   img(src= item)
             +e.slider-second
@@ -31,7 +31,7 @@ mixin single-ad()
               +e('a').like(href='#')
                 i.fa.fa-heart-o
           span.date.mt15 Добавлено: 19 марта 2018, 17:15
-          .md-block
+          .lg-block
             +e('h2').title Рюкзак из натуральной крокодильей кожи
           +e('a').like.md-none(href='#')
             i.fa.fa-heart-o
