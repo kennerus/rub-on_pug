@@ -1,6 +1,7 @@
 include ../../../node_modules/bemto.pug/bemto
 include ../header/header
 include ../header-nav/header-nav
+include ../nav-open/nav-open
 include ../header-mobile/header-mobile
 include ../nav-mobile/nav-mobile
 include ../footer/footer
@@ -22,7 +23,9 @@ html(lang='ru')
     link(href='assets/fonts/fonts.css' rel='stylesheet')
   body
     +header(index)
-    +header-nav(index)
+    if index
+      +header-nav(index)
+    +nav-open
     +header-mobile
     +nav-mobile
     main.main

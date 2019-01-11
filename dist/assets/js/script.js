@@ -271,19 +271,15 @@ $(function () {
     $(document).scroll(function () {
       if ($(document).scrollTop() > heightMenu) {
         $('.js-btn-category').removeClass('header__category-none');
-        $('.main').css('marginTop', heightMenu);
-        $('.header-nav').removeClass('header-nav-open');
       } else {
         $('.js-btn-category').addClass('header__category-none');
-        $('.header-nav').removeClass('header-nav-active');
-        $('.header-nav').addClass('header-nav-open');
-        $('.main').css('marginTop', 0);
+        $('.nav-open').removeClass('nav-open-active');
       }
     });
   }
 
   $(document).on('click', '.js-btn-category', function () {
-    $('.header-nav').toggleClass('header-nav-active');
+    $('.nav-open').toggleClass('nav-open-active');
   });
 });
 
