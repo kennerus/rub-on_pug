@@ -1,2 +1,77 @@
 mixin nav-open()
-	+b('nav').nav-open
+  +b('nav').nav-open
+    .container.d-flex
+      -
+        var items = [
+        {
+        title: 'Транспорт',
+        img: 'car'
+        },
+        {
+        title: 'Дом и сад',
+        img: 'chair'
+        },
+        {
+        title: 'Недвижимость',
+        img: 'key'
+        },
+        {
+        title: 'Мода и стиль',
+        img: 'necktie'
+        },
+        {
+        title: 'Электроника',
+        img: 'devices'
+        },
+        {
+        title: 'Хобби, отдых и спорт',
+        img: 'ball'
+        },
+        {
+        title: 'Бизнес и услуги',
+        img: 'business'
+        },
+        {
+        title: 'Животные',
+        img: 'paw'
+        },
+        {
+        title: 'Работа',
+        img: 'job'
+        },
+        {
+        title: 'Детский мир',
+        img: 'bear'
+        }
+        ]
+      +e.main
+        each item, index in items
+          +e('a').item.nav-open-js(href=`#nav-open-${index}`)
+            +e('img').img(src=`assets/images/svg/${item.img}.svg` alt='')
+            span= item.title
+      -
+        var categories = [
+          'Детский мир',
+          'Детская одежда',
+          'Детская обувь',
+          'Детские коляски',
+          'Детские автокресла',
+          'Детская мебель',
+          'Игрушки',
+          'Детский транспорт',
+          'Товары для кормления',
+          'Товары для школьников',
+          'Прочие детские товары'
+        ]
+      each item, index in items
+        if index !== 0
+          - var none = 'd-none'
+        +e.detail(class= none || '' id=`nav-open-${index}`)
+          +e.detail-text
+            +e('span').title= item.title
+            +e('nav').list
+              each category in categories
+                +e('a').list-item(href='#')= category
+          +e.detail-img
+            +e.circle
+            img(src='assets/images/nav/baby-transport.png' alt='')

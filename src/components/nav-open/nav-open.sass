@@ -1,2 +1,59 @@
+@import "../../shared/sass/imports"
+
 .nav-open
-	display: block
+  position: fixed
+  top: 90px
+  z-index: 100
+  width: 100%
+  display: none
+  padding-bottom: 20px
+  background-color: #fff
+  &__main
+    display: flex
+    flex-direction: column
+    min-width: 230px
+    max-width: 230px
+    border-right: 1px solid #f9f8f8
+  &__item
+    display: flex
+    align-items: center
+    padding: 8px 10px
+    letter-spacing: 0.19px
+    color: $gray
+    font-size: 14px
+    &:hover
+      background-color: #f1efef
+  &__img
+    margin-right: 10px
+    max-width: 21px
+  &__list
+    display: flex
+    flex-direction: column
+    padding-top: 25px
+    &-item
+      padding: 5px 0
+      font-size: 13px
+      color: #0256e9
+  &__title
+    font-size: 18px
+    font-weight: 700
+    letter-spacing: 0.24px
+  &__detail
+    display: flex
+    flex-grow: 1
+    padding-left: 45px
+    &-img
+      position: relative
+      max-width: 300px
+      padding-top: 20px
+      margin-left: auto
+      img
+        position: relative
+  &__circle
+    position: absolute
+    right: 0
+    top: 30px
+    width: 284px
+    height: 284px
+    background-color: #f9f8f8
+    border-radius: 50%

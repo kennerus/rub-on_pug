@@ -273,14 +273,20 @@ $(function () {
         $('.js-btn-category').removeClass('header__category-none');
       } else {
         $('.js-btn-category').addClass('header__category-none');
-        $('.nav-open').removeClass('nav-open-active');
+        $('.nav-open').slideUp();
       }
     });
   }
 
   $(document).on('click', '.js-btn-category', function () {
-    $('.nav-open').toggleClass('nav-open-active');
+    $('.nav-open').slideToggle();
   });
+
+  $('.nav-open-js').hover(function () {
+    var item = $($(this).attr('href'));
+    $('.nav-open__detail').not(item).addClass('d-none');
+    $(item).removeClass('d-none');
+  }, function () {});
 });
 
 document.addEventListener("DOMContentLoaded", function () {
