@@ -1,0 +1,133 @@
+@import "../../../shared/sass/imports"
+
+.header-nav
+  width: 100%
+  font-size: 13px
+  background-color: #fff
+  transition: $transition
+  @media (max-width: $xl)
+    display: none
+    .container
+      width: unset
+    &--active
+      left: 0
+  &__mobile
+    display: none
+  &__btn
+    $size: 25px
+    +btn
+    position: fixed
+    z-index: 1
+    top: 20px
+    right: 20px
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    width: $size
+    height: $size
+    padding: 0
+    span
+      transition: $transition
+    &-close
+      span
+        position: absolute
+        top: 50%
+        &:nth-child(1)
+          transform: rotate(135deg)
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          transform: rotate(-135deg)
+    span
+      width: $size
+      height: 3px
+      background-color: $main
+  &__wrap
+    display: flex
+    align-items: center
+    transition: $transition
+    .slick-list
+      padding-bottom: 500px
+      margin-bottom: -500px
+      pointer-events: none
+    .slick-track
+      pointer-events: all
+  &__link
+    &-category
+      position: relative
+      display: flex
+      align-items: center
+      height: 100%
+      padding: 25px 17px
+      white-space: nowrap
+      font-weight: 500
+      letter-spacing: .4px
+      color: #a8a8a8
+    &-hover
+      background-color: #f1efef
+  &__next
+    +btn
+    position: absolute
+    z-index: 1
+    right: 0
+    display: flex
+    padding: 25px 10px
+    height: 100%
+    background-color: #fff
+    svg
+      height: 20px
+    &:hover
+      svg
+        fill: darken($gray, 15)
+    svg
+      fill: $gray
+      width: 9px
+      transition: $transition
+  &__svg
+    width: 25px
+    margin-right: 10px
+    fill: $gray
+  &__dropdown
+    position: absolute
+    top: 100%
+    z-index: 5
+    display: none
+    padding: 0 15px
+    flex-wrap: wrap
+    background-color: #fff
+    &-list
+      display: flex
+      flex-direction: column
+      list-style: none
+      margin: 0
+      padding: 30px 15px
+    &-li
+      padding: 7px 15px
+    &-link
+      padding: 7px 0
+      color: $main
+      background-color: #fff
+      &:hover
+        color: $gray
+
+.rotateCategoryBtn
+  transform: rotate(180deg)
+
+.menu__overlay
+  position: fixed
+  z-index: 999
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  opacity: 0
+  pointer-events: none
+  transition: $transition
+  &--active
+    opacity: 1
+    pointer-events: unset
+
+.nav-mobile__registration
+  display: flex
+  align-items: center

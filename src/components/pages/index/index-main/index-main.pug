@@ -1,0 +1,22 @@
+include ../../../components/elements/single-card/single-card
+
+mixin index-main()
+  section.index-main
+    .container
+      .cards
+        - for (var i = 0; i < 14; i++)
+          -
+            var data = {
+              index: i
+            }
+          if i === 0
+            - data.gif = true
+          if i === 6 || i === 12
+            - data.big = true
+          if i === 2
+            - data.like = true
+          if i === 3
+            - data.top = true
+          +single-card(data)
+      .d-flex.justify-content-center.mt20
+        button.button.button_gray.button_big Показать еще

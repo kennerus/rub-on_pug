@@ -1,10 +1,10 @@
 include ../../../node_modules/bemto.pug/bemto
-include ../header/header
-include ../header-nav/header-nav
-include ../nav-open/nav-open
-include ../header-mobile/header-mobile
-include ../nav-mobile/nav-mobile
-include ../footer/footer
+include ../layout/header/header
+include ../old/header-nav/header-nav
+include ../layout/nav-open/nav-open
+include ../layout/header-mobile/header-mobile
+include ../layout/nav-mobile/nav-mobile
+include ../layout/footer/footer
 
 doctype html
 html(lang='ru')
@@ -22,9 +22,7 @@ html(lang='ru')
     link(href='assets/css/style.css' rel='stylesheet')
     link(href='assets/fonts/fonts.css' rel='stylesheet')
   body
-    +header(index)
-    if index
-      +header-nav(index)
+    +header
     +nav-open
     +header-mobile
     +nav-mobile

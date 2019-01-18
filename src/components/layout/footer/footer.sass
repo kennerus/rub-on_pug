@@ -1,0 +1,114 @@
+@import "../../../shared/sass/imports"
+
+.footer
+  color: $gray
+  background-color: #fff
+  &__head
+    padding: 20px 0
+  &__title
+    margin: 0
+    font-weight: 500
+    font-size: 16px
+    text-align: center
+    letter-spacing: .4px
+    color: $main
+  &__body
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 30px 0
+    border-top: 1px solid #f0f0f0
+    @media (max-width: $sm)
+      flex-direction: column
+      padding-bottom: 0
+    &:first-child
+      flex-grow: 1
+      .footer__list
+        &:first-child
+          .footer__link
+            &:nth-child(-n + 11)
+              @media (max-width: $sm)
+                display: none
+    &:last-child
+      display: none
+      @media (max-width: $sm)
+        display: flex
+      .footer__link
+        padding-right: 0
+        text-align: right
+  &__list
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: 150px
+    @media (max-width: $sm)
+      height: unset
+    &:first-child
+      @media (max-width: $lg)
+        flex-grow: 1
+    @media (max-width: 650px)
+      height: unset
+      max-height: 220px
+    @media (max-width: 380px)
+      max-height: unset
+    &:last-child
+      .footer__link
+        width: unset
+  &__link
+    width: 250px
+    min-height: 20px
+    padding-right: 25px
+    margin-bottom: 15px
+    color: inherit
+    @media (max-width: $lg)
+      width: unset
+    @media (max-width: $sm)
+      font-size: 12px
+    &:hover
+      color: $main
+  &__bottom
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 20px 0 30px
+    font-size: 14px
+    border-top: 1px solid #f0f0f0
+  &__copyright
+    margin: 0
+    margin-right: 60px
+    @media (max-width: $xl)
+      width: 100%
+  &__faq
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: $lg)
+      width: 100%
+      justify-content: space-between
+    @media (max-width: $sm)
+      display: none
+    &-link
+      margin-right: 30px
+      color: inherit
+      &:hover
+        color: $main
+      &:last-child
+        margin-right: 0
+  .social
+    @media (max-width: $lg)
+      margin-top: 20px
+    @media (max-width: $sm)
+      margin-right: auto
+.social
+  display: inline-flex
+  align-items: center
+  margin-left: auto
+  &__link
+    +f-size(26px)
+    +flex-center
+    margin: 3px
+    color: $white
+    border-radius: 50%
+    &:hover
+      color: $white
+      .fa
+        opacity: 0.5
