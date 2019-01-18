@@ -1,3 +1,10 @@
+include ../../../components/blocks/filter/filter
+include ../../../components/blocks/filter-order/filter-order
+include ../../../components/elements/category-card/category-card
+include ../../../components/blocks/nav-pages/nav-pages
+include ../../../components/blocks/sidebar/sidebar
+
 mixin category()
-	+b.category
-		block
+	+b('section').category
+		.container
+			+e.wrap
