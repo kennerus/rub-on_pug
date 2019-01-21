@@ -1,2 +1,24 @@
+@import "../../../../shared/sass/imports"
+
 .filter
-	display: block
+  display: flex
+  flex-direction: column
+  width: 275px
+  padding: 10px 30px 20px
+  background-color: #fff
+  &__tabs
+    display: flex
+    justify-content: center
+    border-bottom: 1px solid #e2e2e2
+  &__tab
+    margin: 0 13px
+    padding: 10px 0
+    color: $gray
+    font-size: 14px
+    cursor: pointer
+    &.tab-active
+      color: $red
+      border-bottom: 2px solid $red
+    &-item
+      display: flex
+      flex-direction: column

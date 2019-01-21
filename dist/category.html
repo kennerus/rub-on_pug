@@ -8,6 +8,7 @@
     <link href="assets/libs/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
     <link href="assets/libs/slick/slick.css" rel="stylesheet">
     <link href="assets/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
   </head>
@@ -1084,8 +1085,47 @@
       </ul>
     </nav>
     <main class="main">
-      <div class="category">
-      </div>
+      <section class="category">
+        <div class="container">
+          <div class="d-flex flex-wrap">
+            <div class="category__content left-of-sidebar">
+              <div class="filter">
+                <div class="filter__tabs tabs"><span class="filter__tab tab" data-id="oldCar">С пробегом</span><span class="filter__tab tab tab-active" data-id="newCar">Новые</span>
+                </div>
+                <div class="tab-content">
+                  <div class="filter__tab-item tab-item" id="oldCar">
+                  </div>
+                  <div class="filter__tab-item tab-item tab-item-active" id="newCar">
+                    <select class="select2">
+                      <option>3jjfs</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="category__main">
+                <div class="category__filter-order">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="category-card">
+                </div>
+                <div class="nav-pages">
+                </div>
+              </div>
+            </div>
+            <div class="sidebar">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -1130,6 +1170,7 @@
     <script src="assets/libs/masonry/masonry/MasonryFixedWidth.js"></script>
     <script src="assets/libs/fancybox/jquery.fancybox.js"></script>
     <script src="assets/libs/gifffer.min.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
