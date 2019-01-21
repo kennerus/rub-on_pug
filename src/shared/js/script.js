@@ -360,8 +360,13 @@ $(function() {
   }, function() {
 
   });
-  if ($('.select2').length > 0) {
-    $('.select2').select2();
+  if ($('.select2-js').length > 0) {
+    $.each($('.select2-js'), function(index, value) {
+      let placeholder = value.dataset.placeholder;
+      $(value).select2({
+        placeholder: placeholder
+      });
+    });
   }
 
 });
