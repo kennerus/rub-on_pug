@@ -45,3 +45,35 @@ input
 .select
   .select2
     width: 100% !important
+  .select2-container--default .select2-selection--single
+    border: 1px solid #e2e2e2
+  .select2-container--default .select2-selection--single .select2-selection__placeholder
+    color: $main
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    display: flex
+    align-items: center
+    height: 100%
+  .select2-container--default .select2-selection--single .select2-selection__arrow
+    width: 30px
+    height: 100%
+    b
+      +flex-center
+      top: 0
+      left: 0
+      margin: 0
+      width: 100%
+      height: calc(100% - 2px)
+      border: none
+      &:after
+        position: absolute
+        font-family: 'FontAwesome'
+        color: #d3d3d3
+        font-weight: 400
+        font-size: 18px
+        content: "\f107"
+  .select2-container .select2-selection--single
+    height: 35px
+    padding-bottom: 2px
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    color: $gray
+    font-size: 14px

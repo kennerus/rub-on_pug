@@ -4,9 +4,11 @@ mixin filter()
 			+e('span').tab.tab(data-id='oldCar') С пробегом
 			+e('span').tab.tab.tab-active(data-id='newCar') Новые
 		.tab-content
-			+e.tab-item.tab-item(id='oldCar')
-			+e.tab-item.tab-item.tab-item-active(id='newCar')
-				.select
-					select.select2-js(data-placeholder='Легковые автомобили')
-						option
-						option 3jjfs
+			.tab-item(id='oldCar')
+				+e.tab-item
+			.tab-item.tab-item-active(id='newCar')
+				+e.tab-item
+					.select
+						select.select2-js(data-placeholder='Легковые автомобили')
+							option
+							option 3jjfs
