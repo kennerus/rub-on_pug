@@ -8,7 +8,44 @@ mixin filter()
 				+e.tab-item
 			.tab-item.tab-item-active(id='newCar')
 				+e.tab-item
-					.select
-						select.select2-js(data-placeholder='Легковые автомобили')
-							option
-							option 3jjfs
+					-
+						var select = [
+							'Легковые автомобили',
+							'Марка',
+							'Модель',
+							'Тип кузова',
+							'Коробка',
+							'Типы двигателя'
+						]
+					each item in select
+						.select.mb10
+							select.select2-js(data-placeholder= item)
+								option
+								-
+									var options = [
+										'AC',
+										'Acura',
+										'Alfa Romeo',
+										'Alpina',
+										'AM General',
+										'Ariel'
+									]
+								- for (var i = 0; i < 10; i++)
+									each option in options
+										option= option
+					.hr.mt15.mb25
+					+e.price
+						input(type='number' placeholder='Цена от, ₽')
+						input(type='number' placeholder='до')
+					.hr.mt25.mb20
+					.d-flex.justify-content-between
+						+b('label').checkbox.checkbox-normal.mt5.mb5
+							input(type='checkbox')
+							+e.main
+								i.fa.fa-check
+							span Частные
+						+b('label').checkbox.checkbox-normal.mt5.mb5
+							input(type='checkbox')
+							+e.main
+								i.fa.fa-check
+							span Автодилеры

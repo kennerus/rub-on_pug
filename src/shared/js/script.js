@@ -363,7 +363,9 @@ $(function() {
   if ($('.select2-js').length > 0) {
     $.each($('.select2-js'), function(index, value) {
       let placeholder = value.dataset.placeholder;
-      $(value).select2({
+      $(value).on('select2:open', function(e){
+        $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+      }).select2({
         placeholder: placeholder
       });
     });

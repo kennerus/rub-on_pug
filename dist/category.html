@@ -9,6 +9,7 @@
     <link href="assets/libs/slick/slick.css" rel="stylesheet">
     <link href="assets/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
+    <link href="assets/libs/scrollbar/jquery.scrollbar.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
   </head>
@@ -1087,48 +1088,471 @@
     <main class="main">
       <section class="category">
         <div class="container">
-          <div class="d-flex flex-wrap">
-            <div class="category__content left-of-sidebar">
-              <div class="filter">
-                <div class="filter__tabs tabs"><span class="filter__tab tab" data-id="oldCar">С пробегом</span><span class="filter__tab tab tab-active" data-id="newCar">Новые</span>
-                </div>
-                <div class="tab-content">
-                  <div class="tab-item" id="oldCar">
-                    <div class="filter__tab-item">
-                    </div>
-                  </div>
-                  <div class="tab-item tab-item-active" id="newCar">
-                    <div class="filter__tab-item">
-                      <div class="select">
-                        <select class="select2-js" data-placeholder="Легковые автомобили">
-                          <option></option>
-                          <option>3jjfs</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="d-flex align-items-start">
+            <div class="filter">
+              <div class="filter__tabs tabs"><span class="filter__tab tab" data-id="oldCar">С пробегом</span><span class="filter__tab tab tab-active" data-id="newCar">Новые</span>
               </div>
-              <div class="category__main">
-                <div class="category__filter-order">
+              <div class="tab-content">
+                <div class="tab-item" id="oldCar">
+                  <div class="filter__tab-item">
+                  </div>
                 </div>
-                <div class="category-card">
-                </div>
-                <div class="category-card">
-                </div>
-                <div class="category-card">
-                </div>
-                <div class="category-card">
-                </div>
-                <div class="category-card">
-                </div>
-                <div class="category-card">
-                </div>
-                <div class="nav-pages">
+                <div class="tab-item tab-item-active" id="newCar">
+                  <div class="filter__tab-item">
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Легковые автомобили">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Марка">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Модель">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Тип кузова">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Коробка">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="select mb10">
+                      <select class="select2-js" data-placeholder="Типы двигателя">
+                        <option></option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                        <option>AC</option>
+                        <option>Acura</option>
+                        <option>Alfa Romeo</option>
+                        <option>Alpina</option>
+                        <option>AM General</option>
+                        <option>Ariel</option>
+                      </select>
+                    </div>
+                    <div class="hr mt15 mb25"></div>
+                    <div class="filter__price">
+                      <input type="number" placeholder="Цена от, ₽"/>
+                      <input type="number" placeholder="до"/>
+                    </div>
+                    <div class="hr mt25 mb20"></div>
+                    <div class="d-flex justify-content-between">
+                      <label class="checkbox checkbox-normal mt5 mb5">
+                        <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Частные</span>
+                      </label>
+                      <label class="checkbox checkbox-normal mt5 mb5">
+                        <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Автодилеры</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="category__main">
+              <div class="filter-order">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="category-card">
+              </div>
+              <div class="nav-pages">
+              </div>
+            </div>
             <div class="sidebar">
+              <div class="card-company">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-company__title">FRESH Воронеж Север
+                  </h3>
+                  <div class="card-company__logo"><img src="assets/images/car-logo.png" alt=""/>
+                  </div>
+                </div><span class="fz14 mt10">Авто в наличии <span class='c-red'>171</span></span><img class="card-company__img mt15 mb15" src="assets/images/car.jpg" alt="" role="presentation"/>
+                <h3 class="card-company__title-second">Audi Q7 4L [рестайлинг]
+                </h3><span class="price price-smaller">2 523 700 ₽</span>
+                <div class="d-flex flex-wrap mt15"><span class="card-company__option">Без пробега</span><span class="card-company__option">2 л, Дизель</span><span class="card-company__option">180 л.с.</span><span class="card-company__option">2019 г.</span><span class="card-company__option">Внедорожник</span><span class="card-company__option">Автомат</span>
+                </div><a class="button button_gray mt15" href="#">Все товары компании</a>
+              </div>
+              <div class="sidebar__main mt15">
+                <div class="d-flex align-items-center"><img class="mr10" src="assets/images/crown.png" alt=""/><span class="fz20 fw-bold">VIP-объявления</span></div>
+                <div class="sidebar-card"><img class="card-company__img mb5 mt15" src="assets/images/car.jpg" alt=""/>
+                  <h3 class="card-company__title-second mb5 fz16">Audi Q7 4L [рестайлинг]</h3><span class="price price-smaller">2 523 700 ₽</span>
+                </div>
+                <div class="sidebar-card"><img class="card-company__img mb5 mt15" src="assets/images/car.jpg" alt=""/>
+                  <h3 class="card-company__title-second mb5 fz16">Audi Q7 4L [рестайлинг]</h3><span class="price price-smaller">2 523 700 ₽</span>
+                </div>
+                <div class="sidebar-card"><img class="card-company__img mb5 mt15" src="assets/images/car.jpg" alt=""/>
+                  <h3 class="card-company__title-second mb5 fz16">Audi Q7 4L [рестайлинг]</h3><span class="price price-smaller">2 523 700 ₽</span>
+                </div>
+                <div class="sidebar-card"><img class="card-company__img mb5 mt15" src="assets/images/car.jpg" alt=""/>
+                  <h3 class="card-company__title-second mb5 fz16">Audi Q7 4L [рестайлинг]</h3><span class="price price-smaller">2 523 700 ₽</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1178,6 +1602,7 @@
     <script src="assets/libs/fancybox/jquery.fancybox.js"></script>
     <script src="assets/libs/gifffer.min.js"></script>
     <script src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/libs/scrollbar/jquery.scrollbar.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

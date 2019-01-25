@@ -7,12 +7,11 @@ include ../../../components/blocks/sidebar/sidebar
 mixin category()
 	+b('section').category
 		.container
-			.d-flex.flex-wrap
-				+e.content.left-of-sidebar
-					+filter
-					+e.main
-						+e.filter-order
-						- for (var i = 0; i < 6; i++)
-							+category-card
-						+nav-pages
+			.d-flex.align-items-start
+				+filter
+				+e.main
+					+filter-order
+					- for (var i = 0; i < 6; i++)
+						+category-card
+					+nav-pages
 				+sidebar

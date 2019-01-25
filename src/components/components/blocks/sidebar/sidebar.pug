@@ -1,3 +1,12 @@
+include ../../elements/card-company/card-company
+include ../../elements/sidebar-card/sidebar-card
+
 mixin sidebar()
 	+b.sidebar
-		block
+		+card-company
+		+e.main.mt15
+			.d-flex.align-items-center
+				img.mr10(src='assets/images/crown.png' alt='')
+				span.fz20.fw-bold VIP-объявления
+			-for (var i = 0; i < 4; i++)
+				+sidebar-card

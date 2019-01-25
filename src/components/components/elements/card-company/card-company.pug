@@ -1,3 +1,23 @@
 mixin card-company()
 	+b.card-company
-		block
+		.d-flex.justify-content-between
+			+e('h3').title FRESH Воронеж Север
+			+e.logo
+				img(src='assets/images/car-logo.png' alt='')
+		span.fz14.mt10 Авто в наличии <span class='c-red'>171</span>
+		+e.img.mt15.mb15(src='assets/images/car.jpg' alt='')
+		+e('h3').title-second Audi Q7 4L [рестайлинг]
+		span.price.price-smaller 2 523 700 ₽
+		.d-flex.flex-wrap.mt15
+			-
+				var options = [
+					'Без пробега',
+					'2 л, Дизель',
+					'180 л.с.',
+					'2019 г.',
+					'Внедорожник',
+					'Автомат'
+				]
+			each item in options
+				+e('span').option= item
+		a.button.button_gray.mt15(href='#') Все товары компании
