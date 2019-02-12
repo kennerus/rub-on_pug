@@ -1,5 +1,14 @@
 'use strict';
 
+(function ($) {
+  $.fn.removeClassWild = function (mask) {
+    return this.removeClass(function (index, cls) {
+      var re = mask.replace(/\*/g, '\\S+');
+      return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+    });
+  };
+})(jQuery);
+
 $(function () {
   var container = 0;
   var heightMenu = $('.header-nav').height();
@@ -86,6 +95,11 @@ $(function () {
     $('.modal').fadeOut(300);
     $('.modal__overlay').removeClass('modal__overlay-active');
   });
+
+  $(document).on('click', '.js-modalClose', function () {
+    $('.modal').fadeOut(300);
+    $('.modal__overlay').removeClass('modal__overlay-active');
+  });
   $(document).on('mouseenter', '.js-showCategoryList', function () {
     var drop = $(this).find('.header-nav__dropdown');
     drop.slideDown({
@@ -133,11 +147,11 @@ $(function () {
     if ($('.nav-mobile__list--active').length > 0) {
       $('.js-nav-mobile').removeClass('nav-mobile__list--active');
       $('.js-menu-close').removeClass('menu__overlay--active');
-      $(this).removeClass('mobile-btn-menu-close');
+      $('.js-btn-menu').removeClass('mobile-btn-menu-close');
     } else {
       $('#main-menu').addClass('nav-mobile__list--active');
       $('.js-menu-close').addClass('menu__overlay--active');
-      $(this).addClass('mobile-btn-menu-close');
+      $('.js-btn-menu').addClass('mobile-btn-menu-close');
     }
   });
   $(document).on('click', '.js-menu-close', function () {
@@ -302,6 +316,7 @@ $(function () {
 
   $(document).on('click', '.js-btn-category', function () {
     $('.nav-open').slideToggle();
+    $('.jsCategoryClose').toggleClass('active-category-close');
   });
 
   $('.nav-open-js').hover(function () {
@@ -319,6 +334,153 @@ $(function () {
       });
     });
   }
+
+  if (window.innerWidth < 993) {
+    $('.jsSort').click(function () {
+      $('.jsShowSort').fadeIn();
+      $('body').addClass('body-overflow');
+    });
+
+    $('.jsCloseSort').click(function () {
+      $('.jsShowSort').fadeOut();
+      $('body').removeClass('body-overflow');
+    });
+  }
+
+  $('.jsActivePrivateDealers').click(function () {
+    $('.jsActivePrivateDealers').removeClass('active-private-dealers');
+    $(this).addClass('active-private-dealers');
+  });
+
+  $('.jsFilter').click(function () {
+    $('.jsMobileFilter').fadeIn(100);
+    $('body').addClass('body-overflow');
+  });
+
+  $('.jsCloseFilter').click(function () {
+    $('.jsMobileFilter').fadeOut(100);
+    $('body').removeClass('body-overflow');
+  });
+
+  $('.jsShowFilterOpen').click(function () {
+    $(this).next().fadeIn(100);
+    $('.jsMobileFilter').css({ 'overflow-y': 'hidden' });
+  });
+
+  $('.jsCloseFilterAll').click(function () {
+    $('.jsHideFilterOpen').fadeOut(100);
+    $('.jsMobileFilter').css({ 'overflow-y': 'scroll' });
+  });
+
+  // filter mobile
+
+
+  $('.jsShowFlag').click(function () {
+    var htmlFilter = void 0;
+    var attrFilter = void 0;
+    var findHtmlBlock = void 0;
+    attrFilter = $(this).closest('.jsSearchFlag').attr('data-flag');
+    var flagClass = 'flag-' + attrFilter;
+    $(this).closest('.jsSearchFlag').children('.jsShowFlag').removeClass('selected-filter').removeClass(flagClass);
+    htmlFilter = $(this).html();
+    $(this).addClass('selected-filter').addClass(flagClass);
+    var attrSetHtml = document.querySelectorAll('.jsShowFilterOpen');
+    for (var _i = 0; _i < attrSetHtml.length; _i++) {
+      findHtmlBlock = attrSetHtml[_i].getAttribute('data-sethtml');
+      if (attrFilter === findHtmlBlock) {
+        $('.' + attrFilter).children('.jsSetFlag').html(htmlFilter);
+      }
+    }
+    $('.jsHideFilterOpen').fadeOut(100);
+    var filled = $('.jsShowFilterOpen').next().children('.jsSearchFlag').children('.jsShowFlag');
+    var list = $('.selected-filter').closest('.jsSearchFlag').closest('.jsHideFilterOpen').prev();
+    if (filled.hasClass('selected-filter')) {
+      $(list).addClass('filled-filter');
+    }
+  });
+
+  // filter mobile price
+
+  $('.jsGetPrice').click(function () {
+    var fronPrice = $('.jsFromPrice').val();
+    var toPrice = $('.jsToPrice').val();
+
+    $('.jsSetPrice').html('От ' + fronPrice + ' до ' + toPrice + ' руб');
+    var listPrice = $('.jsSearchPrice').closest('.jsHideFilterOpen').prev();
+    $(listPrice).addClass('filled-filter');
+    $('.jsHideFilterOpen').fadeOut(100);
+  });
+
+  $('.jsShowAllProducts').click(function () {
+    $('.jsMobileFilter').fadeOut(100);
+    $('body').removeClass('body-overflow');
+  });
+
+  //reset filter
+
+  $('.jsResetFilter').click(function () {
+    var defaultFilter = ['Все', 'Все', 'Любой', 'Любая', 'Любой'];
+    $('.jsSetFlag').each(function (i) {
+      $(this).html(defaultFilter[i]);
+    });
+    $('.jsSetPrice').html('Любая');
+    $('.jsShowFilterOpen').removeClass('filled-filter');
+    $('.jsShowFlag').removeClass('selected-filter');
+    $('.jsShowFlag').removeClassWild("flag-*");
+  });
+
+  if ($('#sidebar-filter-pc').length > 0 && window.innerWidth > 993) {
+    var stickySidebar = new StickySidebar('#sidebar-filter-pc', {
+      topSpacing: 100,
+      bottomSpacing: 20,
+      containerSelector: '.category-block',
+      innerWrapperSelector: '.sidebar-inner'
+    });
+  }
+
+  if (window.innerWidth < 1200) {
+    $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
+  }
+
+  $(window).resize(function () {
+    if (window.innerWidth < 1200) {
+      $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
+    } else {
+      $('.jsStickyFilter .sidebar-inner').removeClass('active-sidebar-filter');
+    }
+  });
+
+  $(document).scroll(function () {
+    if ($('.jsStickyFilter').hasClass('is-affixed')) {
+      $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
+    } else {
+      $('.jsStickyFilter .sidebar-inner').removeClass('active-sidebar-filter');
+    }
+  });
+
+  // if(window.innerWidth < 993){
+  var body = $('.body');
+  var filter = $('.sidebar-filter');
+  var position = filter.offset().top;
+  var mypos = $(window).scrollTop();
+  $(document).scroll(function () {
+    var block_position = filter.offset().top; // расположение блока, от которого и зависит фиксированность хэдера
+    if (window.scrollY + 60 < position) {
+      // если позиция скролла страницы больше, то ставим фикс
+      filter.removeClass('filter-fixed');
+    } else if (window.scrollY + 60 >= block_position) {
+      filter.addClass('filter-fixed');
+    }
+    if (window.scrollY > 200 && window.scrollY > mypos) {
+      $('.filter-fixed').css({ 'top': '0' });
+    } else if (window.scrollY < 200) {
+      $('.filter-fixed').css({ 'top': '0' });
+    } else {
+      $('.filter-fixed').css({ 'top': '60px' });
+    }
+    mypos = $(window).scrollTop();
+  });
+  // }
 });
 
 document.addEventListener("DOMContentLoaded", function () {

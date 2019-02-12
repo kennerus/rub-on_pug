@@ -1,2 +1,34 @@
 .nav-pages
-	display: block
+  display: flex
+  align-items: center
+  margin-top: 15px
+  padding: 14px 20px 14px 14px
+  background-color: #ffffff
+  border-radius: 4px 4px 0 0
+  @media (max-width: 993px)
+    display: none
+
+  &__link
+    margin-right: 5px
+    padding: 8px 10px
+    font-family: AvenirNextCyr-Demi, sans-serif
+    font-size: 12px
+    font-weight: 600
+    color: #262626
+    background-color: #f7f6f6
+    border-radius: 2px
+    transition: all ease .5s
+
+    &:hover
+      background-color: #dddddd
+      transition: all ease .3s
+
+  &__text
+    margin-left: auto
+    font-size: 12px
+    font-weight: 500
+    color: #a8a8a8
+
+.active-nav-pages
+  background-color: #dddddd
+  transition: all ease .3s

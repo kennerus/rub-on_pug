@@ -1,2 +1,27 @@
 mixin category-card()
-	+b.category-card
+  +b.category-card
+    +e('img')(src='assets/images/cards/category_card_image1.png' alt='').image
+    +e.right
+      +b.category-card__head
+        +e('a')(href='#').head__name Land Rover Range Rover Evoque
+        +e.head__price
+          +e('span') 2 523 700 ₽
+          +e('a').head__price__heart.single-adv__like.sm-none(href='#')
+            i.fa.fa-heart-o
+      +b('span').category-card__data Добавлено:<br> 19 марта 2018, 17:15
+      +b.category-card__description
+        +e('span') Без пробега
+        +e('span') 2019 г.
+        +e('span') 2 л, Дизель
+        +e('span') Внедорожник
+        +e('span') 180 л.с.
+        +e('span') Автомат
+      +b.category-card__bottom
+        a.d-flex.align-items-center(href='#')
+          +b('svg').__icon.ico._gray
+            +e('use')(xlink:href="assets/images/svg.svg#nav")
+          span.ml5.c-gray.fz12 Санкт - Петербург
+        .ml-auto
+          .single-card__detail-view
+            img.mr5(src='assets/images/icon-eye.png' alt='')
+            span 255

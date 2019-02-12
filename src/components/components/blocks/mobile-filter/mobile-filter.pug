@@ -1,0 +1,107 @@
+mixin mobile-filter()
+  +b.mobile-filter.jsMobileFilter
+    +e('button').close.jsCloseFilter
+      +e('span')
+      +e('span')
+    +e('h2').head Фильтр
+    +e.private-dealers
+      +b('button').jsActivePrivateDealers.active-private-dealers Все
+      +b('button').jsActivePrivateDealers Частные
+      +b('button').jsActivePrivateDealers Автодилеры
+    +b(data-sethtml='mark').mark.filter-style.jsShowFilterOpen
+      +e('p') Марка
+      +b('span').btn-arrow.jsSetFlag Все
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Марка
+      +e(data-flag='mark').block.jsSearchFlag
+        +b('button').jsShowFlag AC
+        +b('button').jsShowFlag Acura
+        +b('button').jsShowFlag Alfa Romeo
+        +b('button').jsShowFlag Alpina
+        +b('button').jsShowFlag AM General
+        +b('button').jsShowFlag Ariel
+      //+e('button').ok.jsSetHtml ОК
+    +b(data-sethtml='model').model.filter-style.jsShowFilterOpen
+      +e('p') Модель
+      +b('span').btn-arrow.jsSetFlag Все
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Модель
+      +e(data-flag='model').block.jsSearchFlag
+        +b('button').jsShowFlag AC
+        +b('button').jsShowFlag Acura
+        +b('button').jsShowFlag Alfa Romeo
+        +b('button').jsShowFlag Alpina
+        +b('button').jsShowFlag AM General
+        +b('button').jsShowFlag Ariel
+      //+e('button').ok.jsSetHtml ОК
+    +b(data-sethtml='carcase').carcase.filter-style.jsShowFilterOpen
+      +e('p') Тип кузова
+      +b('span').btn-arrow.jsSetFlag Любой
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Тип кузова
+      +e(data-flag='carcase').block.jsSearchFlag
+        +b('button').jsShowFlag AC
+        +b('button').jsShowFlag Acura
+        +b('button').jsShowFlag Alfa Romeo
+        +b('button').jsShowFlag Alpina
+        +b('button').jsShowFlag AM General
+        +b('button').jsShowFlag Ariel
+      //+e('button').ok.jsSetHtml ОК
+    +b(data-sethtml='box').box.filter-style.jsShowFilterOpen
+      +e('p') Коробка
+      +b('span').btn-arrow.jsSetFlag Любая
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Коробка
+      +e(data-flag='box').block.jsSearchFlag
+        +b('button').jsShowFlag AC
+        +b('button').jsShowFlag Acura
+        +b('button').jsShowFlag Alfa Romeo
+        +b('button').jsShowFlag Alpina
+        +b('button').jsShowFlag AM General
+        +b('button').jsShowFlag Ariel
+      //+e('button').ok.jsSetHtml ОК
+    +b(data-sethtml='engine').engine.filter-style.jsShowFilterOpen
+      +e('p') Тип двигателя
+      +b('span').btn-arrow.jsSetFlag Любой
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Тип двигателя
+      +e(data-flag='engine').block.jsSearchFlag
+        +b('button').jsShowFlag AC
+        +b('button').jsShowFlag Acura
+        +b('button').jsShowFlag Alfa Romeo
+        +b('button').jsShowFlag Alpina
+        +b('button').jsShowFlag AM General
+        +b('button').jsShowFlag Ariel
+      //+e('button').ok.jsSetHtml ОК
+    +b.filter-price.filter-style.jsShowFilterOpen
+      +e('p') Цена
+      +b('span').btn-arrow.jsSetPrice Любая
+    +b.mobile-filter-open.jsHideFilterOpen
+      +e('button').close.jsCloseFilterAll
+        +e('span')
+        +e('span')
+      +e('h2').head Цена, руб
+      +e.inputs.filter__price.jsSearchPrice
+        +e.inputs__inp
+          input(type='number').jsFromPrice
+        +e.inputs__inp
+          input(type='number').jsToPrice
+      +e('button').ok.jsGetPrice ОК
+    +e.buttons
+      +e('button').buttons__reset.jsResetFilter Сбросить
+      +e('button').buttons__show.jsShowAllProducts Показать 48 300

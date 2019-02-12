@@ -39,7 +39,7 @@
     top: 0
   &__input
     width: 100%
-    padding: 8px 20px
+    padding: 8px 30px 8px 20px
     border: 1px solid #e5e5e5
     border-radius: 4px
   &__submit
@@ -49,7 +49,7 @@
   &__label
     position: absolute
     top: 10px
-    right: 10px
+    right: 20px
     cursor: pointer
 
 .header
@@ -62,6 +62,7 @@
   @media (max-width: $xl)
     display: none
   &__category
+    position: relative
     +btn
     display: flex
     align-items: center
@@ -70,7 +71,6 @@
     margin-right: 20px
     color: $red
     font-size: 13px
-    overflow: hidden
     transition: $transition
     &-none
       width: 0
@@ -81,9 +81,38 @@
     display: flex
     align-items: center
     padding: 10px 0
-    padding-right: 5px
+    padding-right: 10px
     border-right: 1px solid #f0f0f0
   &__enter
     padding: 10px 0
-    padding-left: 15px
+    padding-left: 10px
 
+.category-close
+  position: absolute
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  min-width: 20px
+  height: 0
+  background-color: #ffffff
+  transition: all ease .5s
+  overflow: hidden
+
+  & span
+    position: absolute
+    min-width: 20px
+    max-width: 20px
+    height: 4px
+    background-color: #ff564e
+    border-radius: 25px
+
+    &:first-child
+      transform: rotate(45deg)
+
+    &:last-child
+      transform: rotate(-45deg)
+
+.active-category-close
+  height: 20px
+  transition: all ease .5s

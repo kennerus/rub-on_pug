@@ -1,2 +1,136 @@
 .category-card
-	display: block
+  position: relative
+  display: flex
+  margin-top: 15px
+  background-color: #ffffff
+  border-radius: 4px 4px 0 0
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+  @media (max-width: 993px)
+    flex-direction: column
+    width: 48%
+    overflow: hidden
+    &:nth-child(odd)
+      margin-right: auto
+  @media (max-width: 576px)
+    width: 100%
+
+  &__image
+    min-width: 165px
+    @media (max-width: 993px)
+      object-fit: cover
+
+  &__right
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding: 17px 20px 17px 30px
+    @media (max-width: 993px)
+      padding: 20px
+    @media (max-width: 768px)
+      padding: 15px
+
+  &__head
+    display: flex
+    @media (max-width: 993px)
+      flex-direction: column-reverse
+      padding-bottom: 13px
+      border-bottom: 1px solid #e8e8e8
+
+    &__name
+      width: 160px
+      margin: 0
+      font-size: 18px
+      font-weight: 700
+      color: inherit
+      @media (max-width: 993px)
+        width: 100%
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+    &__price
+      display: flex
+      align-items: center
+      height: 24px
+      margin-left: auto
+      @media (max-width: 993px)
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 20px
+
+      & span
+        font-size: 18px
+        font-weight: 700
+        color: #ff564e
+
+      &__heart
+        margin: 0 !important
+
+        & .fa-heart-o
+          margin: 0 0 0 14px !important
+          font-size: 14px !important
+
+  &__data
+    margin: 10px 0 25px
+    font-size: 13px
+    font-weight: 400
+    color: #a8a8a8
+    letter-spacing: 0.28px
+    @media (max-width: 993px)
+      position: absolute
+      bottom: 25px
+      margin: 0
+      font-size: 10px
+
+    & br
+      display: none
+      //@media (max-width: 700px)
+      //  display: block
+
+  &__description
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex-wrap: wrap
+    height: 40px
+    margin-bottom: 15px
+    @media (max-width: 993px)
+      margin-top: 20px
+      font-size: 11px
+    @media (max-width: 768px)
+      font-size: 10px
+
+    & span
+      margin-right: auto
+      margin-bottom: 10px
+      font-size: 13px
+      font-weight: 400
+      letter-spacing: 0.33px
+      line-height: 1
+
+      &:nth-child(even)
+        margin-bottom: 0
+
+  &__bottom
+    display: flex
+
+    & a
+      @media (max-width: 993px)
+        position: absolute
+        left: 20px
+        top: -55px
+        padding: 4px 10px
+        background-color: rgba(0, 0, 0, .65)
+        border-radius: 2px
+
+        & svg
+          display: none
+
+        & span
+          font-size: 10px !important
+          font-weight: 400 !important
+          color: #ffffff
+
+    & .single-card__detail-view
+      font-size: 12px

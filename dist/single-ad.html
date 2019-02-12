@@ -13,10 +13,12 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="container container_flex"><a class="logo" href="/"><img class="logo__img" src="assets/images/logo.png" width="175" height="47" alt="RUBON" title=""/></a>
-        <button class="header__category js-btn-category"><img class="mr10" src="assets/images/ico-caregory.png" alt=""/><span>Категории</span>
+        <button class="header__category js-btn-category">
+          <div class="category-close jsCategoryClose"><span></span><span></span>
+          </div><img class="mr10" src="assets/images/ico-caregory.png" alt=""/><span>Категории</span>
         </button>
         <form class="global-search"><input class="global-search__input" id="global-search" type="search" placeholder="Поиск..."/><input class="global-search__submit" id="global-search_submit" type="submit"/>
           <label class="global-search__label" for="global-search_submit">
@@ -333,6 +335,8 @@
     </header>
     <nav class="nav-mobile">
       <ul class="nav-mobile__list js-nav-mobile" id="main-menu">
+        <li class="nav-mobile__overlay js-btn-menu">
+        </li>
         <li class="nav-mobile__li js-openModal" data-modal="#modalLocation">
           <div class="choose-region">
             <svg class="ico ico ico_gray mr20">
@@ -1654,6 +1658,7 @@
     </footer>
     <script src="assets/libs/jquery-3.3.1.js"></script>
     <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/jquery.sticky-kit.js"></script>
     <script src="assets/libs/masonry/CG.js"></script>
     <script src="assets/libs/masonry/Masonry.js"></script>
     <script src="assets/libs/masonry/events/MasonryEvents.js"></script>

@@ -1,3 +1,10 @@
 mixin nav-pages()
-	+b.nav-pages
-		block
+  +b.nav-pages
+    +e('a')(href='#').link Назад
+    +e('a')(href='#').link.active-nav-pages 1
+    +e('a')(href='#').link 2
+    +e('a')(href='#').link 3
+    +e('a')(href='#').link 4
+    +e('a')(href='#').link 5
+    +e('a')(href='#').link Вперед
+    +e('span').text Всего 1815 страниц

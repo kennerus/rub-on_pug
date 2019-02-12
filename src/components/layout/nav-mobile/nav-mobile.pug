@@ -1,6 +1,7 @@
 mixin nav-mobile()
   +b('nav').nav-mobile
     +e('ul').list.js-nav-mobile(id='main-menu')
+      +e('li').overlay.js-btn-menu
       +e('li').li.js-openModal(data-modal='#modalLocation')
         .choose-region
           +b('svg').ico.ico._gray.mr20

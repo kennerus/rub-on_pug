@@ -1,3 +1,23 @@
 mixin filter-order()
-	+b.filter-order
-		block
+  +b.filter-order.jsShowSort
+    +b.sort-overlay.jsCloseSort
+    +e('label').radio.checkbox.checkbox-normal.jsCloseSort
+      +e('input')(type='radio' name='sort')
+      +b.checkbox__main
+        +b('i').fa.fa-check
+      | По умолчанию
+    +e('label').radio.checkbox.checkbox-normal.jsCloseSort
+      +e('input')(type='radio' name='sort')
+      +b.checkbox__main
+        +b('i').fa.fa-check
+      +e('pre').radio__arrow Новые        старые
+    +e('label').radio.checkbox.checkbox-normal.jsCloseSort
+      +e('input')(type='radio' name='sort')
+      +b.checkbox__main
+        +b('i').fa.fa-check
+      | Дешевле
+    +e('label').radio.checkbox.checkbox-normal.jsCloseSort
+      +e('input')(type='radio' name='sort')
+      +b.checkbox__main
+        +b('i').fa.fa-check
+      | Дороже

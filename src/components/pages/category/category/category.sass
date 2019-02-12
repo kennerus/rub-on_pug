@@ -1,4 +1,133 @@
 .category
-	margin: 35px 0 65px
-	&__main
-		flex-grow: 1
+  position: relative
+  margin: 35px 0 65px
+  @media (max-width: 993px)
+    margin-top: 14px
+
+  &__main
+    flex-grow: 1
+    padding: 0 25px
+    @media (max-width: 993px)
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      padding: 0
+
+  & .container
+    @media (max-width: 993px)
+      position: static
+
+    & .category-block
+      @media (max-width: 993px)
+        flex-direction: column
+
+.mobile-sort
+  display: none
+  @media (max-width: 993px)
+    display: flex
+    flex-direction: column
+    width: 100%
+    background-color: #ffffff
+    border: 1px solid #e8e8e8
+
+  &__mark
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 18px 33px
+    border-bottom: 1px solid #e8e8e8
+
+    & span
+      font-size: 16px
+      font-weight: 500
+
+    & button
+      font-size: 16px
+
+  &__block
+    height: 55px
+
+  &__filter
+    position: relative
+    display: flex
+    width: 100%
+    background-color: #ffffff
+    z-index: 1
+
+    & button
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 50%
+      padding: 18px 0
+      font-size: 14px
+      background: none
+      border: none
+
+      &:first-child
+        border-right: 1px solid #e8e8e8
+
+      & img
+        width: 15px
+        height: auto
+        margin-right: 12px
+
+.mobile-category-text
+  display: none
+  width: 100%
+  margin: 22px auto 8px
+  font-size: 18px
+  font-weight: 700
+  text-align: center
+  @media (max-width: 993px)
+    display: block
+
+.btn-arrow
+  position: relative
+  display: flex
+  align-items: center
+  font-size: 14px
+  font-weight: 500
+  color: #a8a8a8
+  background: none
+  border: none
+  outline: none
+  cursor: pointer
+
+  &:before
+    content: ''
+    position: absolute
+    right: -10px
+    display: block
+    width: 10px
+    height: 15px
+    background: url("../images/svg/small-arrow.svg") no-repeat 50% 50%
+    background-size: contain
+
+.pc-tab-content
+  @media (max-width: 993px)
+    display: none
+
+.mobile-tab-content
+  display: none
+  @media (max-width: 992px)
+    position: absolute
+    top: 57px
+    display: none
+    width: 50%
+    padding: 15px
+    background-color: #ffffff
+    z-index: 4
+
+.category-mobile-all-ads
+  display: none
+  @media (max-width: 993px)
+    display: flex
+    width: 100%
+
+.filter-fixed
+  position: fixed
+  top: 60px
+  left: 0
+  transition: all ease 1s
