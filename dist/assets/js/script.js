@@ -325,12 +325,32 @@ $(function () {
     $(item).removeClass('d-none');
   }, function () {});
   if ($('.select2-js').length > 0) {
+    var flag = true;
     $.each($('.select2-js'), function (index, value) {
       var placeholder = value.dataset.placeholder;
-      $(value).on('select2:open', function (e) {
-        $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+      $(value).on('select2:select', function (e) {
+        // $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+        // $('.select2-dropdown').addClass('select2-dropdown-open');
       }).select2({
         placeholder: placeholder
+      });
+      $(value).on('select2:open', function (e) {
+        $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+        $('.select2-dropdown').removeClass('select2-dropdown-close');
+        $('.select2-dropdown').addClass('select2-dropdown-open');
+      });
+      $(value).on('select2:closing', function (e) {
+        if (flag) {
+          $('.select2-dropdown').removeClass('select2-dropdown-open');
+          $('.select2-dropdown').addClass('select2-dropdown-close');
+          flag = false;
+          e.preventDefault();
+          setTimeout(function () {
+            $('.select2-js').select2('close');
+          }, 400);
+        } else {
+          flag = true;
+        }
       });
     });
   }
@@ -438,12 +458,12 @@ $(function () {
     });
   }
 
-  if (window.innerWidth < 1200) {
+  if (window.innerWidth < 1200 && window.innerWidth > 993) {
     $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
   }
 
   $(window).resize(function () {
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1200 && window.innerWidth > 993) {
       $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
     } else {
       $('.jsStickyFilter .sidebar-inner').removeClass('active-sidebar-filter');
