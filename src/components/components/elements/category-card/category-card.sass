@@ -57,7 +57,7 @@
       @media (max-width: 993px)
         justify-content: space-between
         width: 100%
-        margin-bottom: 20px
+        margin-bottom: 10px
 
       & span
         font-size: 18px
@@ -122,7 +122,7 @@
         position: absolute
         left: 20px
         top: -40px
-        padding: 6px 15px
+        padding: 4px 10px
         background-color: rgba(0, 0, 0, .65)
         border-radius: 2px
 
@@ -130,9 +130,14 @@
           display: none
 
         & span
+          margin-left: 0 !important
           font-size: 12px !important
           font-weight: 400 !important
           color: #ffffff
+
+      @media (max-width: 768px)
+        left: 15px
+        top: -35px
 
     & .single-card__detail-view
       font-size: 12px
