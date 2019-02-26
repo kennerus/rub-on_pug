@@ -364,6 +364,18 @@ $(function () {
     $('.jsCategoryClose').toggleClass('active-category-close');
   });
 
+  $(document).click(function (e) {
+    // событие клика по веб-документу
+    var menu = $('.js-btn-category'); // тут указываем ID элемента
+    var menuBlock = $('.nav-open');
+    if (!menu.is(e.target) // если клик был не по нашему блоку
+      && menu.has(e.target).length === 0 && !menuBlock.is(e.target) && menuBlock.has(e.target).length === 0) {
+      // и не по его дочерним элементам
+      $('.nav-open').slideToggle(); // скрываем его
+      $('.jsCategoryClose').toggleClass('active-category-close');
+    }
+  });
+
   $('.nav-open-js').hover(function () {
     let item = $($(this).attr('href'));
     $('.nav-open__detail').not(item).addClass('d-none');
