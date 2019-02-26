@@ -326,8 +326,8 @@ $(function () {
     if (!menu.is(e.target) // если клик был не по нашему блоку
     && menu.has(e.target).length === 0 && !menuBlock.is(e.target) && menuBlock.has(e.target).length === 0) {
       // и не по его дочерним элементам
-      $('.nav-open').slideToggle(); // скрываем его
-      $('.jsCategoryClose').toggleClass('active-category-close');
+      $('.nav-open').slideUp(); // скрываем его
+      $('.jsCategoryClose').removeClass('active-category-close');
     }
   });
 
