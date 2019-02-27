@@ -54,13 +54,13 @@ $(function () {
               slidesToShow: 5,
               nextArrow: '<button class="single-card__next">\n' +
                 '            <svg>\n' +
-                '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+                '              <use xlink:href="../images/svg.svg#arrow">\n' +
                 '              </use>\n' +
                 '            </svg>\n' +
                 '          </button>',
               prevArrow: '<button class="single-card__prev">\n' +
                 '            <svg>\n' +
-                '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+                '              <use xlink:href="../images/svg.svg#arrow">\n' +
                 '              </use>\n' +
                 '            </svg>\n' +
                 '          </button>',
@@ -152,13 +152,13 @@ $(function () {
       slidesToScroll: 7,
       nextArrow: '<button class="header-nav__next">\n' +
         '            <svg>\n' +
-        '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+        '              <use xlink:href="../images/svg.svg#arrow">\n' +
         '              </use>\n' +
         '            </svg>\n' +
         '          </button>',
       prevArrow: '<button class="header-nav__next rotateCategoryBtn">\n' +
         '            <svg>\n' +
-        '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+        '              <use xlink:href="../images/svg.svg#arrow">\n' +
         '              </use>\n' +
         '            </svg>\n' +
         '          </button>'
@@ -209,13 +209,13 @@ $(function () {
                 slidesToShow: 5,
                 nextArrow: '<button class="single-card__next">\n' +
                   '            <svg>\n' +
-                  '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+                  '              <use xlink:href="../images/svg.svg#arrow">\n' +
                   '              </use>\n' +
                   '            </svg>\n' +
                   '          </button>',
                 prevArrow: '<button class="single-card__prev">\n' +
                   '            <svg>\n' +
-                  '              <use xlink:href="assets/images/svg.svg#arrow">\n' +
+                  '              <use xlink:href="../images/svg.svg#arrow">\n' +
                   '              </use>\n' +
                   '            </svg>\n' +
                   '          </button>',
@@ -406,7 +406,7 @@ $(function () {
           e.preventDefault();
           setTimeout(function () {
             $('.select2-js').select2('close');
-          },400);
+          }, 400);
         } else {
           flag = true;
         }
@@ -539,28 +539,29 @@ $(function () {
     }
   });
 
-  // if(window.innerWidth < 993){
-  var body = $('.body');
-  var filter = $('.sidebar-filter');
-  var position = filter.offset().top;
-  var mypos = $(window).scrollTop();
-  $(document).scroll(function () {
-    var block_position = filter.offset().top; // расположение блока, от которого и зависит фиксированность хэдера
-    if ((window.scrollY + 60) < position) { // если позиция скролла страницы больше, то ставим фикс
-      filter.removeClass('filter-fixed');
-    } else if ((window.scrollY + 60) >= block_position) {
-      filter.addClass('filter-fixed');
-    }
-    if (window.scrollY > 200 && window.scrollY > mypos) {
-      $('.filter-fixed').css({'top': '0'});
-    } else if (window.scrollY < 200) {
-      $('.filter-fixed').css({'top': '0'});
-    } else {
-      $('.filter-fixed').css({'top': '60px'});
-    }
-    mypos = $(window).scrollTop();
-  });
-  // }
+  // if (window.innerWidth < 993) {
+  if ($('.sidebar-filter').length > 0) {
+    var body = $('.body');
+    var filter = $('.sidebar-filter');
+    var position = filter.offset().top;
+    var mypos = $(window).scrollTop();
+    $(document).scroll(function () {
+      var block_position = filter.offset().top; // расположение блока, от которого и зависит фиксированность хэдера
+      if ((window.scrollY + 60) < position) { // если позиция скролла страницы больше, то ставим фикс
+        filter.removeClass('filter-fixed');
+      } else if ((window.scrollY + 60) >= block_position) {
+        filter.addClass('filter-fixed');
+      }
+      if (window.scrollY > 200 && window.scrollY > mypos) {
+        $('.filter-fixed').css({'top': '0'});
+      } else if (window.scrollY < 200) {
+        $('.filter-fixed').css({'top': '0'});
+      } else {
+        $('.filter-fixed').css({'top': '60px'});
+      }
+      mypos = $(window).scrollTop();
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
