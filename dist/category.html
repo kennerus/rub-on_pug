@@ -34,11 +34,15 @@
             </use>
           </svg><span class="gray-text">Регион</span>
         </button><a class="button button_red mr10 header__btn--first">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
-        <div class="header__profile"><a class="header__registration" href="#">
-          <svg class="ico ico_gray mr10">
-            <use xlink:href="assets/images/svg.svg#reg">
-            </use>
-          </svg><span class="gray-text js-openModal" data-modal="#modalReg">Регистрация</span></a><a class="header__enter red-text js-openModal" href="#" data-modal="#modalEnter">Войти</a>
+        <!--+b.header__profile-->
+        <!--  +e('a')(href="#").registration-->
+        <!--    +b('svg').ico._gray.mr10-->
+        <!--      +e('use')(xlink:href="assets/images/svg.svg#reg")-->
+        <!--    +b('span').gray-text.js-openModal(data-modal='#modalReg') Регистрация-->
+        <!--  +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти-->
+        <div class="header__cabinet jsBlockDropdown"><span class="header__cabinet__name jsOpenDropdown">Илья Громов<img src="assets/images/svg/small-arrow.svg" alt="" role="presentation"/></span>
+          <div class="header__cabinet__dropdown jsShowDropdown"><a href="#"><img src="assets/images/svg/user.svg" alt="" role="presentation"/>Личный кабинет</a><a href="#"><img src="assets/images/svg/obyavleniya.svg" alt="" role="presentation"/>Мои обьявления</a><a href="#"><img src="assets/images/svg/profile.svg" alt="" role="presentation"/>Профиль</a><a href="#"><img src="assets/images/svg/account.svg" alt="" role="presentation"/>Аккаунт</a><a href="#"><img src="assets/images/svg/social.svg" alt="" role="presentation"/>Соцсети</a><a href="#"><img src="assets/images/svg/logout.svg" alt="" role="presentation"/>Выйти</a>
+          </div>
         </div>
       </div>
     </header>
@@ -334,9 +338,9 @@
       </div>
     </header>
     <nav class="nav-mobile">
+      <div class="nav-mobile__overlay js-btn-menu" id="overlay">
+      </div>
       <ul class="nav-mobile__list js-nav-mobile" id="main-menu">
-        <li class="nav-mobile__overlay js-btn-menu">
-        </li>
         <li class="nav-mobile__li js-openModal" data-modal="#modalLocation">
           <div class="choose-region">
             <svg class="ico ico ico_gray mr20">
@@ -345,7 +349,8 @@
             </svg><span class="gray-text">Санкт-Петербург</span>
           </div>
         </li>
-        <li class="nav-mobile__li js-openModal" data-modal="#modalEnter">
+        <!--+e('li').li.js-openModal(data-modal='#modalEnter')-->
+        <li class="nav-mobile__li js-menu-link" data-menulink="#cabinet">
           <svg class="ico ico_gray mr20">
             <use xlink:href="assets/images/svg.svg#reg">
             </use>
@@ -362,6 +367,22 @@
         <li class="nav-mobile__li"><a href="#">
           <div class="nav-mobile__plus ico bg-blue mr20">+
           </div><span class="c-blue">Создать организацию</span></a>
+        </li>
+      </ul>
+      <ul class="nav-mobile__list js-nav-mobile" id="cabinet">
+        <li class="nav-mobile__li js-menu-link" data-menulink="#main-menu"><i class="fa fa-angle-left mr20"></i><span>Назад</span>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/user.svg" width="25" height="25" alt="" role="presentation"/>Личный кабинет</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/obyavleniya.svg" width="25" height="25" alt="" role="presentation"/>Мои обьявления</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/profile.svg" width="25" height="25" alt="" role="presentation"/>Профиль</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/account.svg" width="25" height="25" alt="" role="presentation"/>Аккаунт</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/social.svg" width="25" height="25" alt="" role="presentation"/>Соцсети</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/logout.svg" width="25" height="25" alt="" role="presentation"/>Выйти</a>
         </li>
       </ul>
       <ul class="nav-mobile__list js-nav-mobile" id="categoriesOne">

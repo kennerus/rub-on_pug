@@ -29,12 +29,37 @@ mixin header
       +button('_red mr10 header__btn--first') Дать объявление
       +button('_blue mr20') Создать организацию
 
-      +b.header__profile
-        +e('a')(href="#").registration
-          +b('svg').ico._gray.mr10
-            +e('use')(xlink:href="assets/images/svg.svg#reg")
-          +b('span').gray-text.js-openModal(data-modal='#modalReg') Регистрация
-        +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти
+      //+b.header__profile
+      //  +e('a')(href="#").registration
+      //    +b('svg').ico._gray.mr10
+      //      +e('use')(xlink:href="assets/images/svg.svg#reg")
+      //    +b('span').gray-text.js-openModal(data-modal='#modalReg') Регистрация
+      //  +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти
+
+      +b.header__cabinet.jsBlockDropdown
+        +e('span').cabinet__name.jsOpenDropdown Илья Громов
+          +e('img')(src='assets/images/svg/small-arrow.svg' alt='')
+        +e.cabinet__dropdown.jsShowDropdown
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/user.svg' alt='')
+            | Личный кабинет
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/obyavleniya.svg' alt='')
+            | Мои обьявления
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/profile.svg' alt='')
+            | Профиль
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/account.svg' alt='')
+            | Аккаунт
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/social.svg' alt='')
+            | Соцсети
+          +e('a')(href='#')
+            +e('img')(src='assets/images/svg/logout.svg' alt='')
+            | Выйти
+
+
   .modal__overlay.js-modalClose
   +b.modal.modal-big.modal-js(id='modalLocation')
     +e('header').header

@@ -1,13 +1,14 @@
 mixin nav-mobile()
   +b('nav').nav-mobile
+    +e.overlay.js-btn-menu#overlay
     +e('ul').list.js-nav-mobile(id='main-menu')
-      +e('li').overlay.js-btn-menu
       +e('li').li.js-openModal(data-modal='#modalLocation')
         .choose-region
           +b('svg').ico.ico._gray.mr20
             +e('use')(xlink:href="assets/images/svg.svg#nav")
           +b('span').gray-text Санкт-Петербург
-      +e('li').li.js-openModal(data-modal='#modalEnter')
+      //+e('li').li.js-openModal(data-modal='#modalEnter')
+      +e('li').li.js-menu-link(data-menulink='#cabinet')
         +b('svg').ico._gray.mr20
           +e('use')(xlink:href="assets/images/svg.svg#reg")
         +b('span').gray-text Войти в личный кабинет
@@ -24,6 +25,35 @@ mixin nav-mobile()
         a(href='#')
           +e.plus.ico.bg-blue.mr20 +
           span.c-blue Создать организацию
+    +e('ul').list.js-nav-mobile(id='cabinet')
+      +e('li').li.js-menu-link(data-menulink='#main-menu')
+        i.fa.fa-angle-left.mr20
+        span Назад
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/user.svg' width="25" height="25" alt='').svg.mr20
+          | Личный кабинет
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/obyavleniya.svg' width="25" height="25" alt='').svg.mr20
+          | Мои обьявления
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/profile.svg' width="25" height="25" alt='').svg.mr20
+          | Профиль
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/account.svg' width="25" height="25" alt='').svg.mr20
+          | Аккаунт
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/social.svg' width="25" height="25" alt='').svg.mr20
+          | Соцсети
+      +e('li').li.js-menu-link
+        +e('a')(href='#')
+          +e('img')(src='assets/images/svg/logout.svg' width="25" height="25" alt='').svg.mr20
+          | Выйти
+
     +e('ul').list.js-nav-mobile(id='categoriesOne')
       -
         var items = [
