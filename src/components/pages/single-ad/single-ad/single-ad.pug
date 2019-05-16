@@ -24,39 +24,40 @@ mixin single-ad()
               each item in img
                 +e.slider-second-item
                   img(src= item)
-        +e.right
-          .d-flex.align-items-center
-            span.price 2500 ₽
-            .sm-block.ml-auto
-              +e('a').like(href='#')
+        +e.right#singleAdd
+          .sidebar-inner
+            .d-flex.align-items-center
+              span.price 2500 ₽
+              .sm-block.ml-auto
+                +e('a').like(href='#')
+                  i.fa.fa-heart-o
+            +e.like-and-date
+              span.date.mt15 Добавлено: 19 марта 2018, 17:15
+              +e('a').like.sm-none(href='#')
                 i.fa.fa-heart-o
-          +e.like-and-date
-            span.date.mt15 Добавлено: 19 марта 2018, 17:15
-            +e('a').like.sm-none(href='#')
-              i.fa.fa-heart-o
-              span Добавить в избранное
-          .lg-block
-            +e('h2').title Рюкзак из натуральной крокодильей кожи
-          +e.btns
-            button.button.button_big-v.button_red-border.mb10.sm-none Написать продавцу
-            .sm-block
-              button.button.button_big-v.button_red-border Написать
-            button.button.button_big-v.button_red Показать номер
-          +b.offer-user.mt30.mb30.lg-none
-            +e.avatar
-              span ВК
-            +e('a').info(href='#')
-              +e('span').name Виктория Кромарова
-              +e('span').count (15 объявлений)
-          .d-flex.align-items-center
-            a.d-flex.align-items-center(href='#')
-              +b('svg').__icon.ico._gray
-                +e('use')(xlink:href="assets/images/svg.svg#nav")
-              span.ml5.c-gray.fz13 Санкт - Петербург
-            .ml-auto
-              .single-card__detail-view
-                img.mr5(src='assets/images/icon-eye.png' alt='')
-                span 255
+                span Добавить в избранное
+            .lg-block
+              +e('h2').title Рюкзак из натуральной крокодильей кожи
+            +e.btns
+              button.button.button_big-v.button_red-border.mb10.sm-none Написать продавцу
+              .sm-block
+                button.button.button_big-v.button_red-border Написать
+              button.button.button_big-v.button_red Показать номер
+            +b.offer-user.mt30.mb30.lg-none
+              +e.avatar
+                span ВК
+              +e('a').info(href='#')
+                +e('span').name Виктория Кромарова
+                +e('span').count (15 объявлений)
+            .d-flex.align-items-center
+              a.d-flex.align-items-center(href='#')
+                +b('svg').__icon.ico._gray
+                  +e('use')(xlink:href="assets/images/svg.svg#nav")
+                span.ml5.c-gray.fz13 Санкт - Петербург
+              .ml-auto
+                .single-card__detail-view
+                  img.mr5(src='assets/images/icon-eye.png' alt='')
+                  span 255
         +e.left
           +e.bottom-item
             +e.bottom-title.sm-none

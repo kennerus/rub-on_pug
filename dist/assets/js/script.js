@@ -472,6 +472,15 @@ $(function () {
     });
   }
 
+  if ($('#singleAdd').length > 0 && window.innerWidth > 993) {
+    var stickySidebar = new StickySidebar('#singleAdd', {
+      topSpacing: 100,
+      bottomSpacing: 20,
+      containerSelector: '.single-adv__wrap',
+      innerWrapperSelector: '.sidebar-inner'
+    });
+  }
+
   if (window.innerWidth < 1200 && window.innerWidth > 993) {
     $('.jsStickyFilter .sidebar-inner').addClass('active-sidebar-filter');
   }
