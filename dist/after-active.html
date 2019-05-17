@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>After active</title>
+    <link href="assets/libs/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/libs/slick/slick.css" rel="stylesheet">
+    <link href="assets/libs/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet">
+    <link href="assets/libs/scrollbar/jquery.scrollbar.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/fonts/fonts.css" rel="stylesheet">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container container_flex"><a class="logo" href="/"><img class="logo__img" src="assets/images/logo.png" width="175" height="47" alt="RUBON" title=""/></a>
+        <button class="header__category js-btn-category">
+          <div class="category-close jsCategoryClose"><span></span><span></span>
+          </div><img class="mr10" src="assets/images/ico-caregory.png" alt=""/><span>Категории</span>
+        </button>
+        <form class="global-search"><input class="global-search__input" id="global-search" type="search" placeholder="Поиск..."/><input class="global-search__submit" id="global-search_submit" type="submit"/>
+          <label class="global-search__label" for="global-search_submit">
+            <svg class="ico ico_gray ico_small">
+              <use xlink:href="assets/images/svg.svg#search">
+              </use>
+            </svg>
+          </label>
+        </form>
+        <button class="choose-region js-openModal" type="button" data-modal="#modalLocation">
+          <svg class="choose-region__icon ico ico_gray">
+            <use xlink:href="assets/images/svg.svg#nav">
+            </use>
+          </svg><span class="gray-text">Регион</span>
+        </button><a class="button button_red mr10 header__btn--first">Дать объявление</a><a class="button button_blue mr20">Создать организацию</a>
+        <!--+b.header__profile-->
+        <!--  +e('a')(href="#").registration-->
+        <!--    +b('svg').ico._gray.mr10-->
+        <!--      +e('use')(xlink:href="assets/images/svg.svg#reg")-->
+        <!--    +b('span').gray-text.js-openModal(data-modal='#modalReg') Регистрация-->
+        <!--  +e('a')(href="#" data-modal='#modalEnter').enter.red-text.js-openModal Войти-->
+        <div class="header__cabinet jsBlockDropdown"><span class="header__cabinet__name jsOpenDropdown">Илья Громов<img src="assets/images/svg/small-arrow.svg" alt="" role="presentation"/></span>
+          <div class="header__cabinet__dropdown jsShowDropdown"><a href="#"><img src="assets/images/svg/user.svg" alt="" role="presentation"/>Личный кабинет</a><a href="#"><img src="assets/images/svg/obyavleniya.svg" alt="" role="presentation"/>Мои обьявления</a><a href="#"><img src="assets/images/svg/profile.svg" alt="" role="presentation"/>Профиль</a><a href="#"><img src="assets/images/svg/account.svg" alt="" role="presentation"/>Аккаунт</a><a href="#"><img src="assets/images/svg/social.svg" alt="" role="presentation"/>Соцсети</a><a href="#"><img src="assets/images/svg/logout.svg" alt="" role="presentation"/>Выйти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal__overlay js-modalClose"></div>
+    <div class="modal modal-big modal-js" id="modalLocation">
+      <header class="modal__header">
+        <h2 class="modal__title">Выберите город
+        </h2>
+      </header>
+      <div class="modal__body">
+        <form class="modal__form-location" id="location"><input class="modal__city-search" type="search" name="city-search" placeholder="Введите город"/>
+        </form>
+        <div class="city-choise">
+          <ul class="city-choise__list">
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Донецк</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Москва</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Магадан</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Курск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Воронеж</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Волгоград</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Санкт-Петербург</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Пекин</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Чайнатаун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Белгород</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ростов-на-Дону</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Ставпрополь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сибирь</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Кострома</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Большая Лаповка</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Провинция Шаньдун</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Сеул</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Токио</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Мурманск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Луганск</a>
+            </li>
+            <li class="city-choise__li"><a class="header-nav__link header-nav__dropdown-link" href="#">Снежное</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="modal__footer">
+        <button class="button button_white modal__btn">Отмена</button>
+        <button class="button button_red modal__btn">Выбрать</button>
+      </footer>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-big modal-js" id="modalEnter">
+      <div class="modal__content modal__content-two d-flex flex-wrap">
+        <div class="modal__left">
+          <h2 class="modal__title modal__title-small">Войти в кабинет
+          </h2>
+          <form class="modal__form mb0"><input class="modal__input modal__input-small" placeholder="Введите e-mail" type="email"/><input class="modal__input modal__input-small" placeholder="Введите пароль" type="password"/>
+            <div class="d-flex align-items-center flex-wrap mb15 mt5">
+              <label class="checkbox mt5 mb5">
+                <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>Запомнить меня</span>
+              </label><span class="ml-auto mt5 mb5 c-gray fz13 js-openModal" data-modal="#modalPassword">Не можете войти?</span>
+            </div>
+            <button class="button button_red modal__btn modal__btn-small">Войти</button>
+          </form>
+        </div>
+        <div class="modal__center"><span>или</span>
+        </div>
+        <div class="modal__right">
+          <div class="pb20"><a class="modal__social button btn-vk" href="#"><span>Войдите через VK</span><i class="fa fa-vk"></i></a><a class="modal__social button btn-facebook" href="#"><span>Войдите через Facebook</span><i class="fa fa-facebook"></i></a><a class="modal__social button btn-twitter" href="#"><span>Войдите через Twitter</span><i class="fa fa-twitter"></i></a><a class="modal__social button btn-google-plus" href="#"><span>Войдите через Google</span><i class="fa fa-google-plus"></i></a>
+          </div>
+          <div class="text-center pt20 fz15"><span class="fw-light">Нет аккаунта?</span><span class="modal__link js-openModal" data-modal="#modalReg"> Зарегистрируйтесь!</span>
+          </div>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalPassword">
+      <div class="modal__content">
+        <h2 class="modal__title">Восстановление доступа
+        </h2>
+        <form class="modal__form"><input class="modal__input" placeholder="E-mail" type="email"/>
+          <button class="button button_red modal__btn js-openModal" data-modal="#modalPasswordSuccess">Отправить доступы на почту</button>
+        </form>
+        <div class="text-center"><span class="fw-light">или</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Войти в личный кабинет</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-big modal-js" id="modalReg">
+      <div class="modal__content modal__content-two d-flex flex-wrap">
+        <div class="modal__left">
+          <h2 class="modal__title modal__title-small">Регистрация
+          </h2>
+          <form class="modal__form mb0"><input class="modal__input modal__input-small" placeholder="Введите e-mail" type="email"/><input class="modal__input modal__input-small" placeholder="Введите логин" type="text"/><input class="modal__input modal__input-small" placeholder="Введите пароль" type="password"/>
+            <div class="d-flex align-items-center flex-wrap mb15 mt5">
+              <label class="checkbox mt5 mb5">
+                <input type="checkbox"/><span class="checkbox__main"><i class="fa fa-check"></i></span><span>* Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления</span>
+              </label>
+            </div>
+            <button class="button button_red modal__btn modal__btn-small">Зарегистрироваться</button>
+          </form>
+        </div>
+        <div class="modal__center"><span>или</span>
+        </div>
+        <div class="modal__right">
+          <div class="pb20"><a class="modal__social button btn-vk" href="#"><span>Регистрация через VK</span><i class="fa fa-vk"></i></a><a class="modal__social button btn-facebook" href="#"><span>Регистрация через Facebook</span><i class="fa fa-facebook"></i></a><a class="modal__social button btn-twitter" href="#"><span>Регистрация через Twitter</span><i class="fa fa-twitter"></i></a><a class="modal__social button btn-google-plus" href="#"><span>Регистрация через Google</span><i class="fa fa-google-plus"></i></a>
+          </div>
+          <div class="text-center pt20 fz15"><span class="fw-light">Уже зарегистрированы?</span><span class="modal__link js-openModal" data-modal="#modalEnter"> Авторизуйтесь!</span>
+          </div>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <div class="modal modal-js" id="modalPasswordSuccess">
+      <div class="modal__content">
+        <h2 class="modal__title">Благодарим
+        </h2>
+        <div class="check-pulse"><i class="fa fa-check"></i></div>
+        <p class="modal__text">Ваша заявка на восстановление доступа <br>к личному кабинету успешно отправлена.
+        </p>
+        <div class="text-center mt30"><span class="modal__link js-openModal" data-modal="#modalEnter"> Войти в личный кабинет</span>
+        </div>
+      </div>
+      <button class="button_close js-modalClose">×</button>
+    </div>
+    <nav class="nav-open">
+      <div class="container d-flex">
+        <div class="nav-open__main"><a class="nav-open__item nav-open-js" href="#nav-open-0"><img class="nav-open__img" src="assets/images/svg/car.svg" alt="" role="presentation"/><span>Транспорт</span></a><a class="nav-open__item nav-open-js" href="#nav-open-1"><img class="nav-open__img" src="assets/images/svg/chair.svg" alt="" role="presentation"/><span>Дом и сад</span></a><a class="nav-open__item nav-open-js" href="#nav-open-2"><img class="nav-open__img" src="assets/images/svg/key.svg" alt="" role="presentation"/><span>Недвижимость</span></a><a class="nav-open__item nav-open-js" href="#nav-open-3"><img class="nav-open__img" src="assets/images/svg/necktie.svg" alt="" role="presentation"/><span>Мода и стиль</span></a><a class="nav-open__item nav-open-js" href="#nav-open-4"><img class="nav-open__img" src="assets/images/svg/devices.svg" alt="" role="presentation"/><span>Электроника</span></a><a class="nav-open__item nav-open-js" href="#nav-open-5"><img class="nav-open__img" src="assets/images/svg/ball.svg" alt="" role="presentation"/><span>Хобби, отдых и спорт</span></a><a class="nav-open__item nav-open-js" href="#nav-open-6"><img class="nav-open__img" src="assets/images/svg/business.svg" alt="" role="presentation"/><span>Бизнес и услуги</span></a><a class="nav-open__item nav-open-js" href="#nav-open-7"><img class="nav-open__img" src="assets/images/svg/paw.svg" alt="" role="presentation"/><span>Животные</span></a><a class="nav-open__item nav-open-js" href="#nav-open-8"><img class="nav-open__img" src="assets/images/svg/job.svg" alt="" role="presentation"/><span>Работа</span></a><a class="nav-open__item nav-open-js" href="#nav-open-9"><img class="nav-open__img" src="assets/images/svg/bear.svg" alt="" role="presentation"/><span>Детский мир</span></a>
+        </div>
+        <div class="nav-open__detail" id="nav-open-0">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Транспорт</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-1">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Дом и сад</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-2">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Недвижимость</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-3">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Мода и стиль</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-4">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Электроника</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-5">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Хобби, отдых и спорт</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-6">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Бизнес и услуги</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-7">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Животные</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-8">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Работа</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+        <div class="nav-open__detail d-none" id="nav-open-9">
+          <div class="nav-open__detail-text"><span class="nav-open__title">Детский мир</span>
+            <nav class="nav-open__list"><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a><a class="nav-open__list-item" href="#">Детский мир</a><a class="nav-open__list-item" href="#">Детская одежда</a><a class="nav-open__list-item" href="#">Детская обувь</a><a class="nav-open__list-item" href="#">Детские коляски</a><a class="nav-open__list-item" href="#">Детские автокресла</a><a class="nav-open__list-item" href="#">Детская мебель</a><a class="nav-open__list-item" href="#">Игрушки</a><a class="nav-open__list-item" href="#">Детский транспорт</a><a class="nav-open__list-item" href="#">Товары для кормления</a><a class="nav-open__list-item" href="#">Товары для школьников</a><a class="nav-open__list-item" href="#">Прочие детские товары</a>
+            </nav>
+          </div>
+          <div class="nav-open__detail-img">
+            <div class="nav-open__circle">
+            </div><img src="assets/images/nav/baby-transport.png" alt=""/>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="header-mobile">
+      <div class="mobile-btn-menu js-btn-menu"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div><a class="logo" href="/"><img class="logo__img" src="assets/images/logo.png" width="175" height="47" alt="RUBON" title=""/></a>
+      <svg class="ico_gray mobile-search-open js-search-open">
+        <use xlink:href="assets/images/svg.svg#search"></use>
+      </svg>
+      <div class="mobile-search js-mobile-search">
+        <form class="mobile-search__main"><input class="mobile-search__input" type="search" placeholder="Поиск"/>
+          <label class="mobile-search__label" for="global-search_submit">
+            <svg class="ico ico_gray">
+              <use xlink:href="assets/images/svg.svg#search">
+              </use>
+            </svg>
+          </label>
+        </form>
+        <button class="mobile-search__close js-search-close">×
+        </button>
+      </div>
+    </header>
+    <nav class="nav-mobile">
+      <div class="nav-mobile__overlay js-btn-menu" id="overlay">
+      </div>
+      <ul class="nav-mobile__list js-nav-mobile" id="main-menu">
+        <li class="nav-mobile__li js-openModal" data-modal="#modalLocation">
+          <div class="choose-region">
+            <svg class="ico ico ico_gray mr20">
+              <use xlink:href="assets/images/svg.svg#nav">
+              </use>
+            </svg><span class="gray-text">Санкт-Петербург</span>
+          </div>
+        </li>
+        <!--+e('li').li.js-openModal(data-modal='#modalEnter')-->
+        <li class="nav-mobile__li js-menu-link" data-menulink="#cabinet">
+          <svg class="ico ico_gray mr20">
+            <use xlink:href="assets/images/svg.svg#reg">
+            </use>
+          </svg><span class="gray-text">Войти в личный кабинет</span>
+        </li>
+        <li class="nav-mobile__li bg-red js-menu-link" data-menulink="#categoriesOne">
+          <div class="category-icon ico mr20"><span></span><span></span><span></span><span></span>
+          </div><span class="c-white">Категории</span>
+        </li>
+        <li class="nav-mobile__li"><a href="#">
+          <div class="nav-mobile__plus ico bg-red mr20">+
+          </div><span class="c-red">Дать объявление</span></a>
+        </li>
+        <li class="nav-mobile__li"><a href="#">
+          <div class="nav-mobile__plus ico bg-blue mr20">+
+          </div><span class="c-blue">Создать организацию</span></a>
+        </li>
+      </ul>
+      <ul class="nav-mobile__list js-nav-mobile" id="cabinet">
+        <li class="nav-mobile__li js-menu-link" data-menulink="#main-menu"><i class="fa fa-angle-left mr20"></i><span>Назад</span>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/user.svg" width="25" height="25" alt="" role="presentation"/>Личный кабинет</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/obyavleniya.svg" width="25" height="25" alt="" role="presentation"/>Мои обьявления</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/profile.svg" width="25" height="25" alt="" role="presentation"/>Профиль</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/account.svg" width="25" height="25" alt="" role="presentation"/>Аккаунт</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/social.svg" width="25" height="25" alt="" role="presentation"/>Соцсети</a>
+        </li>
+        <li class="nav-mobile__li js-menu-link"><a href="#"><img class="nav-mobile__svg mr20" src="assets/images/svg/logout.svg" width="25" height="25" alt="" role="presentation"/>Выйти</a>
+        </li>
+      </ul>
+      <ul class="nav-mobile__list js-nav-mobile" id="categoriesOne">
+        <li class="nav-mobile__li js-menu-link" data-menulink="#main-menu"><i class="fa fa-angle-left mr20"></i><span>Назад</span>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category0"><img class="nav-mobile__svg mr20" src="assets/images/svg/car.svg" alt="" width="25" height="25" role="presentation"/><span>Транспорт</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category0">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category1"><img class="nav-mobile__svg mr20" src="assets/images/svg/chair.svg" alt="" width="25" height="25" role="presentation"/><span>Дом и сад</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category1">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category2"><img class="nav-mobile__svg mr20" src="assets/images/svg/key.svg" alt="" width="25" height="25" role="presentation"/><span>Недвижимость</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category2">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category3"><img class="nav-mobile__svg mr20" src="assets/images/svg/necktie.svg" alt="" width="25" height="25" role="presentation"/><span>Мода и стиль</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category3">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category4"><img class="nav-mobile__svg mr20" src="assets/images/svg/devices.svg" alt="" width="25" height="25" role="presentation"/><span>Электроника</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category4">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category5"><img class="nav-mobile__svg mr20" src="assets/images/svg/ball.svg" alt="" width="25" height="25" role="presentation"/><span>Хобби, отдых и спорт</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category5">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category6"><img class="nav-mobile__svg mr20" src="assets/images/svg/business.svg" alt="" width="25" height="25" role="presentation"/><span>Бизнес и услуги</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category6">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category7"><img class="nav-mobile__svg mr20" src="assets/images/svg/paw.svg" alt="" width="25" height="25" role="presentation"/><span>Животные</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category7">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category8"><img class="nav-mobile__svg mr20" src="assets/images/svg/job.svg" alt="" width="25" height="25" role="presentation"/><span>Работа</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category8">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+        <li class="nav-mobile__li js-menu-link" data-menulink="#category9"><img class="nav-mobile__svg mr20" src="assets/images/svg/bear.svg" alt="" width="25" height="25" role="presentation"/><span>Детский мир</span><i class="fa fa-angle-right"></i>
+        </li>
+        <li><li>
+          <ul class="nav-mobile__list js-nav-mobile" id="category9">
+            <li class="nav-mobile__li js-menu-link" data-menulink="#categoriesOne"><i class="fa fa-angle-left mr20"></i><span>Назад</span><span class="ml-auto c-main">Мода и стиль</span>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav1.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav2.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav3.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav4.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav5.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav6.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav7.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav8.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav9.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav10.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav11.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav12.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav13.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav14.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav15.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li class="nav-mobile__li"><a href="#">
+              <div class="nav-mobile__img"><img src="assets/images/nav/nav16.png" alt=""/>
+              </div><span><span>Аксессуары</span><span class="c-red"> (1150)</span></span><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul></li>
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+      <section class="after-active">
+        <div class="container"><img src="assets/images/uspehactivate.svg" alt="" role="presentation"/>
+          <div class="after-active__text">
+            <h2>Ваш аккаунт был<strong> успешно активирован</strong>
+            </h2>
+            <p class="after-active__two">Теперь вы можете начать добавлять свои объявления
+            </p>
+            <div class="after-active__btns"><a class="after-active__btn-left" href="#">
+              <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" width="512px" height="512px">
+                <g>
+                  <path class="active-path" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" data-original="#1E201D" data-old_color="#4d8eff" fill="#4d8eff"></path>
+                </g>
+              </svg>Главная страница</a><a class="after-active__btn-right" href="#">Личный кабинет
+              <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" width="512px" height="512px">
+                <g>
+                  <path class="active-path" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111                                C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587                                c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" data-original="#1E201D" data-old_color="#4d8eff" fill="#4d8eff"></path>
+                </g>
+              </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__head">
+          <h2 class="footer__title"><strong>Rubon</strong> — сайт объявлений и организаций ДНР, ЛНР - здесь вы найдете то, что искали!
+          </h2>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="footer__body">
+            <nav class="footer__list"><a class="footer__link" href="#">Транспорт</a><a class="footer__link" href="#">Дом и сад</a><a class="footer__link" href="#">Недвижимость</a><a class="footer__link" href="#">Мода и стиль</a><a class="footer__link" href="#">Электроника</a><a class="footer__link" href="#">Бизнес и услуги</a><a class="footer__link" href="#">Работа</a><a class="footer__link" href="#">Животные</a><a class="footer__link" href="#">Хобби, отдых и спорт</a><a class="footer__link" href="#">Детский мир</a><span class="footer__link"></span><a class="footer__link" href="#">Организации</a>
+            </nav>
+            <nav class="footer__list"><a class="footer__link" href="#">Новости</a><a class="footer__link" href="#">Реклама на сайте</a><a class="footer__link" href="#">Карта сайта</a>
+            </nav>
+          </div>
+          <div class="footer__body">
+            <nav class="footer__list"><a class="footer__link" href="#">Как продавать и покупать?</a><a class="footer__link" href="#">Правила безопастности</a><a class="footer__link" href="#">Обратная связь</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright lg-none">© 2018 Rubon
+          </p>
+          <nav class="footer__faq"><a class="footer__faq-link" href="#">Как продавать и покупать?</a><a class="footer__faq-link" href="#">Правила безопастности</a><a class="footer__faq-link" href="#">Обратная связь</a><a class="footer__faq-link" href="#">Помощь</a>
+          </nav>
+          <div class="lg-block mt20 sm-none">
+            <p>© 2018 Rubon</p>
+          </div>
+          <div class="social"><span class="mr10">Мы в соцсетях</span><a class="social__link bg-vk" href="https://vk.com/rub_on"><i class="fa fa-vk"></i></a><a class="social__link bg-facebook" href="https://vk.com/rub_on"><i class="fa fa-facebook"></i></a><a class="social__link bg-twitter" href="https://vk.com/rub_on"><i class="fa fa-twitter"></i></a><a class="social__link bg-youtube" href="https://vk.com/rub_on"><i class="fa fa-youtube"></i></a>
+          </div>
+          <div class="sm-block width100 text-center">
+            <p>© 2018 Rubon</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/libs/jquery-3.3.1.js"></script>
+    <script src="assets/libs/slick/slick.min.js"></script>
+    <script src="assets/libs/jquery.sticky-kit.js"></script>
+    <script src="assets/libs/masonry/CG.js"></script>
+    <script src="assets/libs/masonry/Masonry.js"></script>
+    <script src="assets/libs/masonry/events/MasonryEvents.js"></script>
+    <script src="assets/libs/masonry/masonry/MasonryFixedSize.js"></script>
+    <script src="assets/libs/masonry/masonry/MasonryFixedWidth.js"></script>
+    <script src="assets/libs/fancybox/jquery.fancybox.js"></script>
+    <script src="assets/libs/gifffer.min.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/libs/scrollbar/jquery.scrollbar.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

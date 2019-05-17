@@ -1,0 +1,8 @@
+extends ../components/layout-default/layout-default
+include ../components/components/blocks/before-active/before-active
+
+block head
+  - var pageTitle = 'Before active';
+
+block content
+  +before-active()

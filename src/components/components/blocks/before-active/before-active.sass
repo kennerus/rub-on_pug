@@ -1,0 +1,86 @@
+.before-active
+  display: block
+
+  & .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 100px 80px 240px
+
+    @media (max-width: 1200px)
+      padding: 50px 0
+
+    @media (max-width: 768px)
+      flex-direction: column
+      justify-content: center
+
+    & > img
+      width: 376px
+      height: 380px
+
+      @media (max-width: 992px)
+        width: 250px
+        height: auto
+        margin-right: 30px
+
+      @media (max-width: 768px)
+        margin: 0 0 30px
+
+
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    color: #262626
+
+    @media (max-width: 768px)
+      align-items: center
+      padding: 0 20px
+      text-align: center
+
+    & h2
+      display: flex
+      flex-direction: column
+      margin: 0 0 30px
+      font-weight: 400
+      font-size: 36px
+      line-height: 1.1
+
+  &__two
+    margin: 0
+    font-size: 18px
+
+  &__three
+    margin: 50px 0 40px
+    font-size: 16px
+
+  &__btns
+    display: flex
+    align-items: center
+
+    @media (max-width: 375px)
+      flex-direction: column
+
+  &__btn-right
+    margin-left: 55px
+    color: #4d8eff
+    font-size: 13px
+    font-weight: 600
+    text-decoration: underline
+
+    &:hover
+      color: #406cd0
+
+      & svg path
+        fill: #406cd0
+
+    @media (max-width: 375px)
+      margin: 20px 0 0
+
+    & svg
+      width: 11px
+      height: 7px
+      margin-left: 7px
+
+      @media (max-width: 375px)
+        display: none
