@@ -1,0 +1,8 @@
+extends ../components/layout-default/layout-default
+include ../components/components/blocks/resending/resending
+
+block head
+  - var pageTitle = 'Resendint';
+
+block content
+  +resending()

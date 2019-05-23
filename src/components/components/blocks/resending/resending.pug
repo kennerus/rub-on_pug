@@ -1,0 +1,20 @@
+mixin resending()
+  +b('section').email-active.resending
+    +b.container
+      +b('img')(src='assets/images/activateaccount.svg' alt='')
+      +b.email-active__text
+        +e('h2') Повторная
+          +e('strong')  отправка инструкций
+        +e('p').two Введите ваш e-mail и подтвердите изменения, пройдя по ссылке в письме.
+        +e('form').form
+          +e('input')(type='text' name='email' placeholder='Введите e-mail *')
+          +b('button').button.button_red Продолжить
+        +e('p').three
+          | Пароль нужен для входа в разделы
+          +e('strong')   Мои объявления, Мои услуги, Мои магазины
+          |  и открывает возможность работы с объявлениями:
+        +e('ul').list
+          +e('li') редактирование, удаление и обновление;
+          +e('li') просмотр сообщений;
+          +e('li') просмотр избранных объявлений;
+          +e('li') предоставление своих услуг или услуг компании
