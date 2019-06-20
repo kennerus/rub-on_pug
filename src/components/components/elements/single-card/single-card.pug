@@ -5,6 +5,7 @@ mixin single-card(data)
   +b.single-card.js-detail-wrap.masonry(class= big || '', data-horizontal=bigAttr || '1', data-vertical="1")
     +e.main
       +e.top
+        +b.card-bg
         +e.overlay
           if data.gif
             button.gifer-play-button
